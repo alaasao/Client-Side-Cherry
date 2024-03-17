@@ -29,7 +29,7 @@ const VideoCover = () => {
         />
         <Link
           href="/marketplace"
-          className="border-2 hover:scale-[1.1] hover:bg-red-500  cursor-pointer border-white flex justify-center items-center w-[16vw] min-w-[200px] h-[80px] text-3xl max-lg:text-[20px] rounded-lg mb-[70px] "
+          className="border-2 hover:scale-[1.1] hover:bg-red-500  cursor-pointer border-white flex justify-center items-center py-6 px-12 text-3xl max-xl:text-[20px] rounded-[8px] mb-[70px] "
         >
           Decouvrez plus...
         </Link>
