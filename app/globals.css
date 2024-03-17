@@ -1,6 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@splidejs /react-splide/css
+
+
+@splidejs/react-splide/css/skyblue
+@splidejs/react-splide/css/sea-green
+
+
+
+@splidejs/react-splide/css/core
 
 @layer base {
   :root {
@@ -77,6 +86,9 @@
   font-family: good;
   src: url("good times rg.otf");
 }
-.good{
+.good {
   font-family: good;
+}
+.sliderText{
+  color: #686565;
 }
