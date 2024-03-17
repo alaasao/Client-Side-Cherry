@@ -21,28 +21,34 @@ const Nav = () => {
           setIsOpen((prev) => !prev);
         }}
       >
-        <div className="flex flex-col cursor-pointer  gap-[10px] ">
-          <div
-            className={`bg-white h-0.5 w-[30px] rounded-sm transition-all ease-in-out duration-200 ${
-              isOpen ? "rotate-45 translate-y-5" : ""
-            }`}
-          />
-          <div
-            className={`bg-white h-0.5 w-[30px] rounded-sm  my-1 transition-all ease-in-out duration-200 ${
-              isOpen ? "opacity-0" : "opacity-100 "
-            }`}
-          />
-          <div
-            className={`bg-white h-0.5 w-[30px] rounded-sm transition-all ease-in-out duration-200 ${
-              isOpen ? "-rotate-45 -translate-y-3" : ""
-            }`}
-          />
+        <div className=" cursor-pointer ">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="icon icon-tabler icon-tabler-menu-2"
+            width="44"
+            height="44"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="white"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M4 6l16 0" />
+            <path d="M4 12l16 0" />
+            <path d="M4 18l16 0" />
+          </svg>
         </div>
-        <p className="text-5xl font-thin">Menu</p>
+        <p className="text-5xl font-thin max-lg:text-2xl">Menu</p>
       </div>
       <div className="flex flex-col items-center">
-        <img src="../assets/logo.png" alt="logo" />
-        <div className="good text-[30px] font-normal text-[#D12621]">
+        <img
+          src="../assets/logo.png"
+          alt="logo"
+          className="max-lg:w-28 max-lg:h-16"
+        />
+        <div className="good text-[30px] font-normal text-[#D12621] max-lg:text-[16px]">
           speed motors
         </div>
       </div>
@@ -98,8 +104,8 @@ const Nav = () => {
                 <Link
                   key={e.title}
                   href={e.target}
-                  className={` flex items-center justify-between  px-[35px] text-[40px] hover:bg-[#D3D3D3] h-[80px]  transition-all duration-700 ${
-                    isOpen ? "opacity-1 " : "opacity-0"
+                  className={` flex items-center justify-between  px-[35px] text-[40px] hover:bg-[#D3D3D3] h-[80px]  transition-all duration-700 opacity-1  ${
+                    isOpen ? "" : "opacity-0"
                   }`}
                 >
                   <div className="w-[500px]">{e.title}</div>{" "}
@@ -108,13 +114,27 @@ const Nav = () => {
               );
             })}
             <div
-              className={`absolute top-[300px] right-[-300px] flex items-center justify-center h-20 w-20 cursor-pointer max-lg:top-[700px] max-lg:right-[50%] max-lg:border-black
-                rounded-lg border-[3px] border-white text-white  text-6xl ${
-                  isOpen ? "scale-1" : "scale-0"
-                }`}
+              className={`absolute  flex items-center justify-center cursor-pointer top-[700px] transition-all duration-700  ${
+                isOpen ? " left-1/2 -translate-x-1/2" : "left-[-100px]"
+              }
+                  text-6xl`}
             >
-              <img src="../assets/x.png" alt="" className="max-lg:hidden" />
-              <div className="lg:hidden text-black"> x</div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="icon icon-tabler icon-tabler-square-x  "
+                width="60"
+                height="60"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="#000000"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14z" />
+                <path d="M9 9l6 6m0 -6l-6 6" />
+              </svg>
             </div>
           </div>
         </div>
