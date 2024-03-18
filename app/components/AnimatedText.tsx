@@ -17,14 +17,13 @@ interface AnimatedTextProps {
   sep?: string;
 }
 
-const quot: AnimationVariants = {
+const quot = {
   initial: {
     opacity: 0,
     y:0
   },
   animate: {
     opacity: 1,
-    y:0,
     transition: {
       delay: 0.2,
       staggerChildren: 0.08,
@@ -32,7 +31,7 @@ const quot: AnimationVariants = {
   },
 };
 
-const singleWord: AnimationVariants = {
+const singleWord = {
   initial: {
     opacity: 0,
     y: 50,
@@ -40,10 +39,6 @@ const singleWord: AnimationVariants = {
   animate: {
     opacity: 1,
     y: 0,
-    transition: {
-      delay: 0,
-      staggerChildren: 0,
-    },
   },
 };
 
