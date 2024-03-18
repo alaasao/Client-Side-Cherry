@@ -40,7 +40,7 @@ const Nav = () => {
             <path d="M4 18l16 0" />
           </svg>
         </div>
-        <p className="text-5xl font-thin max-lg:text-2xl">Menu</p>
+        <p className="text-4xl font-thin max-lg:text-2xl max-sm:hidden">Menu</p>
       </div>
       <div className="flex flex-col items-center">
         <img
