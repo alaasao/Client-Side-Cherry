@@ -6,6 +6,7 @@ interface AnimationVariants {
   initial: { opacity: number; y?: number };
   animate: {
     opacity: number;
+    y?: number;
     transition: { delay: number; staggerChildren: number };
   };
 }
@@ -19,9 +20,11 @@ interface AnimatedTextProps {
 const quot: AnimationVariants = {
   initial: {
     opacity: 0,
+    y:0
   },
   animate: {
     opacity: 1,
+    y:0,
     transition: {
       delay: 0.2,
       staggerChildren: 0.08,
@@ -37,6 +40,10 @@ const singleWord: AnimationVariants = {
   animate: {
     opacity: 1,
     y: 0,
+    transition: {
+      delay: 0,
+      staggerChildren: 0,
+    },
   },
 };
 
