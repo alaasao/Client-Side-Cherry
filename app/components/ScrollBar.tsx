@@ -12,7 +12,7 @@ const ScrollBar: FC<ScrollBarProps> = ({
   children,
   className,
 }: ScrollBarProps) => {
-  const containerRef: RefObject<HTMLMainElement> = useRef(null);
+  const containerRef: RefObject<HTMLMapElement> = useRef(null);
 
   return (
     <LocomotiveScrollProvider
