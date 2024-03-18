@@ -7,7 +7,7 @@ const Summum = () => {
         DÉCOUVREZ &nbsp;
         <span className="text-[#858282] ">LE SUMMUM DU LUXE</span>
           </h1>
-          <img src="../assets/redtiggo.png" width="100%" height="[520]" />
+          <img src="../assets/redtiggo.png" alt="redtiggo" width="100%" height="[520]" />
     </div>
   );
 };
