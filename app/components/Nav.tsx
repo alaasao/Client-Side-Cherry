@@ -1,8 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-const targets = [
+import { Target } from "framer-motion";
+const targets :Array<{target:string,title:string}> = [
   { target: "/#models", title: "Nos modèle" },
   { target: "/events", title: "Nos évènements" },
   { target: "/services", title: "Services" },
@@ -10,7 +11,7 @@ const targets = [
   { target: "/about", title: "About Us" },
 ];
 
-const Nav = () => {
+const Nav:FC = () => {
   let [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -28,11 +29,11 @@ const Nav = () => {
             width="44"
             height="44"
             viewBox="0 0 24 24"
-            strokeWidth="1.5"
+            stroke-width="1.5"
             stroke="white"
             fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+            stroke-linecap="round"
+            stroke-linejoin="round"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M4 6l16 0" />
@@ -40,7 +41,7 @@ const Nav = () => {
             <path d="M4 18l16 0" />
           </svg>
         </div>
-        <p className="text-4xl font-thin max-lg:text-2xl max-sm:hidden">Menu</p>
+        <p className="text-5xl font-thin max-lg:text-2xl">Menu</p>
       </div>
       <div className="flex flex-col items-center">
         <img
@@ -59,11 +60,11 @@ const Nav = () => {
           width="44"
           height="44"
           viewBox="0 0 24 24"
-          strokeWidth="1.5"
+          stroke-width="1.5"
           stroke="white"
           fill="none"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          stroke-linecap="round"
+          stroke-linejoin="round"
         >
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
@@ -76,11 +77,11 @@ const Nav = () => {
           width="44"
           height="44"
           viewBox="0 0 24 24"
-          strokeWidth="1.5"
+          stroke-width="1.5"
           stroke="white"
           fill="none"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          stroke-linecap="round"
+          stroke-linejoin="round"
         >
           <path stroke="none" d="M0 0h24v24H0z" fill="none" />
           <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
@@ -125,11 +126,11 @@ const Nav = () => {
                 width="60"
                 height="60"
                 viewBox="0 0 24 24"
-                strokeWidth="1.5"
+                stroke-width="1.5"
                 stroke="#000000"
                 fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+                stroke-linecap="round"
+                stroke-linejoin="round"
               >
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14z" />

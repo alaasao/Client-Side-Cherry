@@ -1,7 +1,10 @@
-import React from "react";
+import React, { FC } from "react";
+interface sliderCardProps {
+  title: string,
+  image:string
+}
+const SliderCard:FC<sliderCardProps>= ({ title, image }:sliderCardProps) => {
 
-const SliderCard = ({ title, image }) => {
-  console.log(image);
   return (
     <div className="flex flex-col items-center ">
       <img src={image} alt="" />
