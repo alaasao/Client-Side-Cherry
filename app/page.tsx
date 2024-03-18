@@ -7,7 +7,7 @@ import VideoCover from "./components/VideoCover";
 import Recherche from "./components/Recherche";
 import Summum from "./components/Summum";
 import Explore from "./components/Explore";
-import Slider from "./components/Slider";
+import Slider from "./components/Slider.jsx";
 import Offers from "./components/Offers";
 
 export default function Home() {

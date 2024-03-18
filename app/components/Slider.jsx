@@ -1,13 +1,10 @@
 "use client";
 import { Splide, SplideTrack, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
-import React, { useState, useEffect, FC } from "react";
+import React, { useState, useEffect } from "react";
 import SliderCard from "./SliderCard";
-interface datatype{
-  title: string,
-  image:string
-}
-const data :Array<datatype> = [
+
+const data = [
   { title: "tiggo 2 Pro", image: "../assets/tiggo_4.png" }, //the data will be fetched
   { title: "tiggo 2 Pro", image: "../assets/tiggo_4.png" },
   { title: "tiggo 2 Pro", image: "../assets/tiggo_4.png" },
@@ -18,7 +15,7 @@ const data :Array<datatype> = [
   { title: "tiggo 2 Pro", image: "../assets/tiggo_4.png" },
   { title: "tiggo 2 Pro", image: "../assets/tiggo_4.png" },
 ];
-const Slider:FC= () => {
+const Slider = () => {
 
   const [perPage, setPerPage] = useState(1);
 

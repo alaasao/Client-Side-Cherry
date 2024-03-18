@@ -2,21 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-interface AnimationVariants {
-  initial: { opacity: number; y?: number };
-  animate: {
-    opacity: number;
-    transition: { delay: number; staggerChildren: number };
-  };
-}
-
-interface AnimatedTextProps {
-  text: string;
-  className?: string;
-  sep?: string;
-}
-
-const quot: AnimationVariants = {
+const quot = {
   initial: {
     opacity: 0,
   },
@@ -28,8 +14,7 @@ const quot: AnimationVariants = {
     },
   },
 };
-
-const singleWord: AnimationVariants = {
+const singleWord = {
   initial: {
     opacity: 0,
     y: 50,
@@ -39,29 +24,26 @@ const singleWord: AnimationVariants = {
     y: 0,
   },
 };
-
-const AnimatedText: React.FC<AnimatedTextProps> = ({
-  text,
-  className,
-  sep = " ",
-}: AnimatedTextProps) => {
+const AnimatedText = ({ text, className, sep }) => {
   return (
-    <div className="flex items-center justify-center  overflow-hidden text-center ">
+    <div className="flex items-center justify-center  overflow-hidden text-center ">
       <motion.p
-        className={`inline-block   ${className} `}
+        className={`inline-block   ${className} `}
         variants={quot}
         initial="initial"
         animate="animate"
       >
-        {text.split(sep).map((word, index) => (
-          <motion.span
-            key={`${word}-${index}`}
-            className="inline-block"
-            variants={singleWord}
-          >
-            {word}&nbsp;
-          </motion.span>
-        ))}
+        {text.split(sep).map((word, index) => {
+          return (
+            <motion.span
+              key={word + "-" + index}
+              className="inline-block"
+              variants={singleWord}
+            >
+              {word}&nbsp;
+            </motion.span>
+          );
+        })}
       </motion.p>
     </div>
   );

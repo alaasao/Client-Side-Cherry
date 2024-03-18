@@ -1,7 +1,7 @@
 import Link from "next/link";
-import React, { FC } from "react";
+import React from "react";
 
-const Recherche:FC = () => {
+const Recherche = () => {
   return (
     <div className="pt-[180px] px-[8.7vw] bg-white text-black w-full pb-[180px]">
       <h1 className="text-5xl font-medium mb-[90px]  mx-auto  text-center max-lg:text-4xl ">

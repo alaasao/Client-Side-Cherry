@@ -1,8 +1,8 @@
-import React, { FC } from "react";
-import Slider from "./Slider";
+import React from "react";
+import Slider from "./Slider.jsx";
 import Link from "next/link.js";
 
-const Explore:FC = () => {
+const Explore = () => {
   return (
     <div className="bg-white  text-black ">
       <div className="w-[50vw] mx-auto text-center min-w-[300px] mb-[80px]">

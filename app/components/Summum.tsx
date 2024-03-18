@@ -1,6 +1,6 @@
-import React, { FC } from "react";
+import React from "react";
 import Image from "next/image";
-const Summum:FC = () => {
+const Summum = () => {
   return (
     <div className="w-full bg-white pb-[200px] max-md:hidden ">
       <h1 className="font-medium text-6xl mb-[80px] w-[50vw]  min-w-[200px] max-md:text-2xl max-lg:text-4xl uppercase text-black mx-auto text-center">
