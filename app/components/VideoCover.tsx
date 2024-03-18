@@ -1,5 +1,5 @@
 import React from "react";
-import AnimatedText from "./AnimatedText";
+import AnimatedText from "./AnimatedText.jsx";
 import Link from "next/link";
 
 const VideoCover = () => {

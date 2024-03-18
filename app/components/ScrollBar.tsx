@@ -1,9 +1,18 @@
 "use client";
-import React, { useRef } from "react";
+import React, { FC, RefObject, useRef } from "react";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
-const ScrollBar = ({ children, className }) => {
-  let containerRef = useRef(null);
+
+interface ScrollBarProps {
+  children: React.ReactNode; // Children of the scrollable area
+  className?: string; // Optional className for the main element
+}
+
+const ScrollBar: FC<ScrollBarProps> = ({
+  children,
+  className,
+}: ScrollBarProps) => {
+  const containerRef: RefObject<HTMLMapElement> = useRef(null);
 
   return (
     <LocomotiveScrollProvider
