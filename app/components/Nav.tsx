@@ -40,7 +40,7 @@ const CustomLink: FC<CustomLinkProps> = ({
 const Nav = () => {
   let [isOpen, setIsOpen] = useState(false);
   let currentPath = usePathname();
-  let [searchOpen, serSearchOpen] = useState(false);
+  let [searchOpen, serSearchOpen] = useState(true);
   return (
     <div
       className={`w-screen h-[90px]  border-b-[3px] ${
@@ -162,8 +162,8 @@ const Nav = () => {
           className={`relative w-[90%] mx-auto z-[15]   transition-all  duration-700  `}
         >
           <input
-            className={` w-full   pl-[3vw]  text-white text-2xl outline-none max-lg:text-xl max-md:text-[3vw] rounded-full bg-[#7b77768a] border-[2px] border-white h-[70px] transition-all  duration-700 ${
-              searchOpen ? "h-[70px] top-[100px]" : "border-0 h-0 pl-0 top-0"
+            className={` w-full   pl-[3vw]  text-white text-2xl outline-none max-lg:text-xl max-md:text-[3vw] rounded-full bg-[#7b77768a]  border-white transition-all  duration-700 ${
+              searchOpen ? "h-[70px]  border-[2px]" : "border-0 h-0 pl-0 "
             } `}
             placeholder="Entrez le modèle de voiture que vous recherchez
 
