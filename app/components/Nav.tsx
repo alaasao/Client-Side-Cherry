@@ -43,7 +43,7 @@ const Nav = () => {
     <div
       className={`w-screen h-[90px]  border-b-[3px] ${
         currentPath === "/"
-          ? " border-white absolute top-0 z-[10] bg-transparent"
+          ? " border-white absolute top-0 z-[10] bg-transparent text-white"
           : " bg-white text-black border-[#BEBBBA]"
       }   flex justify-between items-center pl-[2vw] pr-[2vw] `}
     >

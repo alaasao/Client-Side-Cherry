@@ -11,7 +11,7 @@ const VideoCover = () => {
           loop
           muted
           autoPlay
-          className=" w-screen h-screen object-cover absolute top-0 left-0 z-[-1]"
+          className=" w-screen h-screen object-cover absolute top-0 left-0 z-[-10]"
         ></video>
         <AnimatedText
           text={"UNE GAMME POUR CHAQUE BESOIN"}
