@@ -31,7 +31,7 @@ const Offers: FC = () => {
         <div> VOIR TOUTES LES OFFRES </div>{" "}
         <img src="../assets/fullarrow.png" alt="" />
       </Link>
-      <OffersAnimated />
+      
     </div>
   );
 };
