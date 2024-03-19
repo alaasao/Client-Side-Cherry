@@ -17,14 +17,15 @@ interface CustomLinkProps {
   href: string;
   title: string;
   className: string;
+  currentPath: string;
 }
+
 const CustomLink: FC<CustomLinkProps> = ({
   href,
   title,
   className,
+  currentPath,
 }: CustomLinkProps) => {
-  const currentPath = usePathname();
-
   return (
     <Link href={href} className={`${className} relative group  cursor-pointer`}>
       {title}
@@ -38,7 +39,8 @@ const CustomLink: FC<CustomLinkProps> = ({
 };
 const Nav = () => {
   let [isOpen, setIsOpen] = useState(false);
-  const currentPath = usePathname();
+  let currentPath = usePathname();
+  let [searchOpen, serSearchOpen] = useState(false);
   return (
     <div
       className={`w-screen h-[90px]  border-b-[3px] ${
@@ -64,16 +66,51 @@ const Nav = () => {
         </div>
       </Link>
       <ul className="w-[60%] flex items-center justify-between max-md:hidden">
-        <CustomLink href={"/"} className="" title="Modèles" />
-        <CustomLink href={"/event"} className="" title="Évènements" />
-        <CustomLink href={"/#offers"} className="" title="Offres" />
-        <CustomLink href={"/services"} className="" title="Services" />
-        <CustomLink href={"/faq"} className="" title="FAQ" />
-        <CustomLink href={"/about"} className="" title="About Us" />
+        <CustomLink
+          href={"/"}
+          className=""
+          title="Modèles"
+          currentPath={currentPath}
+        />
+        <CustomLink
+          href={"/event"}
+          className=""
+          title="Évènements"
+          currentPath={currentPath}
+        />
+        <CustomLink
+          href={"/#offers"}
+          className=""
+          title="Offres"
+          currentPath={currentPath}
+        />
+        <CustomLink
+          href={"/services"}
+          className=""
+          title="Services"
+          currentPath={currentPath}
+        />
+        <CustomLink
+          href={"/faq"}
+          className=""
+          title="FAQ"
+          currentPath={currentPath}
+        />
+        <CustomLink
+          href={"/about"}
+          className=""
+          title="About Us"
+          currentPath={currentPath}
+        />
       </ul>
       <div className="flex gap-[1.5vw]">
         <CiSearch
-          className={`w-8 h-8 ${currentPath === "/" ? "text-white" : ""} `}
+          className={`w-8 h-8 ${
+            currentPath === "/" ? "text-white cursor-pointer " : ""
+          } `}
+          onClick={() => {
+            serSearchOpen((prev) => !prev);
+          }}
         />
         <CiUser
           className={`w-8 h-8 ${currentPath === "/" ? "text-white" : ""} `}
@@ -114,6 +151,32 @@ const Nav = () => {
               <CgCloseR />
             </div>
           </div>
+        </div>
+      </div>
+      <div
+        className={`absolute left-0 w-screen transition-all  duration-700${
+          searchOpen ? " top-[100px]" : "  top-0"
+        }`}
+      >
+        <div
+          className={`relative w-[90%] mx-auto z-[15]   transition-all  duration-700  `}
+        >
+          <input
+            className={` w-full   pl-[3vw]  text-white text-2xl outline-none max-lg:text-xl max-md:text-[3vw] rounded-full bg-[#7b77768a] border-[2px] border-white h-[70px] transition-all  duration-700 ${
+              searchOpen ? "h-[70px] top-[100px]" : "border-0 h-0 pl-0 top-0"
+            } `}
+            placeholder="Entrez le modèle de voiture que vous recherchez
+
+      "
+          />{" "}
+          <img
+            src="../assets/search.png"
+            className={`absolute top-1/2 -translate-y-1/2 right-[20px] transition-all  duration-500 cursor-pointer z-10  ${
+              searchOpen ? "h-8 max-md:h-4" : "h-0"
+            } `}
+            onClick={() => console.log("jjj")}
+            alt=""
+          />
         </div>
       </div>
     </div>

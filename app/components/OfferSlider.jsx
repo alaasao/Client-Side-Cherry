@@ -44,7 +44,7 @@ const OfferSlider = () => {
       >
         {data.map((e, i) => {
           return (
-            <SplideSlide key={e.title + i}>
+            <SplideSlide key={e.title + i * 2}>
               <OfferCard img={e.img} id={e.id} />
             </SplideSlide>
           );

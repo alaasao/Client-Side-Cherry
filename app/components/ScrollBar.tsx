@@ -15,17 +15,9 @@ const ScrollBar: FC<ScrollBarProps> = ({
   const containerRef: RefObject<HTMLMapElement> = useRef(null);
 
   return (
-    <LocomotiveScrollProvider
-      options={{
-        smooth: true,
-      }}
-      watch={[]}
-      containerRef={containerRef}
-    >
-      <main data-scroll-container ref={containerRef} className={className}>
-        {children}
-      </main>
-    </LocomotiveScrollProvider>
+    <main data-scroll-container ref={containerRef} className={className}>
+      {children}
+    </main>
   );
 };
 

@@ -14,10 +14,7 @@ const data: Array<offer> = [
 ];
 const Offers: FC = () => {
   return (
-    <div
-      className="pt-[100px] bg-white pb-[150px] relative"
-      id="offers"
-    >
+    <div className="pt-[100px] bg-white pb-[150px] relative" id="offers">
       <h1 className="w-[700px] text-center  max-lg:w-[300px] max-lg:text-3xl text-6xl text-black mx-auto font-medium mb-[80px]">
         OFFRES DU MOMENT
       </h1>
@@ -26,12 +23,11 @@ const Offers: FC = () => {
       </div>
       <Link
         href={"/marketplace"}
-        className="text-5xl justify-between border-[1px] rounded-xl max-xl:text-xl min-w-[300px] border-black w-[35vw] text-black flex items-center gap-[10px] mx-auto px-[23px] py-[16px] "
+        className="text-5xl justify-between border-[1px] hover:scale-[1.1] rounded-xl max-xl:text-xl min-w-[300px] border-black w-[35vw] text-black flex items-center gap-[10px] mx-auto px-[23px] py-[16px] "
       >
         <div> VOIR TOUTES LES OFFRES </div>{" "}
         <img src="../assets/fullarrow.png" alt="" />
       </Link>
-      
     </div>
   );
 };

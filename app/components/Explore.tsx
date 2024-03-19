@@ -4,7 +4,7 @@ import Link from "next/link.js";
 
 const Explore = () => {
   return (
-    <div className="bg-white  text-black ">
+    <div className="bg-white  text-black pb-[20px] ">
       <div className="w-[50vw] mx-auto text-center min-w-[300px] mb-[80px]">
         <h1 className="w-[80%] text-6xl font-medium max-lg:text-3xl mx-auto mb-[40px]">
           EXPLOREZ VOTRE{" "}
@@ -24,8 +24,7 @@ const Explore = () => {
       >
         <div>
           {" "}
-          DECOUVREZ TOUTE LA GAMME{" "}
-          <span className="text-[#D12621]">CHERY</span>
+          DECOUVREZ TOUTE LA GAMME <span className="text-[#D12621]">CHERY</span>
         </div>{" "}
         <img src="../assets/fullarrow.png" alt="" />
       </Link>
