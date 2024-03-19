@@ -89,6 +89,20 @@
 .good {
   font-family: good;
 }
-.sliderText{
+.sliderText {
   color: #686565;
+}
+.offer-one {
+  color: yellow;
+  font-size: 5vw;
+  position: absolute;
+  top: 10%;
+  z-index: 10;
+}
+.offer-two {
+  color: yellow;
+  font-size: 5vw;
+  position: absolute;
+  top: 60%;
+  z-index: 10;
 }

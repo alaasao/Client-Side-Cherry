@@ -14,11 +14,12 @@ export default function Home() {
   return (
     <div className=" w-screen overflow-hidden ">
       <VideoCover />
-      <div className="bg-white">
-      <Recherche />
-      <Summum />
-      <Explore />
-      <Offers /></div>
+      <div className="bg-white w-screen overflow-hidden">
+        <Recherche />
+        <Summum />
+        <Explore />
+        <Offers />
+      </div>
     </div>
   );
 }
