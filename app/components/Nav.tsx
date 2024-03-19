@@ -71,7 +71,7 @@ const Nav = () => {
         <CustomLink href={"/faq"} className="" title="FAQ" />
         <CustomLink href={"/about"} className="" title="About Us" />
       </ul>
-      <div className="flex gap-[4.3vw]">
+      <div className="flex gap-[3vw]">
         <CiSearch
           className={`w-8 h-8 ${currentPath === "/" ? "text-white" : ""} `}
         />
