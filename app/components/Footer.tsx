@@ -34,7 +34,7 @@ const Footer = () => {
             </Link>
             <Link href={"/events"}>Blog</Link>
           </div>
-          <div className="flex flex-col gap-[24px] text-[#13131399] max-lgg:items-center  ">
+          <div className="flex flex-col gap-[24px] text-[#13131399] max-lg:items-center  ">
             <h1 className="text-black font-[600] text-xl">Socials</h1>
             <Link href={"insta"}>Instagram</Link>
             <Link href={"face"}>Facebook</Link>
