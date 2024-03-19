@@ -40,7 +40,7 @@ const CustomLink: FC<CustomLinkProps> = ({
 const Nav = () => {
   let [isOpen, setIsOpen] = useState(false);
   let currentPath = usePathname();
-  let [searchOpen, serSearchOpen] = useState(true);
+  let [searchOpen, serSearchOpen] = useState(false);
   return (
     <div
       className={`w-screen h-[90px]  border-b-[3px] ${
