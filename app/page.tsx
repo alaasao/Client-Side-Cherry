@@ -12,12 +12,13 @@ import Offers from "./components/Offers";
 
 export default function Home() {
   return (
-    <div className=" w-screen overflow-hidden">
+    <div className=" w-screen overflow-hidden ">
       <VideoCover />
+      <div className="bg-white">
       <Recherche />
       <Summum />
       <Explore />
-      <Offers />
+      <Offers /></div>
     </div>
   );
 }

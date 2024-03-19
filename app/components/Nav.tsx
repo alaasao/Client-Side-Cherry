@@ -1,7 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React, { FC, useState } from "react";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import { CiUser, CiMenuBurger, CiSearch } from "react-icons/ci";
+import { FiMenu } from "react-icons/fi";
+import { CgCloseR } from "react-icons/cg";
 const targets = [
   { target: "/#models", title: "Nos modèle" },
   { target: "/events", title: "Nos évènements" },
@@ -9,88 +13,76 @@ const targets = [
   { target: "/FAQ", title: "FAQ" },
   { target: "/about", title: "About Us" },
 ];
-
-const Nav = () => {
-  let [isOpen, setIsOpen] = useState(false);
+interface CustomLinkProps {
+  href: string;
+  title: string;
+  className: string;
+}
+const CustomLink: FC<CustomLinkProps> = ({
+  href,
+  title,
+  className,
+}: CustomLinkProps) => {
+  const currentPath = usePathname();
 
   return (
-    <div className="w-screen h-[140px]  border-b-[3px]   border-white absolute top-0 z-[10] bg-transparent flex justify-between items-center pl-[3.8vw] pr-[2vw] ">
+    <Link href={href} className={`${className} relative group  cursor-pointer`}>
+      {title}
+      <span
+        className={`absolute left-0 inline-block w-0 h-[3px] -bottom-2 max-lg:bg-light group-hover:w-full transition-all ease duration-300
+      ${currentPath === href ? "w-full" : "w-0"}   
+      ${currentPath === "/" ? " bg-red-800" : "bg-black"} `}
+      ></span>
+    </Link>
+  );
+};
+const Nav = () => {
+  let [isOpen, setIsOpen] = useState(false);
+  const currentPath = usePathname();
+  return (
+    <div
+      className={`w-screen h-[90px]  border-b-[3px] ${
+        currentPath === "/"
+          ? " border-white absolute top-0 z-[10] bg-transparent text-white"
+          : " bg-white text-black border-[#BEBBBA]"
+      }   flex justify-between items-center pl-[2vw] pr-[2vw] `}
+    >
       <div
-        className="flex items-center gap-[11px] cursor-pointer "
+        className="flex items-center  cursor-pointer md:hidden "
         onClick={() => {
-          setIsOpen((prev) => !prev);
+          setIsOpen((prev) => true);
         }}
       >
-        <div className=" cursor-pointer ">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="icon icon-tabler icon-tabler-menu-2"
-            width="44"
-            height="44"
-            viewBox="0 0 24 24"
-            strokeWidth="1.5"
-            stroke="white"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M4 6l16 0" />
-            <path d="M4 12l16 0" />
-            <path d="M4 18l16 0" />
-          </svg>
-        </div>
-        <p className="text-4xl font-thin max-lg:text-2xl max-sm:hidden">Menu</p>
-      </div>
-      <div className="flex flex-col items-center">
-        <img
-          src="../assets/logo.png"
-          alt="logo"
-          className="max-lg:w-28 max-lg:h-16"
+        <FiMenu
+          className={`h-10 w-10 ${currentPath === "/" ? "text-white" : ""}`}
         />
-        <div className="good text-[30px] font-normal text-[#D12621] max-lg:text-[16px]">
+      </div>
+      <Link href={"/"} className="flex flex-col items-center">
+        <img src="../assets/logo.png" alt="logo" className="w-24 h-14 " />
+        <div className="good text-[12px] font-normal text-[#D12621] ">
           speed motors
         </div>
-      </div>
-      <div className="flex gap-[4.3vw]">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="icon icon-tabler icon-tabler-search"
-          width="44"
-          height="44"
-          viewBox="0 0 24 24"
-          strokeWidth="1.5"
-          stroke="white"
-          fill="none"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
-          <path d="M21 21l-6 -6" />
-        </svg>
-
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="icon icon-tabler icon-tabler-user"
-          width="44"
-          height="44"
-          viewBox="0 0 24 24"
-          strokeWidth="1.5"
-          stroke="white"
-          fill="none"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
-          <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
-        </svg>
+      </Link>
+      <ul className="w-[60%] flex items-center justify-between max-md:hidden">
+        <CustomLink href={"/"} className="" title="Modèles" />
+        <CustomLink href={"/event"} className="" title="Évènements" />
+        <CustomLink href={"/#offers"} className="" title="Offres" />
+        <CustomLink href={"/services"} className="" title="Services" />
+        <CustomLink href={"/faq"} className="" title="FAQ" />
+        <CustomLink href={"/about"} className="" title="About Us" />
+      </ul>
+      <div className="flex gap-[3vw]">
+        <CiSearch
+          className={`w-8 h-8 ${currentPath === "/" ? "text-white" : ""} `}
+        />
+        <CiUser
+          className={`w-8 h-8 ${currentPath === "/" ? "text-white" : ""} `}
+        />
       </div>
       <div
         className={`absolute left-0  rounded-lg transition-all duration-700 top-0`}
       >
-        <div className="relative">
+        <div className="relative md:hidden">
           <div
             onClick={() => {
               setIsOpen((prev) => !prev);
@@ -104,7 +96,7 @@ const Nav = () => {
                 <Link
                   key={e.title}
                   href={e.target}
-                  className={` flex items-center justify-between  px-[35px] text-[40px] hover:bg-[#D3D3D3] h-[80px]  transition-all duration-700 opacity-1  ${
+                  className={` flex items-center justify-between  px-[35px] text-[40px] hover:bg-[#D3D3D3] h-[80px]  transition-all duration-700 opacity-1 max-md:text-2xl ${
                     isOpen ? "" : "opacity-0"
                   }`}
                 >
@@ -119,22 +111,7 @@ const Nav = () => {
               }
                   text-6xl`}
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="icon icon-tabler icon-tabler-square-x  "
-                width="60"
-                height="60"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="#000000"
-                fill="none"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path d="M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14z" />
-                <path d="M9 9l6 6m0 -6l-6 6" />
-              </svg>
+              <CgCloseR />
             </div>
           </div>
         </div>
