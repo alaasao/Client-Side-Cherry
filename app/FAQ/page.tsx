@@ -31,7 +31,7 @@ const page = () => {
 
   return (
 
-    <div  className='h-screen w-screen flex items-center gap-8 flex-col justify-center mt-[700px] '>
+    <div  className='h-screen w-screen flex items-center gap-8 flex-col justify-center my-[700px]'>
         <div className='w-[100%] mt-20 flex items-start justify-center text-center '>
               <div className='w-[90%]  h-[60vh] mt-[10vh] shadow-3xl flex justify-center items-center flex-col gap-10  rounded-[10px]'>
                 <div className='font-light text-wrap text-lg sm:text-2xl font-good leading-[60px]'>
@@ -82,8 +82,8 @@ const page = () => {
                 </div>  
                 
                 <div  className='text-sm sm:text-xl font-semibold text-[#686565] '>N’hésitez pas à nous contacter</div>
-               <div className='mt-6 '>
-                  <button  className='text-[#D12621] border-2 border-[#858282] p-2 rounded-[10px] font-good mt-12'>
+               <div className='mt-6  '>
+                  <button  className='text-[#D12621] border-2 border-[#858282] p-2 rounded-[10px] font-good mt-12 '>
                             CHARGER PLUS
                   </button>
                 </div> 

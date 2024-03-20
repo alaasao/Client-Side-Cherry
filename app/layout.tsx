@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { MantineProvider } from "@mantine/core";
 import ScrollBar from "./components/ScrollBar";
+
 const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-mont",
@@ -23,15 +24,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-       {/*  <ScrollBar className={"relative  w-screen overflow-hidden"}> */}
+        <ScrollBar className={"relative  w-screen overflow-hidden"}>
           <Nav />
           {children}
-<<<<<<< HEAD
-       {/*  </ScrollBar> */}
-=======
           <Footer/>
         </ScrollBar>
->>>>>>> 69ed252863a7e2052fdb4e1f996127bdec5defb4
       </body>
     </html>
   );
