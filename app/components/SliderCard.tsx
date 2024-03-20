@@ -1,15 +1,14 @@
 import React, { FC } from "react";
 interface SliderCardProps {
-  title: string,
-  image:string
+  title: string;
+  image: string;
 }
-const SliderCard:FC<SliderCardProps> = ({ title, image }:SliderCardProps) => {
-
+const SliderCard: FC<SliderCardProps> = ({ title, image }: SliderCardProps) => {
   return (
     <div className="flex flex-col items-center ">
       <img src={image} alt="" />
       <div className=" flex items-center gap-[15px]">
-        <div className=" good  sliderText text-4xl max-lg:text-xl ">
+        <div className=" good  sliderText text-4xl max-lg:text-xl uppercase ">
           {" "}
           {title}{" "}
         </div>
