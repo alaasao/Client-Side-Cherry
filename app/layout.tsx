@@ -22,10 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <ScrollBar className={"relative  w-screen overflow-hidden"}>
+       {/*  <ScrollBar className={"relative  w-screen overflow-hidden"}> */}
           <Nav />
           {children}
-        </ScrollBar>
+       {/*  </ScrollBar> */}
       </body>
     </html>
   );
