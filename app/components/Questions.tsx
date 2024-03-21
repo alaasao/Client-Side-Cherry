@@ -60,10 +60,10 @@ const [visible, setvisible] = useState(5)
         </div>
         <div className='flex flex-col items-center justify-center mt-6'>
             <div className='font-light text-wrap text-center text-md sm:text-2xl lg:text-3xl leading-[60px] mt-12'>
-                VOUS N'AVEZ PAS TROUVÉ LA RÉPONSE À  <span className='text-[#D12621]' >VOTRE QUESTION ?</span>
+                VOUS N&apos;AVEZ PAS TROUVÉ LA RÉPONSE À  <span className='text-[#D12621]' >VOTRE QUESTION ?</span>
                 
             </div>
-            <div  className='text-sm sm:text-xl font-semibold text-[#686565] mt-4 '>N'hésitez pas à   <Link href="/about/contact"> <span className='text-red-500'>nous contacter</span></Link>    </div>
+            <div  className='text-sm sm:text-xl font-semibold text-[#686565] mt-4 '>N&apos;hésitez pas à   <Link href="/about/contact"> <span className='text-red-500'>nous contacter</span></Link>    </div>
             <div className='mt-6  '>
                 <button  className='text-[#D12621] border-2 border-[#858282] w-[200px] rounded-[10px] font-good mt-12 h-4  animation' onClick={showMore}>
                              <span className="relative  z-10 text-nowrap  good text-sm ">CHARGER PLUS</span>  
