@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { MantineProvider } from "@mantine/core";
 import ScrollBar from "./components/ScrollBar";
+
 const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-mont",

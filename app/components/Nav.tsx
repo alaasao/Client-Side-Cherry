@@ -91,7 +91,7 @@ const Nav = () => {
           currentPath={currentPath}
         />
         <CustomLink
-          href={"/faq"}
+          href={"/FAQ"}
           className=""
           title="FAQ"
           currentPath={currentPath}

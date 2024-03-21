@@ -23,7 +23,7 @@ const Footer = () => {
             <Link href={"/about/#location"} className="">
               Location
             </Link>
-            <Link href="/faq">FAQ</Link>
+            <Link href="/FAQ">FAQ</Link>
             <Link href={"/about/#horaire"}>Horaires de travail</Link>
             <Link href={"/about/contact"}>Contact</Link>
           </div>
