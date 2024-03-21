@@ -9,7 +9,7 @@ type demoprops = {
   answer:string,
 }
 const QuestionCard = (props:demoprops) => {
-    const [activequestion , setActiveQuestion]= React.useState<number |null>(null)
+    const [activequestion , setActiveQuestion]=useState<number|null>(null)
   return (
     <div key={props.id} className='flex  justify-start  items-center py-6 last:pb-8  border-t-2 border-[#0C0C0C] border-opacity-[25%] last:border-y-2  last:border-[#0C0C0C] last:border-opacity-[25%] '>
             <div className='flex flex-col justify-between items-center w-full'>
