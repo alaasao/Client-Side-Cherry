@@ -1,4 +1,4 @@
-@import url('https://fonts.cdnfonts.com/css/good-times-2');
+@import url("https://fonts.cdnfonts.com/css/good-times-2");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,10 +8,10 @@
 @splidejs/react-splide/css/skyblue
 @splidejs/react-splide/css/sea-green
 
-
-
-@splidejs/react-splide/css/core
-
+@splidejs /react-splide/css/core
+* {
+  box-sizing: border-box;
+}
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -106,4 +106,17 @@
   position: absolute;
   top: 60%;
   z-index: 10;
+}
+.ww {
+  width: calc(100%-);
+}
+
+box {
+  color: red;
+}
+.css-15j2ta9-MuiSlider-root {
+  color: #ff4423;
+}
+.jj {
+  line-height: 0px;
 }

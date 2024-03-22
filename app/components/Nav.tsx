@@ -7,7 +7,7 @@ import { CiUser, CiMenuBurger, CiSearch } from "react-icons/ci";
 import { FiMenu } from "react-icons/fi";
 import { CgCloseR } from "react-icons/cg";
 const targets = [
-  { target: "/#models", title: "Nos modèle" },
+  { target: "/marketplace", title: "Nos modèle" },
   { target: "/events", title: "Nos évènements" },
   { target: "/services", title: "Services" },
   { target: "/FAQ", title: "FAQ" },
@@ -32,7 +32,7 @@ const CustomLink: FC<CustomLinkProps> = ({
       <span
         className={`absolute left-0 inline-block w-0 h-[3px] -bottom-2 max-lg:bg-light group-hover:w-full transition-all ease duration-300
       ${currentPath === href ? "w-full" : "w-0"}   
-      ${currentPath === "/" ? " bg-red-800" : "bg-black"} `}
+      bg-[#D12621] `}
       ></span>
     </Link>
   );
@@ -43,7 +43,7 @@ const Nav = () => {
   let [searchOpen, serSearchOpen] = useState(false);
   return (
     <div
-      className={`w-screen h-[90px]  border-b-[3px] ${
+      className={`w-screen box-border min-w-0 h-[90px]  border-b-[3px] ${
         currentPath === "/"
           ? " border-white absolute top-0 z-[10] bg-transparent text-white"
           : " bg-white text-black border-[#BEBBBA]"
@@ -61,13 +61,13 @@ const Nav = () => {
       </div>
       <Link href={"/"} className="flex flex-col items-center">
         <img src="../assets/logo.png" alt="logo" className="w-24 h-14 " />
-        <div className="good text-[12px] font-normal text-[#D12621] ">
+        <div className="font-good text-[12px] font-normal text-[#D12621] ">
           speed motors
         </div>
       </Link>
       <ul className="w-[60%] flex items-center justify-between max-md:hidden">
         <CustomLink
-          href={"/"}
+          href={"/marketplace"}
           className=""
           title="Modèles"
           currentPath={currentPath}
