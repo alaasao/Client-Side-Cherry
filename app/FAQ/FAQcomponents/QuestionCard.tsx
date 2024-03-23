@@ -11,11 +11,11 @@ type demoprops = {
 const QuestionCard = (props:demoprops) => {
     const [activequestion , setActiveQuestion]=useState<number|null>(null)
   return (
-    <div key={props.id} className='flex  justify-start  items-center py-6 last:pb-8  border-t-2 border-[#0C0C0C] border-opacity-[25%] last:border-y-2  last:border-[#0C0C0C] last:border-opacity-[25%] '>
+    <div key={props.id} className='flex  justify-start  items-center py-6 last:pb-8 bg-white text-black border-t-2 border-[#0C0C0C] border-opacity-[25%] last:border-y-2  last:border-[#0C0C0C] last:border-opacity-[25%] '>
             <div className='flex flex-col justify-between items-center w-full'>
-              <div className='flex justify-between items-center text-sm sm:text-lg  w-full font-light'>
+              <div className='flex justify-between items-center text-sm sm:text-lg font-[500] w-full'>
                           {props.question}
-                <button className='text-start focus:outline-none  font-semibold flex  flxe-col items-center justify-center '> 
+                <button className='text-start focus:outline-none   flex  flxe-col items-center justify-center '> 
                     {activequestion === props.id 
                       ?(  <FaMinus onClick={()=>setActiveQuestion(activequestion === props.id ? null :props.id )} />  )
                       :(  <FaPlus onClick={()=>setActiveQuestion(activequestion === props.id ? null :props.id )} /> )
