@@ -61,7 +61,7 @@ const Nav = () => {
       </div>
       <Link href={"/"} className="flex flex-col items-center">
         <img src="../assets/logo.png" alt="logo" className="w-24 h-14 " />
-        <div className="font-good text-[12px] font-normal text-[#D12621] ">
+        <div className="good text-[12px] font-normal text-[#D12621] ">
           speed motors
         </div>
       </Link>
