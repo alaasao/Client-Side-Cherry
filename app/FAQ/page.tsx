@@ -1,6 +1,6 @@
 import React from 'react'
 import Questions from "../components/Questions"
-const page = () => {
+const Page = () => {
   return (
 
     <div  className='h-[95%] w-screen flex items-center gap-8 flex-col justify-center mb-[50px]'>
@@ -37,4 +37,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
