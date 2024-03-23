@@ -11,7 +11,12 @@ type demoprops = {
 const QuestionCard = (props:demoprops) => {
     const [activequestion , setActiveQuestion]=useState<number|null>(null)
   return (
-    <div key={props.id} className='flex  justify-start  items-center py-6 last:pb-8 bg-white text-black border-t-2 border-[#0C0C0C] border-opacity-[25%] last:border-y-2  last:border-[#0C0C0C] last:border-opacity-[25%] '>
+    <motion.div
+    initial={{ y: 100 }}
+    whileInView={{ y: 0 }}
+    transition={{ duration: 1, type: "spring" }}
+    viewport={{ once: true, amount: 0.1 }}
+      key={props.id} className='flex  justify-start  items-center py-6 last:pb-8 bg-white text-black border-t-2 border-[#0C0C0C] border-opacity-[25%] last:border-y-2  last:border-[#0C0C0C] last:border-opacity-[25%] '>
             <div className='flex flex-col justify-between items-center w-full'>
               <div className='flex justify-between items-center text-sm sm:text-lg font-[500] w-full'>
                           {props.question}
@@ -30,7 +35,7 @@ const QuestionCard = (props:demoprops) => {
                             )}
               </AnimatePresence>
             </div>     
-    </div>
+    </motion.div>
   )
 }
 
