@@ -24,10 +24,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={poppins.className}>
-        <ScrollBar className={"relative  w-screen overflow-hidden"}>
+        <ScrollBar
+          className={"relative ww overflow-x-hidden bg-white text-black "}
+        >
           <Nav />
           {children}
-          <Footer/>
+          <Footer />
         </ScrollBar>
       </body>
     </html>

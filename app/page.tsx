@@ -12,7 +12,7 @@ import Offers from "./components/Offers";
 
 export default function Home() {
   return (
-    <div className=" w-screen overflow-hidden ">
+    <div className="   ">
       <VideoCover />
       <div className="bg-white w-screen overflow-hidden">
         <Recherche />
