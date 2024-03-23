@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-col items-start">
           <Link href={"/"} className="flex flex-col items-center mb-[26px]">
             <img src="../assets/logo.png" alt="logo" className="w-32 " />
-            <div className="good text-[16px] font-normal text-[#D12621] ">
+            <div className="font-good text-[16px] font-normal text-[#D12621] ">
               speed motors
             </div>
           </Link>{" "}

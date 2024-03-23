@@ -8,7 +8,7 @@ const SliderCard: FC<SliderCardProps> = ({ title, image }: SliderCardProps) => {
     <div className="flex flex-col items-center ">
       <img src={image} alt="" />
       <div className=" flex items-center gap-[15px]">
-        <div className=" good  sliderText text-4xl max-lg:text-xl uppercase ">
+        <div className=" font-good  sliderText text-4xl max-lg:text-xl uppercase ">
           {" "}
           {title}{" "}
         </div>

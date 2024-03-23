@@ -5,7 +5,7 @@ import Link from "next/link";
 const VideoCover = () => {
   return (
     <div>
-      <div className="w-screen h-screen flex flex-col items-start justify-end pl-[3.2vw]">
+      <div className=" sticky top-0 z-[1] w-screen   h-screen flex flex-col items-start justify-end pl-[3.2vw] ">
         <video
           src="../assets/TIGGO_8_PRO.mp4"
           loop
@@ -29,7 +29,7 @@ const VideoCover = () => {
         />
         <Link
           href="/marketplace"
-          className="border-2 hover:scale-[1.1]   cursor-pointer border-white flex justify-center items-center py-6 px-12 max-md:py-3 max-lg:px-6 text-3xl max-xl:text-[20px] rounded-[8px] mb-[70px] "
+          className="border-2 hover:scale-[1.1] text-white  cursor-pointer border-white flex justify-center items-center py-6 px-12 max-md:py-3 max-lg:px-6 text-3xl max-xl:text-[20px] rounded-[8px] mb-[70px] "
         >
           Decouvrez plus...
         </Link>
