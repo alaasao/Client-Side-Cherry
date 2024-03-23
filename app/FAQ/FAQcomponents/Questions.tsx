@@ -60,7 +60,7 @@ const [visible, setvisible] = useState(5)
         </div>
         <div className='flex flex-col items-center justify-center mt-6'>
             <div className='font-light text-wrap text-center text-xl sm:text-2xl lg:text-3xl leading-[60px] mt-12 w-full'>
-                VOUS N'AVEZ PAS TROUVÉ LA RÉPONSE À  <span className='text-[#D12621]' >VOTRE QUESTION ?</span>
+                VOUS N&apos;AVEZ PAS TROUVÉ LA RÉPONSE À  <span className='text-[#D12621]' >VOTRE QUESTION ?</span>
                 
             </div>
             <div  className='text-sm sm:text-xl font-semibold text-[#686565] mt-4 '>N&apos;hésitez pas à   <Link href="/about/contact"> <span className='text-red-500'>nous contacter</span></Link>    </div>
