@@ -13,13 +13,16 @@ const FirstSec = () => {
           <h1 className="text-6xl  font-semibold font-good mx-auto max-lg:text-4xl max-md:text-[12px] max-xl:text-4xl ">
             SPEED MOTORS
           </h1>
-          <p className="w-full font-medium text-2xl  max-lg:text-xl max-md:text-[12px] max-sm:text-[8px] max-sm:h-[70px]  max-md:leading-3 max-md:text-center">Chery - Votre partenaire de confiance pour des voyages en toutesécurité et à petit prix. Explorez notre collection dès maintenant !
+          <p className="w-full font-medium text-2xl  max-lg:text-xl max-md:text-[12px] max-sm:text-[8px] max-sm:h-[70px]  max-md:leading-3 max-md:text-center">
+            Chery - Votre partenaire de confiance pour des voyages en
+            toutesécurité et à petit prix. Explorez notre collection dès
+            maintenant !
           </p>
         </div>
         <div className="flex justify-center">
           <img
             src="../assets/marketplace/firstSecCar.png"
-            className="w-2/3  h-[75px] md:h-[200px]"
+            className="w-2/3 max-md:w-full  h-[75px] md:h-[200px]"
           />
         </div>
       </div>
