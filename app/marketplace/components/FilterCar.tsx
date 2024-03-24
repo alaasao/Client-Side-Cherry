@@ -28,6 +28,8 @@ const FilterCar: FC<FilterCarProps> = ({
       return array;
     }
   }
+
+
   // console.log(filterList[catName], catProps);
   return (
     <div>
@@ -35,18 +37,19 @@ const FilterCar: FC<FilterCarProps> = ({
         couleur{" "}
       </h2>
       <div className="flex flex-col gap-[10px] w-full">
-        {catProps.map((elem,i) => {
+        {catProps.map((elem, i) => {
+          
       return  (    <div className="flex flex-col gap-[10px] " key={i-1000+catName}>
             <div
               className="flex gap-[8px] cursor-pointer "
               onClick={() => {
                 setFilterList({
                   ...filterList,
-                  [catName]: toggle(filterList[catName], elem),
+                  [catName]: toggle(filterList[catName as keyof typeof filterList], elem),
                 });
               }}
             >
-              {filterList[catName].some((e) => e === elem) ? (
+              {filterList[catName as keyof typeof filterList].some((e) => e === elem) ? (
                 <div
                   className={`w-[20px] h-[20px] rounded-md border-[0.5px]  bg-[#FF4423] 
        

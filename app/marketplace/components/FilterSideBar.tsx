@@ -64,7 +64,7 @@ const FilterSideBar: FC<FilterSideBarProps> = ({
         <div className="flex flex-col gap-[40px]  pl-[40px] w-full">
           {filterCaracteristiques.map((element, index) => {
             let catName = Object.keys(element)[0];
-            let carProps = element[catName];
+            let carProps = element[catName as keyof typeof element];
 
             return (
               <FilterCar
