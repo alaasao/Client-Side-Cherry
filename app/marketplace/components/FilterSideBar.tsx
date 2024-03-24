@@ -47,7 +47,7 @@ const FilterSideBar: FC<FilterSideBarProps> = ({
         Filter
       </h1>
       <div
-        className={`md:w-[300px] capitalize transition-all duration-700  max-md:absolute max-md:top-0 max-md:h-full bg-white ${
+        className={`md:w-[300px] capitalize transition-all duration-700  max-md:absolute max-md:top-0 max-md:h-screen max-md:overflow-hidden bg-white ${
           isOpen ? "w-full   left-0 " : " left-[-1000px]"
         } `}
       >
