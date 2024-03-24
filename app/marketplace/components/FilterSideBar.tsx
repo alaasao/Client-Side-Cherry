@@ -48,7 +48,7 @@ const FilterSideBar: FC<FilterSideBarProps> = ({
   return (
     <div className="max-md:bg-[#F1F1F0]">
       <h1
-        className="md:hidden  font-bold m-[5px]  bg-[#FF4423] text-white cursor-pointer w-[100px] mt-[10px] py-[10px] rounded-lg flex justify-center items-center "
+        className="md:hidden  font-bold m-[5px]  bg-[#FF4423] text-white cursor-pointer w-[100px] mt-[10px] py-[10px] max-md:mt-[0px] max-md:py-[5px]   rounded-lg flex justify-center items-center "
         onClick={() => {
           setIsOpen((prev) => !prev);
         }}
@@ -61,11 +61,13 @@ const FilterSideBar: FC<FilterSideBarProps> = ({
         } `}
       >
         <h1 className="my-[30px] font-bold  pl-[40px] ">Filter By</h1>
-        <div className="flex flex-col gap-[40px]  pl-[40px] w-full">
+        <div className="flex flex-col gap-[40px]  pl-[40px] w-full max-md:gap-[20px] ">
           {filterCaracteristiques.map((element, index) => {
             let catName = Object.keys(element)[0];
             let carProps = element[catName as keyof typeof element];
-            if (catName==='prix'){return null}
+            if (catName === "prix") {
+              return null;
+            }
             return (
               <FilterCar
                 key={100 * index}
@@ -314,8 +316,8 @@ const FilterSideBar: FC<FilterSideBarProps> = ({
             </div>
           </div> */}
         </div>
-        <div className="mt-[40px] ">
-          <h2 className="mb-[10px] text-[#858282] font-semibold text-[15px] capitalize pl-[20px]">
+        <div className="mt-[40px] max-md:mt-[20px] ">
+          <h2 className="mb-[10px] text-[#858282] font-semibold text-[15px] capitalize pl-[20px] max-md:mx-auto max-md:text-center">
             Prix{" "}
           </h2>
           <div className="w-full flex justify-center ">
@@ -355,7 +357,7 @@ const FilterSideBar: FC<FilterSideBarProps> = ({
               setIsOpen((prev) => !prev);
             }}
           >
-            <div className=" bg-[#FF4423] text-white cursor-pointer w-[100px] mt-[10px] py-[10px] rounded-lg flex justify-center items-center md:hidden">
+            <div className=" bg-[#FF4423] text-white cursor-pointer w-[100px] mt-[10px] max-md:mt-[5px] py-[10px] rounded-lg flex justify-center items-center md:hidden">
               Filter
             </div>
           </div>

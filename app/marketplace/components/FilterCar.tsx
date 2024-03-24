@@ -7,8 +7,8 @@ interface FilterList {
   energie: string[];
   prix: number[];
 }
-interface Ff{
-  jj:string[]
+interface Ff {
+  jj: string[];
 }
 interface FilterCarProps {
   filterList: FilterList;
@@ -32,48 +32,53 @@ const FilterCar: FC<FilterCarProps> = ({
     }
   }
 
-
   // console.log(filterList[catName], catProps);
   return (
     <div>
       <h2 className="mb-[10px] text-[#858282] font-semibold text-[10px] capitalize">
-        couleur{" "}
+        {catName}
       </h2>
-      <div className="flex flex-col gap-[10px] w-full">
+      <div className="flex flex-col gap-[10px] w-full ">
         {catProps.map((elem, i) => {
-      
- return  (    <div className="flex flex-col gap-[10px] " key={i-1000+catName}>
-            <div
-              className="flex gap-[8px] cursor-pointer "
-              onClick={() => {
-                
-                setFilterList({
-                  ...filterList,
-                  [catName]: toggle(filterList[catName as keyof typeof filterList] as typeof filterList.colors , elem),
-                });
-              }}
-            >
-              {filterList[catName as keyof typeof filterList].some((e) => e === elem) ? (
-                <div
-                  className={`w-[20px] h-[20px] rounded-md border-[0.5px]  bg-[#FF4423] 
+          return (
+            <div className="flex flex-col gap-[10px] " key={i - 1000 + catName}>
+              <div
+                className="flex gap-[8px] cursor-pointer "
+                onClick={() => {
+                  setFilterList({
+                    ...filterList,
+                    [catName]: toggle(
+                      filterList[
+                        catName as keyof typeof filterList
+                      ] as typeof filterList.colors,
+                      elem
+                    ),
+                  });
+                }}
+              >
+                {filterList[catName as keyof typeof filterList].some(
+                  (e) => e === elem
+                ) ? (
+                  <div
+                    className={`w-[20px] h-[20px] rounded-md border-[0.5px]  bg-[#FF4423] 
        
            `}
-                >
-                  <MdDone className="text-white " />{" "}
-                </div>
-              ) : (
-                <div
-                  className={`w-[20px] h-[20px] rounded-md border-[0.5px]  border-[#858282] 
+                  >
+                    <MdDone className="text-white " />{" "}
+                  </div>
+                ) : (
+                  <div
+                    className={`w-[20px] h-[20px] rounded-md border-[0.5px]  border-[#858282] 
     
         `}
-                ></div>
-              )}
-  
-              <p className="text-[#5E5959] font-semibold">{elem}</p>
+                  ></div>
+                )}
+
+                <p className="text-[#5E5959] font-semibold">{elem}</p>
+              </div>
             </div>
-          </div>)
+          );
         })}
-      
       </div>
     </div>
   );
