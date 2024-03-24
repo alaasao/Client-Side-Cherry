@@ -7,6 +7,9 @@ interface FilterList {
   energie: string[];
   prix: number[];
 }
+interface Ff{
+  jj:string[]
+}
 interface FilterCarProps {
   filterList: FilterList;
   setFilterList: Dispatch<SetStateAction<FilterList>>;
@@ -38,14 +41,15 @@ const FilterCar: FC<FilterCarProps> = ({
       </h2>
       <div className="flex flex-col gap-[10px] w-full">
         {catProps.map((elem, i) => {
-          if( Array.isArray(elem) && typeof elem[0] === 'number'){return null}
-    else { return  (    <div className="flex flex-col gap-[10px] " key={i-1000+catName}>
+      
+ return  (    <div className="flex flex-col gap-[10px] " key={i-1000+catName}>
             <div
               className="flex gap-[8px] cursor-pointer "
               onClick={() => {
+                
                 setFilterList({
                   ...filterList,
-                  [catName]: toggle(filterList[catName as keyof typeof filterList], elem),
+                  [catName]: toggle(filterList[catName as keyof typeof filterList] as typeof filterList.colors , elem),
                 });
               }}
             >
@@ -67,7 +71,7 @@ const FilterCar: FC<FilterCarProps> = ({
   
               <p className="text-[#5E5959] font-semibold">{elem}</p>
             </div>
-          </div>)}
+          </div>)
         })}
       
       </div>

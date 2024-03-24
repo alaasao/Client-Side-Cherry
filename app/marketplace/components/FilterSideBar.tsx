@@ -65,7 +65,7 @@ const FilterSideBar: FC<FilterSideBarProps> = ({
           {filterCaracteristiques.map((element, index) => {
             let catName = Object.keys(element)[0];
             let carProps = element[catName as keyof typeof element];
-
+            if (catName==='prix'){return null}
             return (
               <FilterCar
                 key={100 * index}
