@@ -38,8 +38,8 @@ const FilterCar: FC<FilterCarProps> = ({
       </h2>
       <div className="flex flex-col gap-[10px] w-full">
         {catProps.map((elem, i) => {
-          
-      return  (    <div className="flex flex-col gap-[10px] " key={i-1000+catName}>
+          if( Array.isArray(elem) && typeof elem[0] === 'number'){return null}
+    else { return  (    <div className="flex flex-col gap-[10px] " key={i-1000+catName}>
             <div
               className="flex gap-[8px] cursor-pointer "
               onClick={() => {
@@ -67,7 +67,7 @@ const FilterCar: FC<FilterCarProps> = ({
   
               <p className="text-[#5E5959] font-semibold">{elem}</p>
             </div>
-          </div>)
+          </div>)}
         })}
       
       </div>
