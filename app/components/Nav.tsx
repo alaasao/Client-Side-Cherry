@@ -59,7 +59,10 @@ const Nav = () => {
           className={`h-10 w-10 ${currentPath === "/" ? "text-white" : ""}`}
         />
       </div>
-      <Link href={"/"} className="flex flex-col items-center">
+      <Link
+        href={"/"}
+        className="flex flex-col items-center max-md:absolute  max-md:top-2 max-md:left-1/2 max-md:-translate-x-1/2"
+      >
         <img src="../assets/logo.png" alt="logo" className="w-24 h-14 " />
         <div className="good text-[12px] font-normal text-[#D12621] ">
           speed motors
