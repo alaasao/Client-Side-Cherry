@@ -6,7 +6,7 @@ import { MdDone } from "react-icons/md";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import FilterCar from "./FilterCar";
-import { JSON } from "json";
+
 interface FilterList {
   colors: string[];
   motors: string[];
