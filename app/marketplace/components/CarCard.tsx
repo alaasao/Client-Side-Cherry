@@ -53,7 +53,7 @@ const CarCard: FC<CarCardProps> = ({
       }`}
     >
       <h1 className="font-bold text-xl w-full mb-[66px]">{name}</h1>
-      <img src={img} className="w-full h-[118px] mb-[50px]  " alt="" />
+      <img src={img} className="w-[300px] h-[118px] mb-[50px]  " alt="" />
       <div className="w-full flex gap-[71px] items-center justify-center text-[#858282] mb-[40px] font-medium ">
         <div className="flex gap-[4px]">
           <GiGasPump className=" text-xl  " />

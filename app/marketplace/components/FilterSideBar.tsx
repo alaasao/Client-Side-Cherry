@@ -5,6 +5,8 @@ import { FaCheck, FaLeaf } from "react-icons/fa";
 import { MdDone } from "react-icons/md";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
+import FilterCar from "./FilterCar";
+import { JSON } from "json";
 interface FilterList {
   colors: string[];
   motors: string[];
@@ -15,6 +17,13 @@ interface FilterSideBarProps {
   filterList: FilterList;
   setFilterList: Dispatch<SetStateAction<FilterList>>;
 }
+const filterCaracteristiques = [
+  { colors: ["rouge", "gris", "noir"] },
+  {
+    motors: ["1.2", "1.4", "1.6", "1.8", "2.0"],
+  },
+  { energie: ["DZL", "essence", "gas"] },
+];
 const FilterSideBar: FC<FilterSideBarProps> = ({
   filterList,
   setFilterList,
@@ -37,9 +46,9 @@ const FilterSideBar: FC<FilterSideBarProps> = ({
   };
   let [isOpen, setIsOpen] = useState(false);
   return (
-    <div>
+    <div className="max-md:bg-[#F1F1F0]">
       <h1
-        className="md:hidden cursor-pointer font-bold m-[5px] w-full bg-white"
+        className="md:hidden  font-bold m-[5px]  bg-[#FF4423] text-white cursor-pointer w-[100px] mt-[10px] py-[10px] rounded-lg flex justify-center items-center "
         onClick={() => {
           setIsOpen((prev) => !prev);
         }}
@@ -53,96 +62,26 @@ const FilterSideBar: FC<FilterSideBarProps> = ({
       >
         <h1 className="my-[30px] font-bold  pl-[40px] ">Filter By</h1>
         <div className="flex flex-col gap-[40px]  pl-[40px] w-full">
-          <div>
-            <h2 className="mb-[10px] text-[#858282] font-semibold text-[10px] capitalize">
-              couleur{" "}
-            </h2>
-            <div className="flex flex-col gap-[10px] w-full">
-              <div className="flex flex-col gap-[10px] ">
-                <div
-                  className="flex gap-[8px] cursor-pointer "
-                  onClick={() => {
-                    setFilterList({
-                      ...filterList,
-                      colors: toggle(filterList.colors, "rouge"),
-                    });
-                  }}
-                >
-                  {filterList.colors.some((e) => e === "rouge") ? (
-                    <div
-                      className={`w-[20px] h-[20px] rounded-md border-[0.5px]  bg-[#FF4423] 
-             
-                 `}
-                    >
-                      <MdDone className="text-white " />{" "}
-                    </div>
-                  ) : (
-                    <div
-                      className={`w-[20px] h-[20px] rounded-md border-[0.5px]  border-[#858282] 
-          
-              `}
-                    ></div>
-                  )}
+          {filterCaracteristiques.map((element, index) => {
+            let catName = Object.keys(element)[0];
+            let carProps = element[catName];
 
-                  <p className="text-[#5E5959] font-semibold">rouge</p>
-                </div>
-                <div
-                  className="flex gap-[8px] cursor-pointer "
-                  onClick={() => {
-                    setFilterList({
-                      ...filterList,
-                      colors: toggle(filterList.colors, "noir"),
-                    });
-                  }}
-                >
-                  {filterList.colors.some((e) => e === "noir") ? (
-                    <div
-                      className={`w-[20px] h-[20px] rounded-md border-[0.5px]  bg-[#FF4423] 
-             
-                 `}
-                    >
-                      <MdDone className="text-white " />{" "}
-                    </div>
-                  ) : (
-                    <div
-                      className={`w-[20px] h-[20px] rounded-md border-[0.5px]  border-[#858282] 
-          
-              `}
-                    ></div>
-                  )}
-
-                  <p className="text-[#5E5959] font-semibold">noir</p>
-                </div>
-                <div
-                  className="flex gap-[8px] cursor-pointer "
-                  onClick={() => {
-                    setFilterList({
-                      ...filterList,
-                      colors: toggle(filterList.colors, "gris"),
-                    });
-                  }}
-                >
-                  {filterList.colors.some((e) => e === "gris") ? (
-                    <div
-                      className={`w-[20px] h-[20px] rounded-md border-[0.5px]  bg-[#FF4423] 
-             
-                 `}
-                    >
-                      <MdDone className="text-white " />{" "}
-                    </div>
-                  ) : (
-                    <div
-                      className={`w-[20px] h-[20px] rounded-md border-[0.5px]  border-[#858282] 
-          
-              `}
-                    ></div>
-                  )}
-
-                  <p className="text-[#5E5959] font-semibold">gris</p>
-                </div>
-              </div>
-            </div>
-          </div>
+            return (
+              <FilterCar
+                key={100 * index}
+                filterList={filterList}
+                setFilterList={setFilterList}
+                catName={catName}
+                catProps={carProps!}
+              />
+            );
+          })}
+          {/* <FilterCar
+            filterList={filterList}
+            setFilterList={setFilterList}
+            catName={"colors"}
+            catProps={filterCaracteristiques[0].colors!}
+          />
           <div>
             <h2 className="mb-[10px] text-[#858282] font-semibold text-[10px] capitalize">
               Moteur{" "}
@@ -373,13 +312,13 @@ const FilterSideBar: FC<FilterSideBarProps> = ({
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
-        <div className="mt-[40px] pl-[20px]">
-          <h2 className="mb-[10px] text-[#858282] font-semibold text-[15px] capitalize">
+        <div className="mt-[40px] ">
+          <h2 className="mb-[10px] text-[#858282] font-semibold text-[15px] capitalize pl-[20px]">
             Prix{" "}
           </h2>
-          <div className="w-full flex justify-center">
+          <div className="w-full flex justify-center ">
             <Box sx={{ width: 250 }}>
               <Slider
                 getAriaLabel={() => "Temperature range"}

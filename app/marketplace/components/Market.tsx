@@ -11,7 +11,7 @@ interface MarketProps {
 }
 const Market: FC<MarketProps> = ({ filterList }: MarketProps) => {
   return (
-    <div className="bg-[#F1F1F0] flex flex-wrap justify-center gap-[30px]  px-[20px] max-md:gap-[10px] py-[64px] min-h-screen ">
+    <div className="bg-[#F1F1F0] flex flex-wrap justify-center gap-[30px]  px-[20px] max-md:gap-[10px] py-[64px] max-md:py-[10px] min-h-screen ">
       {data.map((e, i) => {
         return (
           <CarCard
