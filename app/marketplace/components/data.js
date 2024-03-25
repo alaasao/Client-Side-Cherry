@@ -33,7 +33,7 @@ const data = [
     prix: 4999000,
   },
   {
-    name: "arizzo 8",
+    name: "tiggo 8",
     img: "../assets/marketplace/bluecar.png",
     motor: "1.2",
     reservoir: 90,

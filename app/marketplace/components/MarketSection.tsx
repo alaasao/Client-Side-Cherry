@@ -9,6 +9,7 @@ interface FilterList {
   prix: number[];
 }
 const MarketSection = () => {
+  let [isOpen, setIsOpen] = useState(false);
   let [filterList, setFilterList] = useState<FilterList>({
     colors: [],
     motors: [],
@@ -19,12 +20,12 @@ const MarketSection = () => {
 
   return (
     <div className="w-screen grid md:grid-cols-[300px_1fr] ">
-      <FilterSideBar filterList={filterList} setFilterList={setFilterList} />
-      <div>
-        <h1></h1>
-        <Market filterList={filterList} />
-      </div>
+    <FilterSideBar filterList={filterList} setFilterList={setFilterList} isOpen={isOpen} setIsOpen={setIsOpen} />
+    <div>
+      <h1></h1>
+      <Market filterList={filterList}  isOpen={isOpen} setIsOpen={setIsOpen} />
     </div>
+  </div>
   );
 };
 

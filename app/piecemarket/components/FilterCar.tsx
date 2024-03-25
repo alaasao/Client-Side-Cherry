@@ -29,8 +29,7 @@ const FilterCar: FC<FilterCarProps> = ({
       return array;
     }
   }
-  console.log(filterList, catName);
-  // console.log(filterList[catName], catProps);
+
   return (
     <div>
       <h2 className="mb-[10px] text-[#858282] font-semibold text-[10px] capitalize">

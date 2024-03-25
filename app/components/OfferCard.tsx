@@ -13,7 +13,7 @@ const OfferCard: FC<OfferCardProps> = ({ id, img }: OfferCardProps) => {
       </div>
       <Link
         href={""}
-        className="absolute z-[-1] px-[10px] w-full h-full top-0 pb-[80px] bg-[#696564] text-3xl rounded-xl opacity-[90%]  justify-normal items-center  text-center flex group-hover:z-[3]"
+        className="absolute z-[-1] px-[10px] w-full h-full top-0 pb-[80px] text-white bg-[#696564] text-3xl rounded-xl opacity-[90%]  justify-normal items-center  text-center flex group-hover:z-[3]"
       >
         {" "}
         PROFITEZ DE L’OFFRE AVANT QU’IL NE SOIT TROP TARD !!!!!!

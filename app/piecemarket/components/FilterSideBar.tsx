@@ -16,6 +16,8 @@ interface FilterList {
 interface FilterSideBarProps {
   filterList: FilterList;
   setFilterList: Dispatch<SetStateAction<FilterList>>;
+  isOpen: boolean;
+  setIsOpen: Dispatch<SetStateAction<boolean>>;
 }
 const filterCaracteristiques = [
   {
@@ -33,6 +35,8 @@ const filterCaracteristiques = [
 const FilterSideBar: FC<FilterSideBarProps> = ({
   filterList,
   setFilterList,
+  isOpen,
+  setIsOpen,
 }: FilterSideBarProps) => {
   function toggle(array: Array<string>, word: string) {
     if (array.filter((e) => e === word)[0]) {
@@ -50,19 +54,11 @@ const FilterSideBar: FC<FilterSideBarProps> = ({
   const handleChange = (event: Event, newValue: number | number[]) => {
     setFilterList({ ...filterList, prix: newValue as number[] });
   };
-  let [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="max-md:bg-[#F1F1F0]">
-      <h1
-        className="md:hidden  font-bold m-[5px]  bg-[#FF4423] text-white cursor-pointer w-[100px] mt-[10px] py-[10px] max-md:mt-[0px] max-md:py-[5px]   rounded-lg flex justify-center items-center "
-        onClick={() => {
-          setIsOpen((prev) => !prev);
-        }}
-      >
-        Filter
-      </h1>
       <div
-        className={`md:w-[300px] capitalize transition-all duration-700  max-md:absolute max-md:z-[10] max-md:top-0 max-md:h-screen max-md:overflow-hidden bg-white ${
+        className={`md:w-[300px] capitalize transition-all duration-700  max-md:absolute max-md:z-[10] max-md:top-0 max-md:h-auto max-md:min-h-screen  bg-white ${
           isOpen ? "w-full   left-0  " : " left-[-1000px]"
         } `}
       >
@@ -363,7 +359,7 @@ const FilterSideBar: FC<FilterSideBarProps> = ({
               setIsOpen((prev) => !prev);
             }}
           >
-            <div className=" bg-[#FF4423] text-white cursor-pointer w-[100px] mt-[10px] max-md:mt-[5px] py-[10px] rounded-lg flex justify-center items-center md:hidden">
+            <div className=" mb-[100px] bg-[#FF4423] text-white cursor-pointer w-[100px] mt-[10px] max-md:mt-[5px] py-[10px] rounded-lg flex justify-center items-center md:hidden">
               Filter
             </div>
           </div>

@@ -4,10 +4,8 @@ import Change from "../../piecemarket/components/Change";
 const FirstSec = () => {
   return (
     <div>
-   
-        <Change />{" "}
-    
-      <div className="w-screen  max-md:h-[120px] relative">
+      <Change />{" "}
+      <div className="w-screen  max-md:h-[120px] relative max-md:hidden">
         <img
           src="../assets/marketplace/whitebg.png"
           alt=""

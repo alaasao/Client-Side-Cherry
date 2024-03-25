@@ -2,6 +2,7 @@
 import { Splide, SplideTrack, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 import React, { useState, useEffect } from "react";
+import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import SliderCard from "./SliderCard";
 
 const data = [
@@ -16,9 +17,7 @@ const data = [
   { title: "tiggo 2 Pro", image: "../assets/tiggo_4.png" },
 ];
 const Slider = () => {
-
   const [perPage, setPerPage] = useState(1);
-
 
   useEffect(() => {
     const handleResize = () => {
@@ -32,7 +31,7 @@ const Slider = () => {
       }
     };
     window.addEventListener("resize", handleResize);
-handleResize()
+    handleResize();
     // Cleanup function to remove listener on unmount
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -44,9 +43,13 @@ handleResize()
           type: "loop",
           perPage: perPage,
           arrows: false,
-          autoplay: true,
+     
           pagination: false,
+          drag: "free",
+         
+          autoScroll: { speed: 1 },
         }}
+        extensions={{ AutoScroll }}
       >
         {data.map((e, i) => {
           return (
