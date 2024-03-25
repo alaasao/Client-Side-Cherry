@@ -1,27 +1,27 @@
 import React, { FC } from "react";
 import data from "./data";
-import CarCard from "./CarCard";
+import CarCard from "./PieceCard";
+import PieceCard from "./PieceCard";
 interface MarketProps {
   filterList: {
-    colors: string[];
-    motors: string[];
-    energie: string[];
+    categorie: string[];
+    modele: string[];
+    etat: string[];
     prix: number[];
-  };
+  }
 }
 const Market: FC<MarketProps> = ({ filterList }: MarketProps) => {
   return (
     <div className="bg-[#F1F1F0] flex flex-wrap justify-center gap-[30px]  px-[20px] max-md:gap-[10px] py-[64px] max-md:py-[10px] min-h-screen ">
       {data.map((e, i) => {
         return (
-          <CarCard
+          <PieceCard
             name={e.name}
-            color={e.color}
+            categorie={e.categorie}
+            modele={e.modele}
+            etat={e.etat}
             img={e.img}
-            motor={e.motor}
-            energie={e.energie}
-            reservoir={e.reservoir}
-            boite={e.boite}
+ 
             prix={e.prix}
             key={e.id + i}
             id={e.id}

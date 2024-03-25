@@ -8,9 +8,9 @@ import Slider from "@mui/material/Slider";
 import FilterCar from "./FilterCar";
 
 interface FilterList {
-  colors: string[];
-  motors: string[];
-  energie: string[];
+  categorie: string[];
+  modele: string[];
+  etat: string[];
   prix: number[];
 }
 interface FilterSideBarProps {
@@ -18,11 +18,17 @@ interface FilterSideBarProps {
   setFilterList: Dispatch<SetStateAction<FilterList>>;
 }
 const filterCaracteristiques = [
-  { colors: ["rouge", "gris", "noir"] },
   {
-    motors: ["1.2", "1.4", "1.6", "1.8", "2.0"],
+    categorie: [
+      "Pièces de Moteur",
+      "Pieces de carosserie",
+      "Pieces d’interieur",
+    ],
   },
-  { energie: ["DZL", "essence", "gas"] },
+  {
+    modele: ["Tiggo 8", "Arizo 5", "Tiggo 7", "Arrizo 6", "Tiggo 2 pro"],
+  },
+  { etat: ["neuve", "occasion", "reconditionnée"] },
 ];
 const FilterSideBar: FC<FilterSideBarProps> = ({
   filterList,
@@ -56,8 +62,8 @@ const FilterSideBar: FC<FilterSideBarProps> = ({
         Filter
       </h1>
       <div
-        className={`md:w-[300px] capitalize transition-all duration-700  max-md:absolute max-md:top-0 max-md:h-screen max-md:overflow-hidden bg-white ${
-          isOpen ? "w-full   left-0 " : " left-[-1000px]"
+        className={`md:w-[300px] capitalize transition-all duration-700  max-md:absolute max-md:z-[10] max-md:top-0 max-md:h-screen max-md:overflow-hidden bg-white ${
+          isOpen ? "w-full   left-0  " : " left-[-1000px]"
         } `}
       >
         <h1 className="my-[30px] font-bold  pl-[40px] ">Filter By</h1>
@@ -70,7 +76,7 @@ const FilterSideBar: FC<FilterSideBarProps> = ({
             }
             return (
               <FilterCar
-                key={100 * index}
+                key={33 * index}
                 filterList={filterList}
                 setFilterList={setFilterList}
                 catName={catName}
@@ -329,7 +335,7 @@ const FilterSideBar: FC<FilterSideBarProps> = ({
                 valueLabelDisplay="auto"
                 getAriaValueText={valuetext}
                 min={0} // Adjust these values as needed
-                max={10000000}
+                max={1000}
                 sx={{
                   color: "primary.light",
                 }}

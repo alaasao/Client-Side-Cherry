@@ -6,6 +6,7 @@ import Link from "next/link";
 import { CiUser, CiMenuBurger, CiSearch } from "react-icons/ci";
 import { FiMenu } from "react-icons/fi";
 import { CgCloseR } from "react-icons/cg";
+import CustomLink from './CustomLink'
 const targets = [
   { target: "/marketplace", title: "Nos modèle" },
   { target: "/events", title: "Nos évènements" },
@@ -13,30 +14,9 @@ const targets = [
   { target: "/FAQ", title: "FAQ" },
   { target: "/about", title: "About Us" },
 ];
-interface CustomLinkProps {
-  href: string;
-  title: string;
-  className: string;
-  currentPath: string;
-}
 
-const CustomLink: FC<CustomLinkProps> = ({
-  href,
-  title,
-  className,
-  currentPath,
-}: CustomLinkProps) => {
-  return (
-    <Link href={href} className={`${className} relative group  cursor-pointer`}>
-      {title}
-      <span
-        className={`absolute left-0 inline-block w-0 h-[3px] -bottom-2 max-lg:bg-light group-hover:w-full transition-all ease duration-300
-      ${currentPath === href ? "w-full" : "w-0"}   
-      bg-[#D12621] `}
-      ></span>
-    </Link>
-  );
-};
+
+
 const Nav = () => {
   let [isOpen, setIsOpen] = useState(false);
   let currentPath = usePathname();
@@ -59,7 +39,10 @@ const Nav = () => {
           className={`h-10 w-10 ${currentPath === "/" ? "text-white" : ""}`}
         />
       </div>
-      <Link href={"/"} className="flex flex-col items-center">
+      <Link
+        href={"/"}
+        className="flex flex-col items-center max-md:absolute  max-md:top-2 max-md:left-1/2 max-md:-translate-x-1/2"
+      >
         <img src="../assets/logo.png" alt="logo" className="w-24 h-14 " />
         <div className="good text-[12px] font-normal text-[#D12621] ">
           speed motors
@@ -124,8 +107,10 @@ const Nav = () => {
             onClick={() => {
               setIsOpen((prev) => !prev);
             }}
-            className={`absolute left-0  py-[50px] h-screen bg-white text-black  flex flex-col rounded-lg transition-all duration-700 ${
-              isOpen ? "w-[600px] top-0 max-lg:w-screen" : "w-0 top-0 "
+            className={`absolute   py-[50px] h-screen bg-white text-black  flex flex-col rounded-lg transition-all duration-700  z-[100] ${
+              isOpen
+                ? "w-[600px] left-0 top-0 max-lg:w-screen"
+                : "w-0 top-0 left-[-1000px] "
             }`}
           >
             {targets.map((e) => {
@@ -155,7 +140,7 @@ const Nav = () => {
       </div>
       <div
         className={`absolute left-0 w-screen transition-all  duration-700${
-          searchOpen ? " top-[100px]" : "  top-0"
+          searchOpen ? " top-[100px]" : "  top-[80px]"
         }`}
       >
         <div
