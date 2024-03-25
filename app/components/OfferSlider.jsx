@@ -1,5 +1,6 @@
 "use client";
 import { Splide, SplideTrack, SplideSlide } from "@splidejs/react-splide";
+import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/react-splide/css";
 import React, { useState, useEffect } from "react";
 import SliderCard from "./SliderCard";
@@ -34,13 +35,18 @@ const OfferSlider = () => {
       <Splide
         aria-label="My Favorite Images"
         options={{
-          type: "loop",
+          type: "loop", // Experiment with disabling loop temporarily
           perPage: perPage,
           arrows: false,
-          autoplay: true,
           pagination: false,
           gap: 46,
+
+          drag: "free",
+          autoScroll: {
+            speed: 1, // Try increasing speed for visibility
+          },
         }}
+        extensions={{ AutoScroll }}
       >
         {data.map((e, i) => {
           return (
