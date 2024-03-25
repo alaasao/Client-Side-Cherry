@@ -18,7 +18,7 @@ const Change = () => {
       >
         Véhicules
         <span
-          className={`absolute left-0 inline-block w-0 h-[3px] -bottom-0 max-lg:bg-light group-hover:w-full transition-all ease duration-300 z-[1]
+          className={`absolute left-0 inline-block w-0 h-[3px] -bottom-0 max-lg:bg-light group-hover:w-full transition-all ease duration-300
     //   ${path === "/marketplace" ? "w-full" : "w-0"}   
       bg-[#D12621] `}
         ></span>

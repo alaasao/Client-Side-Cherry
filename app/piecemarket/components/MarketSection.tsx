@@ -3,18 +3,18 @@ import React, { useState } from "react";
 import FilterSideBar from "./FilterSideBar";
 import Market from "./Market";
 interface FilterList {
-  colors: string[];
-  motors: string[];
-  energie: string[];
+  categorie: string[];
+  modele: string[];
+  etat: string[];
   prix: number[];
 }
 const MarketSection = () => {
   let [filterList, setFilterList] = useState<FilterList>({
-    colors: [],
-    motors: [],
-    energie: [],
+    categorie: [],
+    modele: [],
+    etat: [],
 
-    prix: [0, 10000000],
+    prix: [0, 10000],
   });
 
   return (

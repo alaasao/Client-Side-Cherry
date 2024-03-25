@@ -6,6 +6,7 @@ import Link from "next/link";
 import { CiUser, CiMenuBurger, CiSearch } from "react-icons/ci";
 import { FiMenu } from "react-icons/fi";
 import { CgCloseR } from "react-icons/cg";
+import CustomLink from './CustomLink'
 const targets = [
   { target: "/marketplace", title: "Nos modèle" },
   { target: "/events", title: "Nos évènements" },
@@ -13,30 +14,9 @@ const targets = [
   { target: "/FAQ", title: "FAQ" },
   { target: "/about", title: "About Us" },
 ];
-interface CustomLinkProps {
-  href: string;
-  title: string;
-  className: string;
-  currentPath: string;
-}
 
-const CustomLink: FC<CustomLinkProps> = ({
-  href,
-  title,
-  className,
-  currentPath,
-}: CustomLinkProps) => {
-  return (
-    <Link href={href} className={`${className} relative group  cursor-pointer`}>
-      {title}
-      <span
-        className={`absolute left-0 inline-block w-0 h-[3px] -bottom-2 max-lg:bg-light group-hover:w-full transition-all ease duration-300
-      ${currentPath === href ? "w-full" : "w-0"}   
-      bg-[#D12621] `}
-      ></span>
-    </Link>
-  );
-};
+
+
 const Nav = () => {
   let [isOpen, setIsOpen] = useState(false);
   let currentPath = usePathname();
@@ -160,7 +140,7 @@ const Nav = () => {
       </div>
       <div
         className={`absolute left-0 w-screen transition-all  duration-700${
-          searchOpen ? " top-[100px]" : "  top-0"
+          searchOpen ? " top-[100px]" : "  top-[80px]"
         }`}
       >
         <div

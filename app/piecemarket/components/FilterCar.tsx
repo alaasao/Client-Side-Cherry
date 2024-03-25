@@ -2,9 +2,9 @@ import React, { FC, Dispatch, SetStateAction } from "react";
 import { MdDone } from "react-icons/md";
 
 interface FilterList {
-  colors: string[];
-  motors: string[];
-  energie: string[];
+  categorie: string[];
+  modele: string[];
+  etat: string[];
   prix: number[];
 }
 
@@ -29,7 +29,7 @@ const FilterCar: FC<FilterCarProps> = ({
       return array;
     }
   }
-
+  console.log(filterList, catName);
   // console.log(filterList[catName], catProps);
   return (
     <div>
@@ -48,7 +48,7 @@ const FilterCar: FC<FilterCarProps> = ({
                     [catName]: toggle(
                       filterList[
                         catName as keyof typeof filterList
-                      ] as typeof filterList.colors,
+                      ] as typeof filterList.categorie,
                       elem
                     ),
                   });
