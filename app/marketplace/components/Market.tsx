@@ -5,8 +5,7 @@ import { CiSearch } from "react-icons/ci";
 interface MarketProps {
   isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
-  v;
-  filterList: {
+    filterList: {
     colors: string[];
     motors: string[];
     energie: string[];
