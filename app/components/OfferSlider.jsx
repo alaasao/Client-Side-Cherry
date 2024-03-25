@@ -35,7 +35,7 @@ const OfferSlider = () => {
       <Splide
         aria-label="My Favorite Images"
         options={{
-          type: "loop", // Experiment with disabling loop temporarily
+          type: "loop",
           perPage: perPage,
           arrows: false,
           pagination: false,
@@ -43,7 +43,7 @@ const OfferSlider = () => {
 
           drag: "free",
           autoScroll: {
-            speed: 1, // Try increasing speed for visibility
+            speed: 1,
           },
         }}
         extensions={{ AutoScroll }}

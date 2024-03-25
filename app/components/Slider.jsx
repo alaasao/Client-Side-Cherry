@@ -43,10 +43,10 @@ const Slider = () => {
           type: "loop",
           perPage: perPage,
           arrows: false,
-          autoplay: true,
+     
           pagination: false,
           drag: "free",
-          // Add AutoScroll extension
+         
           autoScroll: { speed: 1 },
         }}
         extensions={{ AutoScroll }}

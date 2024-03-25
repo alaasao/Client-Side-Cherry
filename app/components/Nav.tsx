@@ -6,7 +6,7 @@ import Link from "next/link";
 import { CiUser, CiMenuBurger, CiSearch } from "react-icons/ci";
 import { FiMenu } from "react-icons/fi";
 import { CgCloseR } from "react-icons/cg";
-import CustomLink from './CustomLink'
+import CustomLink from "./CustomLink";
 const targets = [
   { target: "/marketplace", title: "Nos modèle" },
   { target: "/events", title: "Nos évènements" },
@@ -14,8 +14,6 @@ const targets = [
   { target: "/FAQ", title: "FAQ" },
   { target: "/about", title: "About Us" },
 ];
-
-
 
 const Nav = () => {
   let [isOpen, setIsOpen] = useState(false);
@@ -87,14 +85,14 @@ const Nav = () => {
         />
       </ul>
       <div className="flex gap-[1.5vw]">
-        <CiSearch
+        {/* <CiSearch
           className={`w-8 h-8 ${
             currentPath === "/" ? "text-white cursor-pointer " : ""
           } `}
           onClick={() => {
             serSearchOpen((prev) => !prev);
           }}
-        />
+        /> */}
         <CiUser
           className={`w-8 h-8 ${currentPath === "/" ? "text-white" : ""} `}
         />
