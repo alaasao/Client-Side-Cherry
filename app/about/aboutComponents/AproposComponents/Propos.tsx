@@ -5,7 +5,8 @@ import { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 type Demoprops = {
   title: string;
-  description: string;
+  shortText: string;
+  longText:string;
 };
 
 const Propos = (props: Demoprops) => {
@@ -27,13 +28,12 @@ const Propos = (props: Demoprops) => {
         />
 
         <div className=" sm:italic  pl-[40px] sm:max-w-[90%] w-full h-auto  text-sm  font-[400] sm:font-[500] sm:text-sm md:text-xl sm:text-start sm:pr-2 sm:leading-[37px]">
-          Sarl Automobile Leader Company ALC est le représentant officiel de la
-          marque CHERY en Algérie.
+        {props.shortText.split('\n').map((line, index) => (
+        <React.Fragment key={index}>
+          {line}
           <br />
-          Depuis 2020, ALC est entrée en service en Algérie dans le but
-          d&apos;assurer la distribution et la commercialisation des véhicules
-          CHERY ainsi que, leur Service après-vente.
-          <br />
+        </React.Fragment>
+      ))}
           <span
             className={`max-h-0 transition-all ease-in-out duration-1000 overflow-hidden inline-block md:max-h-[50rem] ${
               collapse
@@ -41,22 +41,13 @@ const Propos = (props: Demoprops) => {
                 : ""
             }`}
           >
-            Une équipe de cadres hautement qualifiée qui s&apos;engage à fournir
-            un produit représentatif et compétitif afin de satisfaire les
-            clients et créer de l&apos;emploi et de la richesse pour le pays.
-            <br />
-            L&apos;objectif de l&apos;ALC est de proposer une large gamme de
-            véhicules CHERY, couvrant les besoins essentiels du marché algérien
-            avec un choix de gammes diverses, de segments, de motorisations et
-            de finitions, sur pratiquement toutes les régions d&apos;Algérie.
-            <br />
-            ALC compte prendre en charge tous les cas de garantie des véhicules
-            qui seront vendus par son réseau en Algérie.
-            <br />
-            Ses succursales et agents agréés ne seront pas seulement des points
-            de vente, mais elles offriront et couvriront également, tous les
-            services et besoins des clients de la marque CHERY.
-          </span>
+          {props.longText.split('\n').map((line, index) => (
+          <React.Fragment key={index}>
+            {line}
+            <br/>
+          </React.Fragment>
+      ))}
+      </span>
           <button
             className="md:hidden text-red-500"
             onClick={() => {
