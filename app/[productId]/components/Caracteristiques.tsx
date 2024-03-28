@@ -5,7 +5,7 @@ import Main from "./Main";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import DescSection from "./DescSection";
-import Confort from "./Confort";
+
 const Caracteristiques: FC<CaracteristiquesProps> = ({
   _id,
   PromoObj,
