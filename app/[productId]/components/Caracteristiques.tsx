@@ -68,7 +68,7 @@ const Caracteristiques: FC<CaracteristiquesProps> = ({
         <DescSection
           props={MoteurObj}
           Title="MOTEUR"
-          img="../assets/details/settings.png"
+          img="../assets/details/Settings.png"
         />
         <DescSection
           props={ConfortObj}
@@ -99,7 +99,7 @@ const Caracteristiques: FC<CaracteristiquesProps> = ({
 
 export default Caracteristiques;
 
-interface CaracteristiquesProps {
+export  interface CaracteristiquesProps {
   _id: string;
 
   Images: { Images: string[]; Color: string }[];

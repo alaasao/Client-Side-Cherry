@@ -3,12 +3,12 @@ import data from "./components/data";
 import Caracteristiques from "./components/Caracteristiques";
 export default function Page({ params }: { params: { productId: string } }) {
   let car = data.filter((e) => e._id === params.productId)[0];
+  
 
   return (
     <div>
       <Caracteristiques
         _id={car._id}
-  
         Images={car.Images}
         Modele={car.Modele}
         Garentie={car.Garentie}
