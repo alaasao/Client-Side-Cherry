@@ -52,7 +52,7 @@ const Main: FC<MainProps> = ({
       </div>
       <div className="grid grid-cols-3 gap-[50px] max-md:gap-[15px]  w-full">
         <div className="flex flex-col gap-[30px] max-md:gap-[10px]  font-medium">
-          <h1 className="text-2xl capitalize  text-[#959494]">Prix_TTC</h1>
+          <h1 className="text-2xl max-md:text-[16px] capitalize  text-[#959494]">Prix_TTC</h1>
           <p className="capitalize  text-2xl max-md:text-[16px]">
             {Prix_TTC.toLocaleString()}DZ
           </p>
