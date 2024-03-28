@@ -18,7 +18,7 @@ const Offers: FC = () => {
       <h1 className="w-[700px] text-center  max-lg:w-[300px] max-lg:text-3xl text-6xl text-black mx-auto font-medium mb-[80px]">
         OFFRES DU MOMENT
       </h1>
-      <div className="w-full flex  flex-wrap px-[23px] justify-center gap-[20px] pb-[140px] ">
+      <div className="w-full flex  flex-wrap px-[23px] max-md:[5px] justify-center gap-[20px] pb-[140px] ">
         <OfferSlider />
       </div>
       <Link

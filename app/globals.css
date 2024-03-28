@@ -89,7 +89,7 @@
   src: url("good times rg.otf");
 }
 .good {
-  font-family: good;
+  font-family: "Good Times Rg";
 }
 .sliderText {
   color: #686565;
@@ -134,4 +134,10 @@ img,
 video {
   max-width: none;
   height: none;
+}
+.stick {
+  position: fixed;
+  top: 0; /* Adjust as needed */
+
+  z-index: 999; /* Ensure it's above other content */
 }

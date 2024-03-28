@@ -18,7 +18,7 @@ const data = [
 ];
 const Slider = () => {
   const [perPage, setPerPage] = useState(1);
-
+  const [gap, setGap] = useState(0);
   useEffect(() => {
     const handleResize = () => {
       const windowWidth = window.innerWidth;
@@ -28,6 +28,7 @@ const Slider = () => {
         setPerPage(2);
       } else {
         setPerPage(1);
+        setGap(46);
       }
     };
     window.addEventListener("resize", handleResize);
@@ -43,10 +44,10 @@ const Slider = () => {
           type: "loop",
           perPage: perPage,
           arrows: false,
-     
+          gap: gap,
           pagination: false,
           drag: "free",
-         
+
           autoScroll: { speed: 1 },
         }}
         extensions={{ AutoScroll }}
