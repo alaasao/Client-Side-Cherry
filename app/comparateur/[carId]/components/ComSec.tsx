@@ -5,20 +5,38 @@ import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoClose } from "react-icons/io5";
 import { MdDone } from "react-icons/md";
-const DescSection = ({ props, Title, img }) => {
+import {
+  ConfortObj,
+  LookObj,
+  MoteurObj,
+  SecurityObj,
+  VehiculeObj,
+} from "../../../[productId]/components/Caracteristiques";
+interface ComSecProps {
+  FirstProps: MoteurObj | LookObj | ConfortObj | SecurityObj | VehiculeObj;
+  SecondProps:
+    | MoteurObj
+    | LookObj
+    | ConfortObj
+    | SecurityObj
+    | VehiculeObj
+    | undefined;
+  Title: string;
+}
+const ComSec: FC<ComSecProps> = ({
+  FirstProps,
+  Title,
+  SecondProps,
+}: ComSecProps) => {
   let [open, setOpen] = useState(false);
-  Object.entries(props).map(([key, value]) => {
-    console.log(`${key}: ${value}`);
-  });
+
   return (
-    <div className="w-full flex flex-col mb-[50px] ">
-      <div className="flex items-center  w-full justify-between border-b-[1px] pb-[23px] mt-[23px]  border-[#A0A0A0]">
-        <div className="flex gap-[10px] items-center text-3xl ">
-          <img src={img} alt="" className="w-[40px]" />
-          <div className="font-medium* "> {Title}</div>
-        </div>
+    <div className="w-full flex flex-col  ">
+      <div className="flex items-center  w-full justify-between px-[15px]   bg-[#303030] text-white  h-[55px]   ">
+        <div className="font-medium text-3xl  "> {Title}</div>
+
         <div
-          className="text-[#F70202] text-3xl cursor-pointer"
+          className=" text-3xl cursor-pointer"
           onClick={() => setOpen((prev) => !prev)}
         >
           {" "}
@@ -39,26 +57,44 @@ const DescSection = ({ props, Title, img }) => {
               transition: { duration: 1 },
             }}
             exit={{ height: 0, opacity: 0 }}
-            className="mt-2 ml-4 "
+            className=" "
           >
-            <div className="w-full flex justify-between max-sm:justify-center flex-wrap  mb-[127px]">
-              {Object.entries(props).map(([key, value], index) => {
+            <div className="w-full flex justify-between flex-col  ">
+              {Object.entries(FirstProps).map(([key, value], index) => {
                 return (
                   <div
-                    className="  grid grid-cols-2 text-2xl capitalize max-xl:text-[16px] w-[48%] mb-[40px] max-md:w-full gap-[10px]"
+                    className=" flex flex-col text-2xl capitalize max-xl:text-[16px] w-full   max-md:w-full "
                     key={index + key}
                   >
-                    <div className="text-[#848484]   ">{titles[key]}</div>
-                    <div className="  font-bold">
-                      {typeof value === "boolean" ? (
-                        value ? (
-                          <MdDone className="text-3xl text-[#39A63D] mx-auto my-auto" />
+                    <div className=" w-full justify-center items-center flex  h-[40px] max-md:text-xl ">
+                      {titles[key as keyof typeof titles]}
+                    </div>
+                    <div className="w-full grid grid-cols-2">
+                      {" "}
+                      <div className="  font-bold bg-[#E4E4E4] border-[#6363634F] border-[1px] flex items-center justify-center h-[55px]">
+                        {typeof value === "boolean" ? (
+                          value ? (
+                            <MdDone className="text-3xl text-[#39A63D] mx-auto my-auto" />
+                          ) : (
+                            <IoClose className="text-3xl text-[#DB2719] mx-auto my-auto" />
+                          )
                         ) : (
-                          <IoClose className="text-3xl text-[#DB2719] mx-auto my-auto" />
-                        )
-                      ) : (
-                        value
-                      )}
+                          value
+                        )}
+                      </div>
+                      <div className="  font-bold bg-[#F4F4F4]  border-[#6363634F] border-[1px] h-[55px] flex items-center justify-center ">
+                        {typeof value === "boolean" ? (
+                          SecondProps &&
+                          SecondProps[key as keyof typeof SecondProps] ? (
+                            <MdDone className="text-3xl text-[#39A63D] mx-auto my-auto" />
+                          ) : (
+                            <IoClose className="text-3xl text-[#DB2719] mx-auto my-auto" />
+                          )
+                        ) : (
+                          SecondProps &&
+                          SecondProps[key as keyof typeof SecondProps]
+                        )}
+                      </div>
                     </div>
                   </div>
                 );
@@ -71,7 +107,7 @@ const DescSection = ({ props, Title, img }) => {
   );
 };
 
-export default DescSection;
+export default ComSec;
 const titles = {
   Energie: "Energie",
   Motricite: "Motricite",
