@@ -21,7 +21,7 @@ const Nav = () => {
   let [searchOpen, serSearchOpen] = useState(false);
   return (
     <div
-      className={`w-screen box-border min-w-0 h-[90px]  border-b-[3px] ${
+      className={`w-screen box-border min-w-0 h-[90px]  border-b-[3px]  ${
         currentPath === "/"
           ? " border-white absolute top-0 z-[10] bg-transparent text-white"
           : " bg-white text-black border-[#BEBBBA]"
@@ -42,7 +42,7 @@ const Nav = () => {
         className="flex flex-col items-center max-md:absolute  max-md:top-2 max-md:left-1/2 max-md:-translate-x-1/2"
       >
         <img src="../assets/logo.png" alt="logo" className="w-24 h-14 " />
-        <div className="good text-[12px] font-normal text-[#D12621] ">
+        <div className=" good text-[12px] font-normal text-[#D12621] ">
           speed motors
         </div>
       </Link>

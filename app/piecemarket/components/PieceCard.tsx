@@ -113,8 +113,12 @@ const PieceCard: FC<PieceCardProps> = ({
           hide ? " hidden" : ""
         }`}
       >
-        <img src={img} className="w-full h-[217px] mb-[10px]  " alt="" />
-        <div className="flex flex-col w-full px-[5px] gap-[6px]">
+        <img
+          src={img}
+          className="w-full h-[217px] mb-[10px] rounded-t-xl  "
+          alt=""
+        />
+        <div className="flex flex-col w-full px-[15px] gap-[6px]">
           <h1 className="font-bold text-xl w-full capitalize">{name}</h1>
           <div className="text-[#A5A5A5]">
             {" "}
