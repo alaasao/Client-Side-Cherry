@@ -9,7 +9,7 @@ import { CgCloseR } from "react-icons/cg";
 import CustomLink from "./CustomLink";
 const targets = [
   { target: "/marketplace", title: "Nos modèle" },
-  { target: "/events", title: "Nos évènements" },
+  { target: "/event", title: "Nos évènements" },
   { target: "/services", title: "Services" },
   { target: "/FAQ", title: "FAQ" },
   { target: "/about", title: "About Us" },
@@ -159,6 +159,7 @@ const Nav = () => {
             } `}
             onClick={() => console.log("jjj")}
             alt=""
+            
           />
         </div>
       </div>
