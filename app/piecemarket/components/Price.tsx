@@ -30,7 +30,7 @@ const Price: FC<PriceProps> = ({ filterList, setFilterList }: PriceProps) => {
   }, [minValue, maxValue]);
   return (
     <div
-      className={`md:col-span-2 grid md:grid-cols-[1fr_1fr] gap-[40px] max-sm:gap-[20px] transition-all duration-500  mb-[20px] ${
+      className={`sm:col-span-2 grid sm:grid-cols-[1fr_1fr] gap-[40px] max-sm:gap-[20px] transition-all duration-500  mb-[20px] ${
         maxOpen || minOpen ? "mb-[40px]" : ""
       }`}
     >

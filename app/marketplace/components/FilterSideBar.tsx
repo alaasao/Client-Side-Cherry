@@ -111,7 +111,7 @@ const FilterSideBar: FC<FilterSideBarProps> = ({
                 transition: { duration: 0.5 },
               }}
               exit={{ height: 0, opacity: 0 }}
-              className={`grid grid-cols-[1fr_1fr_1fr_1fr] gap-x-[40px] max-sm:grid-cols-[1fr_1fr]  py-[20px] w-full max-md:gap-[20px] bg-white rounded-2xl md:shadow-sm px-[3vw]  `}
+              className={`grid grid-cols-[1fr_1fr_1fr_1fr] gap-x-[40px] max-sm:grid-cols-[1fr_1fr]  py-[20px] w-full max-md:gap-x-[20px] bg-white rounded-2xl md:shadow-sm px-[3vw]  `}
             >
               {filterCaracteristiques.map((element, index) => {
                 let catName = Object.keys(element)[0];
