@@ -1,6 +1,6 @@
 import React from 'react'
 import Data from '../eventComponents/data'
-import Container from '../eventComponents/container'
+import Container from '../../components/Container'
 import Image from 'next/image'
 type DemoProp={
     params:any,

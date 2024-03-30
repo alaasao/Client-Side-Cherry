@@ -1,6 +1,6 @@
 import React from 'react'
 import Events from './eventComponents/events'
-import Container from './eventComponents/container'
+import Container from '../components/Container'
 const page = () => {
   return (
     <div  className='h-[95%] w-screen flex items-center gap-8 flex-col justify-center mb-[50px] bg-white text-black'>
