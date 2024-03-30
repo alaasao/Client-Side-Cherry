@@ -7,7 +7,7 @@ interface CompareProps {
   secondCar: CaracteristiquesProps | null;
 }
 const Compare: FC<CompareProps> = ({ firstCar, secondCar }: CompareProps) => {
-  // console.log(firstCar, secondCar);
+
   let path = usePathname();
   return (
     <div className="w-full   px-[4vw] ">
