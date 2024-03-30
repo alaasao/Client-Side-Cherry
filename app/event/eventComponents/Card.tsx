@@ -21,10 +21,10 @@ const Card = (props:DemoProp) => {
             </Image>
         </div>     
             
-            <div className='flex flex-col  justify-between'>
-                        <p className='w-full md:max-w-[80%] lg:max-w-[80%] text-xs sm:text-lg md:text-sm md:text-left text-center'>{props.littleDescription}</p>
+            <div className='flex flex-col  justify-around'>
+                        <p className='w-full md:max-w-[80%] lg:max-w-[80%] text-xs sm:text-lg md:text-sm md:text-left lg:text-lg text-center'>{props.littleDescription}</p>
 
-                        <div className='flex flex-col-reverse gap-2 sm:flex-row items-center w-full justify-center sm:justify-between py-2' > 
+                        <div className='flex flex-col-reverse gap-2 mt-4 sm:flex-row items-center w-[80%] justify-center sm:justify-around py-2' > 
                              <Link href={`/event/${props.id}`}>
                                 <button  className='text-[#D12621] border-2 border-[#858282] rounded-[10px] good  animation' >
                                             <span className="relative  z-10 text-nowrap  good text-sm ">En Savoir Plus</span>  

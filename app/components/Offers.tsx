@@ -22,7 +22,7 @@ const Offers: FC = () => {
         <OfferSlider />
       </div>
       <Link
-        href={"/marketplace"}
+        href={"/offres"}
         className="text-5xl justify-between border-[1px] hover:scale-[1.1] rounded-xl max-xl:text-xl min-w-[300px] border-black w-[35vw] text-black flex items-center gap-[10px] mx-auto px-[23px] py-[16px] "
       >
         <div> VOIR TOUTES LES OFFRES </div>{" "}
