@@ -59,7 +59,7 @@ const FilterSideBar: FC<FilterSideBarProps> = ({
   };
 
   return (
-    <div className="max-md:bg-[#F1F1F0] w-full relative">
+    <div className="max-md:bg-[#F1F1F0] w-full relative ">
       <div
         className={` capitalize transition-all duration-700  max-md: max-md:z-[300]  max-md:overflow-hidden  w-full bg-[#F1F1F0] px-[5vw] pb-[20px] `}
       >
@@ -91,7 +91,7 @@ const FilterSideBar: FC<FilterSideBarProps> = ({
               name=""
               id=""
               placeholder="Search something here"
-              className="h-full w-full pl-[8px] placeholder:text-[#827D7D] rounded-xl  focus:outline-none"
+              className="h-full w-full pl-[8px] text-[#827D7D] rounded-xl  outline-none bg-white"
               onChange={(e) => {
                 setSearchKey(e.target.value.toLowerCase());
               }}
@@ -111,7 +111,7 @@ const FilterSideBar: FC<FilterSideBarProps> = ({
                 transition: { duration: 0.5 },
               }}
               exit={{ height: 0, opacity: 0 }}
-              className={`grid grid-cols-[1fr_1fr_1fr_1fr] gap-x-[40px] max-sm:grid-cols-[1fr_1fr]  pt-[20px] w-full max-md:gap-[20px] bg-white rounded-2xl md:shadow-sm px-[3vw]  `}
+              className={`grid grid-cols-[1fr_1fr_1fr_1fr] gap-x-[40px] max-sm:grid-cols-[1fr_1fr]  py-[20px] w-full max-md:gap-[20px] bg-white rounded-2xl md:shadow-sm px-[3vw]  `}
             >
               {filterCaracteristiques.map((element, index) => {
                 let catName = Object.keys(element)[0];

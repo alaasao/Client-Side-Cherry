@@ -36,7 +36,7 @@ const FilterCar: FC<FilterCarProps> = ({
 
   // console.log(filterList[catName], catProps);
   return (
-    <div className="w-full relative">
+    <div className="w-full relative mb-[20px]">
       <div
         className={`flex items-center   justify-between text-[#858282] mx-auto w-full  h-[40px] mb-[10px]  transition-all duration-500  ${
           open ? "" : "border-[#858282] border-b-[0.5px]"
@@ -57,14 +57,14 @@ const FilterCar: FC<FilterCarProps> = ({
         </div>
       </div>
       <div
-        className={`flex flex-col gap-x-[10px]  rounded-b-lg  w-full pl-[5px] text-[#858282] transition-all duration-500  top-[50px] left-0 bg-white z-[300] ${
+        className={`flex flex-col gap-[10px]  rounded-b-lg  w-full pl-[5px] text-[#858282] transition-all duration-500  top-[50px] left-0 bg-white z-[300] ${
           open ? "" : "opacity-0"
         }`}
       >
         {catProps.map((elem, i) => {
           return (
             <div
-              className={`flex flex-col  gap-[10px]  transition-all duration-500 ${
+              className={`flex flex-col  gap-[10px]  transition-all duration-500  ${
                 open ? "h-[40px]" : "h-0 opacity-0"
               }`}
               key={i - 1000 + catName}

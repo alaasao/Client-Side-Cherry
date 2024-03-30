@@ -68,7 +68,7 @@ const Price: FC<PriceProps> = ({ filterList, setFilterList }: PriceProps) => {
           >
             <input
               type="number"
-              className="w-full h-full placeholder:text-[#858282] text-[#858282] outline-none "
+              className="w-full h-full placeholder:text-[#858282] text-[#858282] outline-none  bg-white"
               value={minValue}
               onChange={(e) => {
                 setMinValue(parseInt(e.target.value));
@@ -137,7 +137,7 @@ const Price: FC<PriceProps> = ({ filterList, setFilterList }: PriceProps) => {
           >
             <input
               type="number"
-              className="w-full h-full placeholder:text-[#858282] text-[#858282] outline-none "
+              className="w-full h-full text-[#858282]  outline-none bg-white "
               value={maxValue}
               onChange={(e) => {
                 setMaxValue(parseInt(e.target.value));

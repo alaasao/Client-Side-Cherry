@@ -1,4 +1,10 @@
-import React, { Dispatch, FC, SetStateAction, useEffect, useState } from "react";
+import React, {
+  Dispatch,
+  FC,
+  SetStateAction,
+  useEffect,
+  useState,
+} from "react";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 
 interface FilterList {
@@ -15,16 +21,16 @@ const Price: FC<PriceProps> = ({ filterList, setFilterList }: PriceProps) => {
   let [minOpen, setMinOpen] = useState(false);
   let [maxOpen, setMaxOpen] = useState(false);
   const [minValue, setMinValue] = useState<number>(0);
-    const [maxValue, setMaxValue] = useState<number>(10000000);
-    useEffect(() => {
-        setFilterList({
-            ...filterList,
-            prix: [minValue, maxValue],
-          });
-    },[minValue,maxValue])
+  const [maxValue, setMaxValue] = useState<number>(10000000);
+  useEffect(() => {
+    setFilterList({
+      ...filterList,
+      prix: [minValue, maxValue],
+    });
+  }, [minValue, maxValue]);
   return (
     <div
-      className={`md:col-span-2 grid md:grid-cols-[1fr_1fr] gap-x-[40px] transition-all duration-500  ${
+      className={`md:col-span-2 grid md:grid-cols-[1fr_1fr] gap-[40px] max-sm:gap-[20px] transition-all duration-500  mb-[20px] ${
         maxOpen || minOpen ? "mb-[40px]" : ""
       }`}
     >
@@ -62,7 +68,7 @@ const Price: FC<PriceProps> = ({ filterList, setFilterList }: PriceProps) => {
           >
             <input
               type="number"
-              className="w-full h-full placeholder:text-[#858282] text-[#858282] outline-none "
+              className="w-full h-full placeholder:text-[#858282] text-[#858282] outline-none bg-white "
               value={minValue}
               onChange={(e) => {
                 setMinValue(parseInt(e.target.value));
@@ -85,7 +91,7 @@ const Price: FC<PriceProps> = ({ filterList, setFilterList }: PriceProps) => {
                   }
 
                   setMinValue((prev) => prev + 1);
- 
+
                   console.log(filterList);
                 }}
               />
@@ -97,7 +103,6 @@ const Price: FC<PriceProps> = ({ filterList, setFilterList }: PriceProps) => {
                   }
 
                   setMinValue((prev) => prev - 1);
- 
                 }}
               />
             </div>
@@ -138,12 +143,11 @@ const Price: FC<PriceProps> = ({ filterList, setFilterList }: PriceProps) => {
           >
             <input
               type="number"
-              className="w-full h-full placeholder:text-[#858282] text-[#858282] outline-none "
+              className="w-full h-full placeholder:text-[#858282] text-[#858282] outline-none bg-white"
               value={maxValue}
               max={10000000}
               onChange={(e) => {
                 setMaxValue(parseInt(e.target.value));
-   
               }}
             />
             <div
@@ -158,7 +162,6 @@ const Price: FC<PriceProps> = ({ filterList, setFilterList }: PriceProps) => {
                     return;
                   }
                   setMaxValue((prev) => prev + 1);
- 
                 }}
               />
               <MdKeyboardArrowDown
@@ -169,7 +172,6 @@ const Price: FC<PriceProps> = ({ filterList, setFilterList }: PriceProps) => {
                   }
 
                   setMaxValue((prev) => prev - 1);
-
                 }}
               />
             </div>
