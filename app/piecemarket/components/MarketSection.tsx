@@ -9,7 +9,6 @@ interface FilterList {
   prix: number[];
 }
 const MarketSection = () => {
-  let [searchKey, setSearchKey] = useState("");
   let [isOpen, setIsOpen] = useState(false);
   let [filterList, setFilterList] = useState<FilterList>({
     categorie: [],
@@ -18,13 +17,26 @@ const MarketSection = () => {
 
     prix: [0, 10000],
   });
-
+  let [searchKey, setSearchKey] = useState("");
   return (
-    <div className="w-screen grid md:grid-cols-[300px_1fr] ">
-      <FilterSideBar filterList={filterList} setFilterList={setFilterList} isOpen={isOpen} setIsOpen={setIsOpen} />
+    <div className="w-screen flex flex-col  ">
+      <FilterSideBar
+        searchKey={searchKey}
+        setSearchKey={setSearchKey}
+        filterList={filterList}
+        setFilterList={setFilterList}
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+      />
       <div>
         <h1></h1>
-        <Market filterList={filterList}  isOpen={isOpen} setIsOpen={setIsOpen} />
+        <Market
+          filterList={filterList}
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          searchKey={searchKey}
+          setSearchKey={setSearchKey}
+        />
       </div>
     </div>
   );

@@ -19,6 +19,7 @@ interface CarCardProps {
     colors: string[];
     motors: string[];
     energie: string[];
+    boite: string[];
     prix: number[];
   };
 }
@@ -38,14 +39,14 @@ const CarCard: FC<CarCardProps> = ({
   let [hide, setHide] = useState(false);
   useEffect(() => {
     setHide(
-      (!filter.motors.some((e) => e === motor) && filter.motors.length !== 0) ||
+      (!filter.motors.some((e) => e === motor) && filter.motors.length !== 0)  ||
         (!filter.energie.some((e) => e === energie) &&
           filter.energie.length !== 0) ||
         (!filter.colors.some((e) => color.some((ele) => ele === e)) &&
           filter.colors.length !== 0) ||
         filter.prix[0] > prix ||
         filter.prix[1] < prix ||
-        !name.toLowerCase().includes(searchKey)
+        !name.toLowerCase().includes(searchKey)|| !filter.boite.some((e) => e === boite) && filter.boite.length !== 0
     );
   }, [filter, searchKey]);
   return (
