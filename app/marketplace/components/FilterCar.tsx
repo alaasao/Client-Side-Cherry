@@ -1,10 +1,11 @@
 import React, { FC, Dispatch, SetStateAction } from "react";
 import { MdDone } from "react-icons/md";
-
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 interface FilterList {
   colors: string[];
   motors: string[];
   energie: string[];
+  boite: string[];
   prix: number[];
 }
 interface Ff {
@@ -31,20 +32,49 @@ const FilterCar: FC<FilterCarProps> = ({
       return array;
     }
   }
+  let [open, setOpen] = React.useState(false);
 
   // console.log(filterList[catName], catProps);
   return (
-    <div>
-      <h2 className="mb-[10px] text-[#858282] font-semibold text-[10px] capitalize">
-        {catName}
-      </h2>
-      <div className="flex flex-col gap-[10px] w-full ">
+    <div className="w-full relative">
+      <div
+        className={`flex items-center   justify-between text-[#858282] mx-auto w-full  h-[40px] mb-[10px]  transition-all duration-500  ${
+          open ? "" : "border-[#858282] border-b-[0.5px]"
+        } `}
+      >
+        <div className="font-bold   "> {catName}</div>
+
+        <div
+          className="  cursor-pointer"
+          onClick={() => setOpen((prev) => !prev)}
+        >
+          {" "}
+          {open ? (
+            <MdKeyboardArrowUp className="" />
+          ) : (
+            <MdKeyboardArrowDown className="" />
+          )}
+        </div>
+      </div>
+      <div
+        className={`flex flex-col gap-x-[10px]  rounded-b-lg  w-full pl-[5px] text-[#858282] transition-all duration-500  top-[50px] left-0 bg-white z-[300] ${
+          open ? "" : "opacity-0"
+        }`}
+      >
         {catProps.map((elem, i) => {
           return (
-            <div className="flex flex-col gap-[10px] " key={i - 1000 + catName}>
+            <div
+              className={`flex flex-col  gap-[10px]  transition-all duration-500 ${
+                open ? "h-[40px]" : "h-0 opacity-0"
+              }`}
+              key={i - 1000 + catName}
+            >
               <div
                 className="flex gap-[8px] cursor-pointer "
                 onClick={() => {
+                  if (!open) {
+                    return;
+                  }
                   setFilterList({
                     ...filterList,
                     [catName]: toggle(
@@ -60,7 +90,9 @@ const FilterCar: FC<FilterCarProps> = ({
                   (e) => e === elem
                 ) ? (
                   <div
-                    className={`w-[20px] h-[20px] rounded-md border-[0.5px]  bg-[#FF4423] 
+                    className={`w-[20px]  rounded-md border-[0.5px]  bg-[#FF4423] ${
+                      open ? "h-[20px]" : "h-0 opacity-0"
+                    }
        
            `}
                   >
@@ -74,7 +106,13 @@ const FilterCar: FC<FilterCarProps> = ({
                   ></div>
                 )}
 
-                <p className="text-[#5E5959] font-semibold">{elem}</p>
+                <p
+                  className={` text-[#5E5959] font-semibold ${
+                    open ? "h-[20px]" : "h-0 opacity-0"
+                  }`}
+                >
+                  {elem}
+                </p>
               </div>
             </div>
           );
