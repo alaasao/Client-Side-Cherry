@@ -21,7 +21,6 @@ const ClientPage: FC<ClientPageProps> = ({
   );
   let [secondCar, setSecondCar] = useState<CaracteristiquesProps | null>(null);
   useEffect(() => {
-    console.log(Cars);
     setFirstCar(Cars.filter((e) => e._id === firstCarId)[0]);
     setSecondCar(Cars.filter((e) => e._id === secondCarId)[0]);
   }, [firstCarId, secondCarId, Cars]);

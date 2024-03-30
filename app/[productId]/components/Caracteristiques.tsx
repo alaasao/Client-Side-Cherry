@@ -57,7 +57,7 @@ const Caracteristiques: FC<CaracteristiquesProps> = ({
             LES CARACTÉRISTIQUES
           </div>
           <Link
-            href={`/${_id}`}
+            href={`comparateur/${_id}`}
             className="flex  items-center gap-[5px] text-white bg-[#E02727]  px-10 py-4 max-lg:px-4 max-lg:py-1 rounded-md"
           >
             <span className="max-sm:text-[12px]">Comparer</span>

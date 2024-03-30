@@ -14,7 +14,7 @@ const page = async ({ params }: { params: { carId: string } }) => {
 
   // let Cars: Array<CaracteristiquesProps> = await data.json();
   let Cars = data;
-  console.log(Cars.length);
+
   // Cars = Cars.slice(1);
   // console.log(Cars,"###########");
 
