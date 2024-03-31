@@ -7,7 +7,6 @@ interface CompareProps {
   secondCar: CaracteristiquesProps | null;
 }
 const Compare: FC<CompareProps> = ({ firstCar, secondCar }: CompareProps) => {
-
   let path = usePathname();
   return (
     <div className="w-full   px-[4vw] ">
@@ -26,10 +25,10 @@ const Compare: FC<CompareProps> = ({ firstCar, secondCar }: CompareProps) => {
               alt=" "
               className="w-full h-full rounded-3xl"
             />
-            {secondCar === null && (
+            {!secondCar && (
               <a
                 href={`${path}/#compare`}
-                className="absolute border-dashed border-[1px] border-[#939393] text-3xl text-[#939393] w-[340px] flex justify-center items-center py-[20px] top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 "
+                className="absolute border-dashed border-[0.5px] border-[#939393]  sm:text-3xl text-[#939393]  w-full flex justify-center items-center text-center py-[20px] top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 "
               >
                 + Ajouter une véhicule{" "}
               </a>
