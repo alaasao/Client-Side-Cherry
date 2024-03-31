@@ -1,7 +1,7 @@
 const Data =[
     {   
                 id:1,
-            image:"/assets/offres/carrrr.jpeg",
+            image:"/assets/offres/caroffre.png",
             title:"Le Tiggo 8 Pro Max :",
             sousTitle:"L'Élégance et la Puissance Réunies ",
             price:345,
@@ -9,7 +9,7 @@ const Data =[
     },
     {
         id:2,    
-        image:"/assets/offres/caroffre.png",
+        image:"/assets/offres/carrrr.jpeg",
             title:"Le Tiggo 8 Pro Max :",
             sousTitle:"L'Élégance et la Puissance Réunies ",
             price:345,
