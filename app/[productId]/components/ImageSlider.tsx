@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { FC } from 'react'
 interface ImageSliderProps {
     Images:{Images:string[],Color:string}[]
 }
-const ImageSlider:Fc<ImageSliderProps> = ({Images}:ImageSliderProps) => {
+const ImageSlider:FC<ImageSliderProps> = ({Images}:ImageSliderProps) => {
   return (
     <div className='w-screen h-screen'>
       
