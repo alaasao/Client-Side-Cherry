@@ -9,7 +9,7 @@ const page = () => {
   return (
 <div className=' h-[95%] w-screen flex items-center gap-8 flex-col justify-center mb-[50px] bg-white text-black'>
             <Container title={'decouvrez nos offres du moment chez '} subtitle={'Comparez plusieurs offres et trouvez facilement votre véhicule.Renseignez-vous sur les offres de toute notre gamme '} redtitle={'chery'}  />
-            <div className='w-full h-[20%]'>
+            <div className=' w-screen h-[20%]'>
               <Cover src='/assets/offres/cover.png' />
              </div>
             <div className='flex items-center justify-center good text-sm sm:text-lg md:text-xl lg:text-4xl my-8'>

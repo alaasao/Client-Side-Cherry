@@ -17,7 +17,7 @@ const LargeCard = (props:Demoprop) => {
           <div className='relative'>
                   { direction == 'l' && <div className={`absolute left-0 top-0 bg-gradient-to-l from-white to-transparent via-transparent  h-full w-full`}></div> }
                   { direction =='r' && <div className={`absolute left-0 top-0 bg-gradient-to-r from-white to-transparent via-transparent h-full w-full`}></div> }
-                    <div className='w-screen '>
+                    <div className=' w-screen object-cover '>
                     <img
                 src={props.image}
                 alt=""
@@ -34,8 +34,8 @@ const LargeCard = (props:Demoprop) => {
                     </div>
                     <div className='flex items-center flex-col   gap-6  '>
                                 <p className='text-[#D12621] opacity-100 underline text-sm sm:text-lg  lg:text-xl text-center'>A partir de {props.price}$ par apport</p>
-                                <button  className='text-[#D12621] border rounded-[30px]   w-[200px]  font-good  mt-4 h-4  animation' >
-                                    <span className="relative  z-10 text-nowrap good text-xs ">En profiter</span>  
+                                <button  className='text-[#D12621] border rounded-[30px] relative  z-10 text-nowrap good text-xs  w-[200px]  font-good  mt-4 h-4  animation ' >
+                                    En profiter
                                 </button>
                     </div>
                 </div>
