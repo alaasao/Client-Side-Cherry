@@ -33,16 +33,14 @@ const FilterCar: FC<FilterCarProps> = ({
   return (
     <div className="w-full relative">
       <div
-        className={`flex items-center   justify-between text-[#858282] mx-auto w-full  h-[40px]   transition-all duration-500  ${
+        className={`flex items-center   justify-between text-[#858282] cursor-pointer mx-auto w-full  h-[40px]   transition-all duration-500  ${
           open ? "" : "border-[#858282] border-b-[0.5px]"
         } `}
+        onClick={() => setOpen((prev) => !prev)}
       >
         <div className="font-bold   "> {catName}</div>
 
-        <div
-          className="  cursor-pointer"
-          onClick={() => setOpen((prev) => !prev)}
-        >
+        <div className="  cursor-pointer">
           {" "}
           {open ? (
             <MdKeyboardArrowUp className="" />
