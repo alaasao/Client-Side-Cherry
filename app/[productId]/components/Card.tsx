@@ -11,7 +11,7 @@ interface CardProps {
 const Card: FC<CardProps> = ({ Images, _id, Prix_TTC, sticky }: CardProps) => {
   return (
     <div
-      className={`flex flex-col items-center h-[740px] shadow-2xl max-lg:hidden  ${
+      className={` flex-col items-center h-[740px] shadow-2xl max-lg:hidden hidden  ${
         sticky ? "stick " : ""
       }`}
     >

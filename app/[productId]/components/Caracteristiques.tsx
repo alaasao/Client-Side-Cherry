@@ -44,7 +44,7 @@ const Caracteristiques: FC<CaracteristiquesProps> = ({
   return (
     <div>
       
-    <ImageSlider Images={Images} />
+    {/* <ImageSlider Images={Images} /> */}
     <div className="w-full grid grid-cols-[3fr_1fr] max-lg:grid-cols-1 ">
      
       <div className="px-[40px] max-md:px-[20px] py-[40px]">
