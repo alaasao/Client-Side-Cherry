@@ -1,37 +1,23 @@
 import React from 'react'
-import Propos from './aboutComponents/AproposComponents/Propos'
-import Image from 'next/image'
-import presentation from '../../public/assets/presentation .png' 
+import Propos from './aboutComponents/AproposComponents/Propos' 
 import Horaire from './aboutComponents/HoraireComponents/Horaire'
 import ContactUs from './aboutComponents/ContactUs'
+import Container from '../components/Container'
+import Cover from   './Cover'
 const page = () => {
   return (
 
 <div  className='h-[95%] w-screen flex items-center justify-center mb-[50px] bg-white text-black '>
     <div  className='w-[80%] flex flex-col justify-center items-center gap-8 '>
-        <div className='w-full  h-[10%] flex  justify-center text-center bg-white text-black '>
-            <div className='w-[80%] h-[30vh]  mt-[5vh] sm:w-[80%] sm:h-[40vh] sm:mt-[5vh] shadow-3xl flex justify-around sm:justify-around  items-center  rounded-[10px]'>
-                <div>
-                    <div className='font-[500] text-wrap text-sm sm:text-2xl md:text-4xl good leading-[54px] pb-2'>
-                        À propos de nous
-                    </div>  
-                    <div  className='text-xs sm:text-xl sm:font-light font-light text-[#686565] pt-2 '>
-                        Apprenez plus sur nous
-                    </div>
-                </div>
-            </div>     
-        </div>
-
-        <div >
+        <Container title={'A propos de nous'} subtitle={'Aprenez plus sur nous'} redtitle={''} />
+        <div>
                 <Propos 
                 title='speed motors' 
                 shortText={`Sarl Automobile Leader Company ALC est le représentant officiel de la marque CHERY en Algérie.\n Depuis 2020, ALC est entrée en service en Algérie dans le but d'assurer la distribution et la commercialisation des véhicules CHERY ainsi que, leur Service après-vente.`}
                 longText={`Une équipe de cadres hautement qualifiée qui s'engage à fournirun produit représentatif et compétitif afin de satisfaire lesclients et créer de l'emploi et de la richesse pour le pays.\nL'bjectif de l'ALC est de proposer une large gamme devéhicules CHERY, couvrant les besoins essentiels du marché algérienavec un choix de gammes diverses, de segments, de motorisations etde finitions, sur pratiquement toutes les régions d'Algérie.\nALC compte prendre en charge tous les cas de garantie des véhiculesqui seront vendus par son réseau en Algérie.\nSes succursales et agents agréés ne seront pas seulement des pointsde vente, mais elles offriront et couvriront également, tous lesservices et besoins des clients de la marque CHERY.\n`}/>
             
         </div>
-        <div className='w-[90%] flex items-center justify-center ml-4 mt-6 '>
-              <Image src={presentation} alt='presentation'  ></Image>
-        </div> 
+        <Cover src='/assets/presentation.png'/> 
         <div>
             <Propos title='CHERY'
              shortText={`Fondée en 1997, CHERY est aujourd'hui la marque automobile chinoise la plus exportée au monde.\nCHERY a réussi à créer des marques de produits telles que Arrizo, Tiggo et la marque EXEED haut de gamme et a cumulé plus de 8,3 millions de vente d'unités dans 80 pays.`} 

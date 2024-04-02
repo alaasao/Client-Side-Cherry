@@ -21,7 +21,7 @@ const LargeCard = (props:Demoprop) => {
                     <img
                 src={props.image}
                 alt=""
-                className="w-full h-[500px]"
+                className="w-full object-cover h-[500px]"
               />
                     </div>
           </div>
@@ -35,7 +35,7 @@ const LargeCard = (props:Demoprop) => {
                     <div className='flex items-center flex-col   gap-6  '>
                                 <p className='text-[#D12621] opacity-100 underline text-sm sm:text-lg  lg:text-xl text-center'>A partir de {props.price}$ par apport</p>
                                 <button  className='text-[#D12621] border rounded-[30px] relative  z-10 text-nowrap good text-xs  w-[200px]  font-good  mt-4 h-4  animation ' >
-                                    En profiter
+                                   <span className='relative z-10'> En profiter</span>
                                 </button>
                     </div>
                 </div>
