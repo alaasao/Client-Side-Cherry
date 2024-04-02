@@ -20,26 +20,24 @@ const ContactUs = () => {
   const [selectedPerson, setSelectedPerson] = useState(people[0])
   return (
     <div>
-  <form >
-    <div className='flex flex-col md:flex-row justify-between items-center w-full'>
-              <div className="w-full md:w-[40%] flex flex-col my-4">
-                <label
-                  className=" text-[#0C0C0C] mb-2 "
-                  htmlFor="name">
+      <form >
+    <div className='flex flex-col md:flex-row justify-between items-center w-full p-6'>
+        <div className="w-full md:w-[40%] flex flex-col my-4">
+                <label className=" text-[#0C0C0C] mb-2" htmlFor="name">
                   Nom complet*
                 </label>
-                <input
-                  type="text"
-                  minLength={3}
-                  maxLength={100}
-                  required
-                  placeholder='entrer votre nom et prenom'
-                  className=" p-3 bg-gray-50 border border-opacity-[25%] border-[#000000] focus:border-red-500 rounded-[10px] "
-                  autoComplete="off"
-                  id="name"
-                />
-              </div>
-              <div className="w-full md:w-[40%] flex flex-col my-4">
+                  <input
+                    type="text"
+                    minLength={3}
+                    maxLength={100}
+                    required
+                    placeholder='entrer votre nom et prenom'
+                    className=" p-3 bg-gray-50 border border-opacity-[25%] border-[#000000] focus:border-red-500 rounded-[10px] "
+                    autoComplete="off"
+                    id="name"
+                  />
+        </div>
+        <div className="w-full md:w-[40%] flex flex-col my-4">
                 <label
                   className="text-[#0C0C0C] mb-2"
                   htmlFor="numero"
@@ -56,7 +54,7 @@ const ContactUs = () => {
                   className=" p-3  bg-gray-50 border border-opacity-[25%] border-[#000000] rounded-[10px] "
                   autoComplete="off"
                   id="numero" />
-          </div>
+        </div>
     </div>
 
     <div className="w-full flex flex-col my-4 p-6">

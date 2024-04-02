@@ -21,7 +21,7 @@ const SmallCard = (props:Demoprop) => {
               <img
                 src={props.image}
                 alt=""
-                className="w-full h-[350px] rounded-lg"
+                className="w-full object-fill h-[350px] rounded-lg"
               />
               {/* overlay section */}
               <div className="absolute left-0 top-[-100%] opacity-0 group-hover:opacity-100 group-hover:top-[0] p-4 w-full h-full bg-black/60 group-hover:backdrop-blur-sm duration-500">
@@ -37,8 +37,8 @@ const SmallCard = (props:Demoprop) => {
                         <h3 className='text-lg sm:xl underline italic font-semibold text-red-500'>A partir de {props.price}$</h3>
                     </div></Fade>
                     <div>
-                        <button  className='text-[#D12621] border rounded-[10px]   w-[200px]  font-good  mt-4 h-4  animation' >
-                                    <span className="relative  z-10 text-nowrap good text-xs ">En profiter</span>  
+                        <button  className='text-[#D12621] border rounded-[30px] relative  z-10 text-nowrap good text-xs  w-[200px]  font-good  mt-4 h-4  animation ' >
+                                    <span className='relative z-10'> En profiter</span>
                         </button>
                     </div>
                   </Slide>
