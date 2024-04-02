@@ -5,7 +5,7 @@ import Main from "./Main";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import DescSection from "./DescSection";
-import ImageSlider from "./ImageSlider";
+// import ImageSlider from "./ImageSlider";
 
 const Caracteristiques: FC<CaracteristiquesProps> = ({
   _id,
