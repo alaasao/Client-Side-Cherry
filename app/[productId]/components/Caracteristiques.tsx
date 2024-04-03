@@ -5,7 +5,7 @@ import Main from "./Main";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import DescSection from "./DescSection";
-import ImageSlider from "./ImageSlider";
+// import ImageSlider from "./ImageSlider";
 
 const Caracteristiques: FC<CaracteristiquesProps> = ({
   _id,
@@ -44,7 +44,7 @@ const Caracteristiques: FC<CaracteristiquesProps> = ({
   return (
     <div>
       
-    <ImageSlider Images={Images} />
+    {/* <ImageSlider Images={Images} /> */}
     <div className="w-full grid grid-cols-[3fr_1fr] max-lg:grid-cols-1 ">
      
       <div className="px-[40px] max-md:px-[20px] py-[40px]">
