@@ -6,18 +6,22 @@ import { GiGasPump } from "react-icons/gi";
 import { MdDone } from "react-icons/md";
 import { TbAutomaticGearbox, TbManualGearbox } from "react-icons/tb";
 import { IoClose } from "react-icons/io5";
+
+
 interface PieceCardProps {
-  name: string;
-  img: string;
-  categorie: string;
-  etat: string;
-  modele: string[];
-  searchKey: string;
-  id: number;
-  prix: number;
+    name: string;
+    img: string;
+    categorie: string;
+    etat: string;
+    modele: string[];
+    searchKey: string;
+    id: string;
+    prix: number;
   dispo: boolean;
-  reffer: string;
+  Garentie: string;
+    reffer: string;
   mark: string;
+  doc: string;
   filter: {
     categorie: string[];
     modele: string[];

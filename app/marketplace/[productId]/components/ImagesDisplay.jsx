@@ -30,13 +30,13 @@ const ImagesDisplay = ({ data }) => {
           {data.Images.map((e, i) => (
             <SplideSlide
               key={i}
-              className="splide-slide flex justify-center items-center cursor-pointer"
+              className=""
               onClick={() => {
                 setMain(e);
               }}
             >
-              <div className="image-container h-full max-w-full">
-                <img src={e} alt="" className="h-full w-auto  object-cover" />
+              <div className="">
+                <img src={e} alt="" className="" />
               </div>
             </SplideSlide>
           ))}
