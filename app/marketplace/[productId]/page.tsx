@@ -7,6 +7,7 @@ export default function Page({ params }: { params: { productId: string } }) {
 
   return (
     <div>
+      
       <Caracteristiques
         _id={car._id}
         Images={car.Images}

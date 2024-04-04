@@ -45,7 +45,7 @@ const Caracteristiques: FC<CaracteristiquesProps> = ({
     <div>
       
     {/* <ImageSlider Images={Images} /> */}
-    <div className="w-full grid grid-cols-[3fr_1fr] max-lg:grid-cols-1 ">
+    <div className="w-full max-lg:grid-cols-1 ">
      
       <div className="px-[40px] max-md:px-[20px] py-[40px]">
         <Main
@@ -55,7 +55,8 @@ const Caracteristiques: FC<CaracteristiquesProps> = ({
           Disponabilite={Disponabilite}
           Prix_TTC={Prix_TTC}
           Moteur={Moteur}
-          updatedAt={updatedAt}
+            updatedAt={updatedAt}
+            Images={Images}
         />
         <div className="w-full flex justify-between items-center mt-[70px] max-md:text-[14px] mb-[84px]">
           <div className=" sm:text-xl md:text-2xl lg:text-4xl">

@@ -2,7 +2,7 @@
 import React, { FC, useEffect, useState } from "react";
 import Form from "./Form";
 import { modelTitle } from "../page";
-import { CaracteristiquesProps } from "@/app/[productId]/components/Caracteristiques";
+import { CaracteristiquesProps } from "@/app/marketplace/[productId]/components/Caracteristiques";
 import Compare from "./Compare";
 interface ClientPageProps {
   modelTiles: Array<modelTitle>;
