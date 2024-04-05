@@ -11,7 +11,7 @@ import {
   MoteurObj,
   SecurityObj,
   VehiculeObj,
-} from "../../../[productId]/components/Caracteristiques";
+} from "../../../marketplace/[productId]/components/Caracteristiques";
 interface ComSecProps {
   FirstProps: MoteurObj | LookObj | ConfortObj | SecurityObj | VehiculeObj;
   SecondProps:

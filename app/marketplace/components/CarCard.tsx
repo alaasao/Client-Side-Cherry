@@ -4,7 +4,7 @@ import {
   MoteurObj,
   SecurityObj,
   VehiculeObj,
-} from "@/app/[productId]/components/Caracteristiques";
+} from "../[productId]/components/Caracteristiques";
 import Link from "next/link";
 import { resolve } from "path";
 import React, { FC, useState, useEffect } from "react";
@@ -152,47 +152,3 @@ const CarCard: FC<CarCardProps> = ({
 
 export default CarCard;
 
-{
-  /* <div
-className={` max-sm:hidden w-full h-[420px] bg-white flex flex-col rounded-xl  items-center ${
-  hide ? "hidden" : ""
-}`}
->
-{" "}
-<h1 className="font-bold text-xl w-full  pl-[10px] capitalize">
-  {Modele}
-</h1>
-<div className="w-full">
-  <img
-    src={Images[0].Images[0]}
-    className="w-full h-[50%]  object-cover mb-[20px] rounded-t-lg "
-    alt=""
-  />
-  <div className="w-full flex gap-[71px] items-center justify-center text-[#858282] mb-[20px] font-medium p-[23px]">
-    <div className="flex gap-[4px]">
-      <GiGasPump className=" text-xl  " />
-      {VehiculeObj.Reservoir}L
-    </div>
-    <div className="flex  items-center gap-[7px]">
-      {MoteurObj.Boite === "manuelle" ? (
-        <TbManualGearbox />
-      ) : (
-        <TbAutomaticGearbox />
-      )}
-      <div className="capitalize ">{MoteurObj.Boite}</div>
-    </div>
-  </div>
-  <div className="flex gap-[50px] max-md:gap-[20px] items-center justify-center max-lg:gap-[50px] ">
-    <div className="flex font-bold text-xl">
-      {Prix_TTC.toLocaleString()}DZ
-    </div>
-    <Link
-      href={""}
-      className="text-white bg-[#DB2719] flex justify-center items-center w-[127px] max-lg:w-[100px] max-md:w-[127px] h-[50px] rounded-lg"
-    >
-      Voir plus
-    </Link>
-  </div>
-</div>
-</div> */
-}

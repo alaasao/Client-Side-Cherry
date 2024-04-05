@@ -3,7 +3,7 @@ import ClientPage from "./components/ClientPage";
 import data from "@/app/marketplace/components/data";
 import Caracteristiques, {
   CaracteristiquesProps,
-} from "@/app/[productId]/components/Caracteristiques";
+} from "@/app/marketplace/[productId]/components/Caracteristiques";
 export interface modelTitle {
   modelName: string;
   modelId: string;

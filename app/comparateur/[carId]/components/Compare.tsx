@@ -1,4 +1,4 @@
-import { CaracteristiquesProps } from "@/app/[productId]/components/Caracteristiques";
+import { CaracteristiquesProps } from "@/app/marketplace/[productId]/components/Caracteristiques";
 import { usePathname } from "next/navigation";
 import React, { FC } from "react";
 import ComSec from "./ComSec";

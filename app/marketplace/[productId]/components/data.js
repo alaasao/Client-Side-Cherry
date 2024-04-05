@@ -5,7 +5,9 @@ const data = [
     Images: [
       {
         Color: "rouge",
-        Images: ["../assets/marketplace/rename.png"],
+        Images: ["../assets/marketplace/rename.png",
+   "../assets/details/black.png",
+        ],
       },
     ],
     Modele: "bb",

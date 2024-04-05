@@ -5,13 +5,23 @@ import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import { motion, AnimatePresence } from "framer-motion";
 import { IoClose } from "react-icons/io5";
 import { MdDone } from "react-icons/md";
-import { ConfortObj, LookObj, MoteurObj, SecurityObj, VehiculeObj } from "./Caracteristiques";
+import {
+  ConfortObj,
+  LookObj,
+  MoteurObj,
+  SecurityObj,
+  VehiculeObj,
+} from "./Caracteristiques";
 interface DescSectionProps {
-  props: MoteurObj|LookObj|ConfortObj|SecurityObj|VehiculeObj;
+  props: MoteurObj | LookObj | ConfortObj | SecurityObj | VehiculeObj;
   Title: string;
   img: string;
 }
-const DescSection:FC<DescSectionProps> = ({ props, Title, img }:DescSectionProps) => {
+const DescSection: FC<DescSectionProps> = ({
+  props,
+  Title,
+  img,
+}: DescSectionProps) => {
   let [open, setOpen] = useState(false);
 
   return (
@@ -49,10 +59,12 @@ const DescSection:FC<DescSectionProps> = ({ props, Title, img }:DescSectionProps
               {Object.entries(props).map(([key, value], index) => {
                 return (
                   <div
-                    className="  grid grid-cols-2 text-2xl capitalize max-xl:text-[16px] w-[48%] mb-[40px] max-md:w-full gap-[10px]"
+                    className="  grid grid-cols-2 text-2xl capitalize max-xl:text-[16px] w-[33%] mb-[40px] max-md:w-full gap-[10px]"
                     key={index + key}
                   >
-                    <div className="text-[#848484]   ">{titles[key as keyof typeof titles]}</div>
+                    <div className="text-[#848484]   ">
+                      {titles[key as keyof typeof titles]}
+                    </div>
                     <div className="  font-bold">
                       {typeof value === "boolean" ? (
                         value ? (

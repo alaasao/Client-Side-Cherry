@@ -1,5 +1,5 @@
 "use client";
-import { CaracteristiquesProps } from "@/app/[productId]/components/Caracteristiques";
+import { CaracteristiquesProps } from "@/app/marketplace/[productId]/components/Caracteristiques";
 import React, { useState, Dispatch, SetStateAction, FC } from "react";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import { modelTitle } from "../page";

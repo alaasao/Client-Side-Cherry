@@ -27,6 +27,7 @@ const Market: FC<MarketProps> = ({
       {data.map((e, i) => {
         return (
           <PieceCard
+            Garentie={e.Garentie}
             dispo={e.dispo}
             reffer={e.reffer}
             mark={e.mark}
@@ -39,6 +40,7 @@ const Market: FC<MarketProps> = ({
             prix={e.prix}
             key={e.id + i}
             id={e.id}
+            doc={e.doc}
             filter={filterList}
           />
         );
@@ -48,3 +50,16 @@ const Market: FC<MarketProps> = ({
 };
 
 export default Market;
+export interface pieceProps{
+  name: string;
+  img: string;
+  categorie: string;
+  etat: string;
+  modele: string[];
+ Garentie: string;
+  id: string;
+  prix: number;
+  dispo: boolean;
+  reffer: string;
+  mark: string;
+}
