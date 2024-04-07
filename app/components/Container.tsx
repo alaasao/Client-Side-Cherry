@@ -6,8 +6,8 @@ type DemoProp={
 }
 const Container = (props:DemoProp) => {
   return (
-    <div className='w-full  flex items-start justify-center text-center bg-white text-black good '>
-              <div className='w-[80%] sm:w-[70%] h-[40vh] md:h-[50vh] lg:h-[60vh] mt-10 shadow-3xl flex justify-center items-center flex-col gap-8  rounded-[10px]'>
+    <div className='w-full  flex items-start justify-center text-center bg-white text-black font-good '>
+              <div className='sm:w-[70%] relative shadow-[14px_20px_50px_7px] shadow-[#00000040]  max-sm:w-[80%] max-sm:h-[40vh] h-[30vh] lg:h-[50vh] 2xl:h-[40vh] 2xl:w-[60%] lg:w-[70%] mt-10 shadow-3xl flex justify-center items-center flex-col gap-8  rounded-[10px]'>
                     <div className='font-light text-wrap text-lg sm:text-xl md:text-3xl lg:text-4xl  good leading-[60px]'>
                      {props.title}<span className='text-[#D12621]' >{props.redtitle}</span>
                     </div>  

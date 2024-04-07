@@ -1,18 +1,16 @@
 "use client"
 import React from 'react'
-import offfre from '../../../public/assets/offres/caroffre.png'
-import car from '../../../public/assets/offres/car.jpg'
-import Image from 'next/image'
 import { Slide, Fade } from "react-awesome-reveal";
 type Demoprop={
     title:string,
     image:string,
-    sousTitle:string,
-    description:string,
+    start:Date,
+    end:Date,
     price:number,
     id:number,
   }
 const SmallCard = (props:Demoprop) => {
+  const date = props.start.toLocaleDateString();
   return (
     <div
               key={props.id}
@@ -29,11 +27,11 @@ const SmallCard = (props:Demoprop) => {
                   <Slide cascade>
                     <div className='flex flex-col gap-6 mb-10'>
                         <h1 className="text-xl sm:2xl font-bold">{props.title}</h1>
-                        <h2 className='text-lg sm:xl font-semibold'>{props.sousTitle}</h2>
+                        <h2 className='text-lg sm:xl font-semibold'>{date}</h2>
                     </div>    
                     <Fade cascade damping={0.05} className='text-wrap max-w-[80%]'>
                         <div className='flex flex-col gap-2 mb-2'>
-                        <p className='text-wrap sm:text-xs  text-sm max-sm:hidden '> {props.description}</p>
+                        {/* <p className='text-wrap sm:text-xs  text-sm max-sm:hidden '> {props.description}</p> */}
                         <h3 className='text-lg sm:xl underline italic font-semibold text-red-500'>A partir de {props.price}$</h3>
                     </div></Fade>
                     <div>
