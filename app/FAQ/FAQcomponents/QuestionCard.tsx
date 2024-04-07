@@ -4,12 +4,12 @@ import { useState } from 'react';
 import {FaMinus , FaPlus} from "react-icons/fa";
 import {motion , AnimatePresence}from"framer-motion"
 type demoprops = {
-  id:number,
+  id:string,
   question:string,
   answer:string,
 }
 const QuestionCard = (props:demoprops) => {
-  const [activequestion, setActiveQuestion] = useState<number | null>(null)
+  const [activequestion, setActiveQuestion] = useState<string | null>(null)
 
   return (
     <motion.div

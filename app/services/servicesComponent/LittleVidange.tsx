@@ -1,16 +1,14 @@
 "use client"
-import React from 'react'
-import  { useState } from 'react'; 
+import React from 'react' 
 import Datetime from 'react-datetime';
 import "react-datetime/css/react-datetime.css"
-import { FaCalendarAlt } from "react-icons/fa";
 import Dateshac from"./Dateshac"
 const LittleVidange = () => {
   
   return (
     <div className='w-[85%] sm:w-[90%] justify-center items-center md:hidden'>
-        <h1 className='good text-2xl sm:text-3xl my-14'>ViLittledange</h1>
-        <p className='text-lg font-[500]'>Dans notre section dédiée aux services chez Chery Algerie , nous nous engageons à maintenir votre véhicule en parfait état de fonctionnement. Planifiez votre viLittledange en ligne dès maintenant.</p>
+        <h1 className='good text-2xl sm:text-3xl my-14'>Vidange</h1>
+        <p className='text-lg font-[500]'>Dans notre section dédiée aux services chez Chery Algerie , nous nous engageons à maintenir votre véhicule en parfait état de fonctionnement. Planifiez votre vidange en ligne dès maintenant.</p>
     
 
         <form>

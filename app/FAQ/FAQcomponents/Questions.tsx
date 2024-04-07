@@ -16,7 +16,7 @@ return (
               <div  className='w-[100%] m-auto flex flex-col gap-4 justify-center'>
                   {Data.slice(0,visible).map((q) => 
                   (     
-                      <QuestionCard key={q.id} id={q.id} question={q.question} answer={q.answer}/>
+                      <QuestionCard key={q._id} id={q._id} question={q.Question} answer={q.Response}/>
                   ))}
               </div> 
         </div>          

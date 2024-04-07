@@ -12,7 +12,7 @@ const Events = () => {
     <div>
         <div className='flex flex-col w-full justify-center items-center mt-4 h-full'>
             {Data.slice(0,visible).map((q)=>(
-                <Card key={q.id} image={q.image} littleDescription={q.littledescription} id={q.id} date={q.Date} />
+                <Card key={q._id} image={q.Images} littleDescription={q.Description} id={q._id} date={q.Date} />
             ))}
         </div>
         <div className='mt-6 flex items-center justify-center '>
