@@ -60,9 +60,9 @@ const Nav = () => {
           currentPath={currentPath}
         />
         <CustomLink
-          href={"/#offers"}
+          href={"/offres"}
           className=""
-          title="Offres"
+          title="offres"
           currentPath={currentPath}
         />
         <CustomLink

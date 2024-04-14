@@ -26,14 +26,14 @@ const DescSection: FC<DescSectionProps> = ({
 
   return (
     <div className="w-full flex flex-col mb-[50px] ">
-      <div className="flex items-center  w-full justify-between border-b-[1px] pb-[23px] mt-[23px]  border-[#A0A0A0]">
-        <div className="flex gap-[10px] items-center text-3xl ">
+      <div className="flex items-center  w-full justify-between border-b-[1px] pb-[23px] mt-[23px]  border-[#A0A0A0] cursor-pointer"     onClick={() => setOpen((prev) => !prev)}>
+        <div className="flex gap-[10px] items-center text-3xl  ">
           <img src={img} alt="" className="w-[40px]" />
           <div className="font-medium* "> {Title}</div>
         </div>
         <div
-          className="text-[#F70202] text-3xl cursor-pointer"
-          onClick={() => setOpen((prev) => !prev)}
+          className="text-[#F70202] text-3xl "
+      
         >
           {" "}
           {open ? (

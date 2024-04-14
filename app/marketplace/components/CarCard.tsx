@@ -138,7 +138,7 @@ const CarCard: FC<CarCardProps> = ({
               {Prix_TTC.toLocaleString()}DZ
             </div>
             <Link
-              href={""}
+              href={"/marketplace/" + _id}
               className="text-white bg-[#DB2719] flex justify-center items-center w-[127px] max-lg:w-[100px] max-md:w-[127px] h-[50px] rounded-lg"
             >
               Voir plus

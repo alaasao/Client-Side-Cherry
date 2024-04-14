@@ -56,7 +56,7 @@ const Form: FC<FromProps> = ({ name }: FromProps) => {
           <input
             type="text"
             value={name}
-            readOnly
+            readOnly={true}
             className=" outline-none bg-[#F6F7F9] h-[56px] pl-[30px] mt-[16px] w-full cursor-pointer rounded-xl"
           />
         </div>
