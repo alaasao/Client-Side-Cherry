@@ -12,14 +12,14 @@ const Compare: FC<CompareProps> = ({ firstCar, secondCar }: CompareProps) => {
     <div className="w-full   px-[4vw] ">
       <div className="w-full border-t-[1px] border-black px-[2vw] py-[70px] flex flex-col gap-[30px]  ">
         <div className="w-full grid grid-cols-[1fr_1fr] gap-[4vw] h-[400px] max-md:h-[40vw] md:mb-[40px]">
-          <div className="w-full h-full rounded-3xl shadow-xl ">
+          <div className="w-full h-full rounded-3xl shadow-xl  ">
             <img
               src={firstCar.Images[0].Images[0]}
               alt=""
-              className="w-full h-full rounded-3xl"
+              className="w-full h-[400px] max-md:h-[40vw] rounded-3xl"
             />
           </div>
-          <div className="w-full h-full rounded-3xl shadow-xl relative">
+          <div className="w-full h-[400px] max-md:h-[40vw] rounded-3xl shadow-xl relative">
             <img
               src={secondCar?.Images[0].Images[0]}
               alt=" "

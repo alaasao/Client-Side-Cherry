@@ -151,7 +151,7 @@ const PieceCard: FC<PieceCardProps> = ({
               {prix.toLocaleString()}DZ
             </div>
             <Link
-              href={""}
+              href={"/piecemarket/" + id}
               className="text-white bg-[#DB2719] flex justify-center items-center w-[250px]   h-[50px] rounded-lg"
             >
               Voir plus

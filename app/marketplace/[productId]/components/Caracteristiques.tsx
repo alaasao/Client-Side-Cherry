@@ -58,12 +58,12 @@ const Caracteristiques: FC<CaracteristiquesProps> = ({
             updatedAt={updatedAt}
             Images={Images}
         />
-        <div className="w-full flex justify-between items-center mt-[70px] max-md:text-[14px] mb-[84px]">
+        <div className="w-full flex justify-between items-center max-md:text-[14px] mb-[84px]">
           <div className=" sm:text-xl md:text-2xl lg:text-4xl">
             LES CARACTÉRISTIQUES
           </div>
           <Link
-            href={`comparateur/${_id}`}
+            href={`/comparateur/${_id}`}
             className="flex  items-center gap-[5px] text-white bg-[#E02727]  px-10 py-4 max-lg:px-4 max-lg:py-1 rounded-md"
           >
             <span className="max-sm:text-[12px]">Comparer</span>
