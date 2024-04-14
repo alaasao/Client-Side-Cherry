@@ -1,6 +1,6 @@
 const Data =[
     {   
-            _id:"1",
+            _id:1,
             Images:"/assets/offres/offrecar.png",
             Modele:"Le Tiggo 8 Pro Max :",
             Prix_TTC :12312312,
@@ -12,7 +12,7 @@ const Data =[
             },
     },
     {   
-            _id:"1",
+            _id:1,
             Prix_TTC :12312312,
             Images:"/assets/offres/offrecar.png",
             Modele:"Le Tiggo 8 Pro Max :",
@@ -24,7 +24,7 @@ const Data =[
             },
     },
     {   
-            _id:"1",
+            _id:1,
             Prix_TTC :12312312,
             Images:"/assets/offres/offrecar.png",
             Modele:"Le Tiggo 8 Pro Max :",
@@ -36,7 +36,7 @@ const Data =[
             },
     },
     {   
-            _id:"1",
+            _id:1,
             Prix_TTC :12312312,
             Images:"/assets/offres/offrecar.png",
             Modele:"Le Tiggo 8 Pro Max :",
@@ -48,7 +48,7 @@ const Data =[
             },
     },
     {   
-            _id:"1",
+            _id:1,
             Prix_TTC :12312312,
             Images:"/assets/offres/offrecar.png",
             Modele:"Le Tiggo 8 Pro Max :",
@@ -60,7 +60,7 @@ const Data =[
             },
     },
     {   
-            _id:"1",
+            _id:1,
             Prix_TTC :12312312,
             Images:"/assets/offres/offrecar.png",
             Modele:"Le Tiggo 8 Pro Max :",
