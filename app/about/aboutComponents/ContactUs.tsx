@@ -118,9 +118,10 @@ const handleOnChange =(e:any)=>{
         />
       </div>
       <div className='w-full flex justify-center items-center'>
-      <button type='submit' onClick={handleOnClick} className=' text-[#D12621] border-2 border-[#858282] w-[200px]  rounded-[10px] font-good mt-12 h-4  animation' >
-                             <span className="relative  z-10 text-nowrap  good text-sm ">Sumbmit</span>  
-         </button></div>
+      <button  className='text-[#D12621] border  rounded-[10px] relative  z-10 text-nowrap good text-xs  w-[200px]  font-good  h-4  animation ' >
+                                        <span className='relative z-10 '>Submit</span>
+                                </button>
+         </div>
     </form>
 
     </div>
