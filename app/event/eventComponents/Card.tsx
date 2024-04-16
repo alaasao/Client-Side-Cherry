@@ -26,8 +26,8 @@ const Card = (props:DemoProp) => {
 
                     <div className='flex flex-col-reverse  gap-2 mt-4 sm:flex-row items-center 2xl:items-center  w-full md:items-end md:w-[80%]  2xl:justify-around sm:justify-between' > 
                              <Link href={`/event/${props.id}`}>
-                                <button  className='text-[#D12621] border 2xl:w-[300px] 2xl:h-[100px] rounded-[10px] relative  z-10 text-nowrap good text-xs  w-[200px]  font-good  h-4  animation ' >
-                                        <span className='relative z-10 2xl:text-2xl'> En profiter</span>
+                                <button  className='text-[#D12621] border 2xl:w-[300px] 2xl:h-[75px] rounded-[10px] relative  z-10 text-nowrap good text-xs  w-[200px]  font-good  h-4  animation ' >
+                                        <span className='relative z-10 2xl:text-xl'> En Savoir Plus</span>
                                 </button>
                             </Link>
                             <p className='text-[#00000080] w-full  text-center sm:w-[10%] lg:font-bold  lg:text-xl 2xl:text-3xl text-lg md:text-opacity-[50%]'>{props.date}</p>
