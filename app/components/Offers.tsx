@@ -15,7 +15,7 @@ const data: Array<offer> = [
 const Offers: FC = () => {
   return (
     <div className="pt-[100px] bg-white pb-[150px] relative" id="offers">
-      <h1 className="w-[700px] text-center  max-lg:w-[300px] max-lg:text-3xl text-6xl text-black mx-auto font-medium mb-[80px]">
+      <h1 className="w-[700px] text-center  max-lg:w-[300px] max-lg:text-3xl text-5xl text-black mx-auto font-medium mb-[80px]">
         OFFRES DU MOMENT
       </h1>
       <div className="w-full flex  flex-wrap  max-md:[5px] justify-center gap-[20px] pb-[140px] ">
@@ -23,10 +23,10 @@ const Offers: FC = () => {
       </div>
       <Link
         href={"/offres"}
-        className="text-5xl justify-between border-[1px] hover:scale-[1.1] rounded-xl max-xl:text-xl min-w-[300px] border-black w-[35vw] text-black flex items-center gap-[10px] mx-auto px-[23px] py-[16px] "
-      >
+        className="link text-xl max-md:text-[12px] border-[1px] rounded-xl max-lg:text-xl md:min-w-[300px]  w-max border-black focus:border-white  hover:scale-[1.1] focus:bg-red-600 focus:!text-white group flex items-center gap-[10px] justify-center  max-md:w-[200px] mx-auto px-[23px] py-[16px] group "
+        >
         <div> VOIR TOUTES LES OFFRES </div>{" "}
-        <img src="../assets/fullarrow.png" alt="" />
+       
       </Link>
     </div>
   );
