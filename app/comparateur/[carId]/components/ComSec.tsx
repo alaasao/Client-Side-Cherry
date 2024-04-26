@@ -108,7 +108,7 @@ const ComSec: FC<ComSecProps> = ({
 };
 
 export default ComSec;
-const titles = {
+export const titles = {
   Energie: "Energie",
   Motricite: "Motricite",
   Type_Moteur: "Type De Moteur",

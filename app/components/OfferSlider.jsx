@@ -46,7 +46,7 @@ const OfferSlider = () => {
             speed: 1,
           },
         }}
-        extensions={{ AutoScroll }}
+        // extensions={{ AutoScroll }}
       >
         {data.map((e, i) => {
           return (

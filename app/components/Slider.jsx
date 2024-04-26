@@ -48,9 +48,9 @@ const Slider = () => {
           pagination: false,
           drag: "free",
 
-          autoScroll: { speed: 1 },
+          // autoScroll: { speed: 1 },
         }}
-        extensions={{ AutoScroll }}
+    
       >
         {data.map((e, i) => {
           return (

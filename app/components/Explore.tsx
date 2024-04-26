@@ -18,16 +18,16 @@ const Explore = () => {
       <div className="mb-[160px]">
         <Slider />
       </div>
-      <Link
-        href={"/marketplace"}
-        className="text-5xl border-[1px] rounded-xl max-lg:text-xl min-w-[300px] border-black  hover:scale-[1.1] group flex items-center gap-[10px] w-[50vw] mx-auto px-[23px] py-[16px] "
-      >
-        <div>
-          {" "}
-          DECOUVREZ TOUTE LA GAMME <span className="text-[#D12621]">CHERY</span>
+
+<Link
+  href={"/marketplace"}
+  className="link text-xl max-md:text-[12px] border-[1px] rounded-xl max-lg:text-xl md:min-w-[300px]  w-max border-black focus:border-white  hover:scale-[1.1] focus:bg-red-600 focus:!text-white group flex items-center gap-[10px] justify-center  max-md:w-[200px] mx-auto px-[23px] py-[16px] group "
+>
+  <div className="">
+    {" "}DECOUVREZ TOUTE LA GAMME 
         </div>{" "}
-        <img src="../assets/fullarrow.png" alt="" />
-      </Link>
+        <span className="text-[#D12621] group-focus:text-white">CHERY</span>
+</Link>
     </div>
   );
 };
