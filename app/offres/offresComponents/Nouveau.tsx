@@ -31,7 +31,7 @@ const Nouveau = (props: CardProps) => {
                                     <h1 className='text-3xl text-[#D12621] font-[500]'>{props.price}.00 DZD</h1>
                                 </div>
                                 <div className='flex flex-col '>
-                                        <p className='text-[#888888]'>Découvrez le Tiggo 8 Pro Max : l'élégance et la puissance combinées dans un design sophistiqué. Avec un intérieur spacieux et moderne, ce véhicule offre confort et praticité à chaque trajet.
+                                        <p className='text-[#888888]'>Découvrez le Tiggo 8 Pro Max : lélégance et la puissance combinées dans un design sophistiqué. Avec un intérieur spacieux et moderne, ce véhicule offre confort et praticité à chaque trajet.
                                         </p>
                                         <div className='flex items-center justify-end w-[90%] h-full'>
                                             <Link href={"/marketplace/"+props.id} className='bg-[#D12621] rounded-[10.68px] p-2 text-white border-[0.89px]  no-underline'>
