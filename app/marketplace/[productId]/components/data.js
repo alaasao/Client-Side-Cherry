@@ -17,8 +17,8 @@ const data = [
     Moteur: "1.4",
     PromoObj: {
       IsPromo: true,
-      Start: "2022-01-01T00:00:00.000Z",
-      End: "2022-12-31T00:00:00.000Z",
+      Start: "2022-01-01",
+      End: "2022-12-31",
       Value: 10,
     },
     MoteurObj: {
@@ -86,8 +86,8 @@ const data = [
       Nombre_Portes: 4,
       Reservoir: 0,
     },
-    createdAt: "2024-03-26T22:40:55.502Z",
-    updatedAt: "2024-03-26T22:40:55.502Z",
+    createdAt: "2024-03-26",
+    updatedAt: "2024-03-26",
     __v: 0,
   },
   {
@@ -106,8 +106,8 @@ const data = [
     Moteur: "1.2",
     PromoObj: {
       IsPromo: true,
-      Start: "2022-01-01T00:00:00.000Z",
-      End: "2022-12-31T00:00:00.000Z",
+      Start: "2022-01-01",
+      End: "2022-12-31",
       Value: 10,
     },
     MoteurObj: {
@@ -175,8 +175,8 @@ const data = [
       Nombre_Portes: 4,
       Reservoir: 0,
     },
-    createdAt: "2024-03-26T22:40:55.502Z",
-    updatedAt: "2024-03-26T22:40:55.502Z",
+    createdAt: "2024-03-26",
+    updatedAt: "2024-03-26",
     __v: 0,
   },
 ];
