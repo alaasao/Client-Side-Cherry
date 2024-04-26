@@ -37,7 +37,7 @@ const handleOnChange =(e:any)=>{
                   <input
                     onChange={handleOnChange}
                     type="text"
-                    value={value.Name}
+                    
                     minLength={3}
                     maxLength={100}
                     required
@@ -55,7 +55,7 @@ const handleOnChange =(e:any)=>{
                   numero du telephone
                 </label>
                 <input
-                value={value.Phone}
+
                   onChange={handleOnChange}
                   type="number"
                   minLength={3}
@@ -86,9 +86,9 @@ const handleOnChange =(e:any)=>{
                           key={person._id}
                           value={person}
                           disabled={person.unavailable}
-                          className={`w-full py-2 px-4 `}
+                          className={`w-full py-4 px-4 `}
                         >
-                          <span className={person.show ? 'hidden ' : 'text-[#5E5959] hover:cursor-pointer'}>
+                          <span className={person.show ? 'hidden ' : 'text-[#5E5959] hover:cursor-pointer hover:text-[#D12621] py-4 px-4'}>
                             {person.name}
                           </span>
                         </Listbox.Option>
@@ -108,7 +108,6 @@ const handleOnChange =(e:any)=>{
         <textarea
           onChange={handleOnChange}
           rows={4}
-          value={value.Description}
           placeholder='Laissez votre message afin que nous puissions vous aider*'
           required
           minLength={10}
