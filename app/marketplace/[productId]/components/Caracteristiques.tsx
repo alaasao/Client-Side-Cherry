@@ -44,20 +44,21 @@ const Caracteristiques: FC<CaracteristiquesProps> = ({
   return (
     <div>
       
-    {/* <ImageSlider Images={Images} /> */}
-    <div className="w-full max-lg:grid-cols-1 ">
-     
-      <div className="px-[40px] max-md:px-[20px] py-[40px]">
-        <Main
-          _id={_id}
-          Modele={Modele}
-          Garentie={Garentie}
-          Disponabilite={Disponabilite}
-          Prix_TTC={Prix_TTC}
-          Moteur={Moteur}
-            updatedAt={updatedAt}
-            Images={Images}
-        />
+    
+    <div className="w-full  max-lg:grid-cols-1 ">
+      <div className="px-[40px] max-md:px-[20px] flex flex-col  py-[40px]">
+        <div className="mb-32">
+          <Main
+            _id={_id}
+            Modele={Modele}
+            Garentie={Garentie}
+            Disponabilite={Disponabilite}
+            Prix_TTC={Prix_TTC}
+            Moteur={Moteur}
+              updatedAt={updatedAt}
+              Images={Images}
+          />
+        </div>
         <div className="w-full flex justify-between items-center max-md:text-[14px] mb-[84px]">
           <div className=" sm:text-xl md:text-2xl lg:text-4xl">
             LES CARACTÉRISTIQUES

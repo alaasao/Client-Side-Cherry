@@ -7,10 +7,10 @@ const CarInformation = () => {
       <h1 className="good text-2xl sm:text-3xl my-14">Mon vehicule</h1>
 
       <div className=" bg-gradient-to-r 2xl:h-[800px] max-sm:h-[700px] h-[500px] mb-10 max-sm:rounded-[50px] rounded-md relative from-[#3E3D45] to-[#202020] shadow-[0px_2px_6px_0px_rgba(0,0,0,0.25)] ">
-        {/* <img
+        <img
           src="/assets/serv/back.png"
-          className="object-cover max-sm:h-[610px] h-[500px] 2xl:h-[800px] "
-        /> */}
+          className="object-cover max-sm:h-[700px] h-[500px] 2xl:h-[800px] "
+        />
         <div className="w-full h-full absolute top-0 left-0 grid  max-sm:grid-rows-[1fr_2fr]  sm:grid-cols-[1fr_1fr]  gap-[50px]  items-start sm:justify-center sm:items-center text-black ">
           <div className="flex flex-row order-2 sm:order-1 items-start sm:items-center rounded-[50px] justify-around w-full h-full text-white ">
             <div className="flex flex-col justify-start gap-6 sm:gap-10 text-xs font-semibold md:text-sm  2xl:text-3xl pl-2 text-nowrap lg:text-lg underline">

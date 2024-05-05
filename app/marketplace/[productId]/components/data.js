@@ -2,7 +2,7 @@ const data = [
   {
     Masked: false,
     _id: "second",
-    Images: [
+    Images:[
       {
         Color: "rouge",
         Images: ["../assets/marketplace/rename.png",
