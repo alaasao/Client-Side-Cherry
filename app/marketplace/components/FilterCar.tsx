@@ -38,15 +38,15 @@ const FilterCar: FC<FilterCarProps> = ({
   return (
     <div className="w-full relative mb-[20px]">
       <div
-        className={`flex items-center   justify-between text-[#858282] mx-auto w-full  h-[40px] mb-[10px]  transition-all duration-500  ${
+        className={`flex items-center  cursor-pointer justify-between text-[#858282] mx-auto w-full  h-[40px] mb-[10px]  transition-all duration-500  ${
           open ? "" : "border-[#858282] border-b-[0.5px]"
         } `}
-      >
+        onClick={() => setOpen((prev) => !prev)}      >
         <div className="font-bold   "> {catName}</div>
 
         <div
           className="  cursor-pointer"
-          onClick={() => setOpen((prev) => !prev)}
+   
         >
           {" "}
           {open ? (

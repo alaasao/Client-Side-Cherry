@@ -13,7 +13,7 @@ const page = () => {
                   Vous trouverez ci-dessous les réponses aux questions les plus fréquentes
         </p>
         <div className='w-[70%] bg-white text-black'>
-            <Questions /> 
+            <Questions  /> 
         </div>
     </div>     
   )
