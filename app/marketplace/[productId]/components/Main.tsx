@@ -2,9 +2,9 @@ import React, { FC } from "react";
 import { IoClose } from "react-icons/io5";
 import { MdDone } from "react-icons/md";
 import ImagesDisplay from "./ImagesDisplay.jsx";
+import Sliderrr from "./Sliderrr.jsx";
 const Main: FC<MainProps> = ({
   _id,
-
   Modele,
   Garentie,
   Disponabilite,
@@ -14,10 +14,10 @@ const Main: FC<MainProps> = ({
   updatedAt,
 }: MainProps) => {
   return (
-    <div className="w-full grid md:grid-cols-2  gap-[44px] md:h-[400px]  mb-[30px]">
-      <div className="w-full ">
-        <img src={Images[0].Images[0]} className="w-full h-[300px] md:h-[400px] rounded-3xl" />
-      </div>
+    <div className=" w-full   md:grid  md:grid-cols-2  max-md:gap-[100px] gap-[44px] md:h-[400px]   md:mb-[30px]">
+        <div className="max-md:w-full max-md:mb-[30px] ">
+          <Sliderrr />
+        </div>
       <div className="w-full flex flex-col gap-[70px] max-md:gap-[30px] capitalize ">
         <div className="grid grid-cols-3 gap-[50px] max-md:gap-[15px] w-full  ">
           <div className="flex flex-col max-md:items-center gap-[30px] max-md:gap-[10px]  font-medium ">

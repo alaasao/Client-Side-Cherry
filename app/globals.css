@@ -13,6 +13,13 @@
 * {
   box-sizing: border-box;
 }
+.thumbs .swiper-slide {
+  opacity: 0.9;
+}
+
+.thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+}
 /* @layer base {
   :root {
     --background: 0 0% 100%;
