@@ -23,7 +23,7 @@ const Market: FC<MarketProps> = ({
   setSearchKey,
 }: MarketProps) => {
   return (
-    <div className="bg-[#F1F1F0] relative flex  max-sm:flex-col max-sm:items-center  flex-wrap max-sm:justify-start sm:justify-center gap-[30px]  px-[20px]  max-md:gap-[10px] py-[100px] max-md:py-[80px] max-sm:py-[20px] min-h-screen ">
+    <div className="bg-[#F1F1F0] relative flex  max-sm:flex-col max-sm:items-center  flex-wrap max-sm:justify-start sm:justify-center gap-[30px]  px-[20px]  max-md:gap-[10px] pb-[100px] ">
       {data.map((e, i) => {
         return (
           <PieceCard

@@ -107,7 +107,7 @@ const FilterSideBar: FC<FilterSideBarProps> = ({
               initial={{ scale: 0 }}
               animate={{
                 scale: 1,
-                transition: { duration: 0.5 },
+                transition: { duration: 0.3 },
               }}
               exit={{ scale: 0 }}
               className={`grid grid-cols-[1fr_1fr_1fr_1fr] origin-top-left gap-x-[40px] max-sm:grid-cols-[1fr_1fr]  py-[20px] w-full max-md:gap-x-[20px] bg-white rounded-2xl md:shadow-sm px-[3vw]  `}

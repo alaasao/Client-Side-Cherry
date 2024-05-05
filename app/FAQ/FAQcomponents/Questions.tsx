@@ -1,10 +1,18 @@
 "use client"
-import React from 'react'
+import React, { useEffect } from 'react'
 import Link from 'next/link';
 import { useState } from 'react';
 import QuestionCard from './QuestionCard';
 import Data from '../FAQcomponents/Data'
+import axios from 'axios'
 const Questions = () => {
+    const [Data, setData] = useState([{"Question":"", "Answer":"","_id":""}])
+  
+    
+    const res = axios.get("https://axeiny.tech:4004/faq")
+    res.then((res) => {
+        setData(res.data)
+    })
 const [visible, setvisible] = useState(5)
     function showMore() {
         setvisible((prev)=>prev+4)
@@ -16,7 +24,7 @@ return (
               <div  className='w-[100%] m-auto flex flex-col gap-4 justify-center'>
                   {Data.slice(0,visible).map((q) => 
                   (     
-                      <QuestionCard key={q._id} id={q._id} question={q.Question} answer={q.Response}/>
+                      <QuestionCard key={q._id} id={q._id} question={q.Question} answer={q.Answer}/>
                   ))}
               </div> 
         </div>          

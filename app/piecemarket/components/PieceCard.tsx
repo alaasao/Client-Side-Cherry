@@ -59,13 +59,13 @@ const PieceCard: FC<PieceCardProps> = ({
   }, [filter, searchKey]);
   return (
     <div
-      className={`sm:w-[23%]  sm:max-lg:min-w-[250px] sm:lg:min-w-[330px] sm:max-md:min-w-[300px] sm:max-sm:w-[300px] ${
+      className={`w-[333px] sm:max-lg:min-w-[250px] sm:lg:min-w-[330px] sm:max-md:min-w-[300px] sm:max-sm:w-[300px]${
         hide ? "hidden" : ""
       } `}
     >
       {" "}
       <div
-        className={` sm:hidden bg-white w-full flex flex-col rounded-xl    ${
+        className={` sm:hidden  w-full flex flex-col rounded-xl    ${
           hide ? "hidden" : ""
         }`}
       >
@@ -73,7 +73,7 @@ const PieceCard: FC<PieceCardProps> = ({
           <h1 className="font-bold text-xl ">{name}</h1>
         </div>
 
-        <div className="flex justify-between max-h-[122px]  w-full mb-[24px]">
+        <div className="flex justify-between  w-full mb-[24px]">
           <div className="w-[50%]">
             <img src={img} alt=" " className="  h-full  max-sm:w-full" />
           </div>

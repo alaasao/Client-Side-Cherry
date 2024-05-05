@@ -67,10 +67,10 @@ const FilterSideBar: FC<FilterSideBarProps> = ({
       <div
         className={` capitalize transition-all duration-700  max-md: max-md:z-[300]  max-md:overflow-hidden  w-full bg-[#F1F1F0] px-[5vw] pb-[20px] `}
       >
-        <div className="w-full flex items-center justify-between ">
+        <div className="w-full flex items-center justify-between "            onClick={() => setIsOpen((prev) => !prev)}>
           <div
             className="my-[30px] font-bold  pl-[5px] cursor-pointer mr-[10px] w-[208px] max-md:text-[12px] max-md:w-[110px] bg-white h-[45px] rounded-xl flex items-center justify-between  text-[#827D7D]"
-            onClick={() => setIsOpen((prev) => !prev)}
+ 
           >
             <div className="flex gap-[5px] items-center">
               <img
@@ -111,7 +111,7 @@ const FilterSideBar: FC<FilterSideBarProps> = ({
               initial={{ scale: 0 }}
               animate={{
                 scale: 1,
-                transition: { duration: 0.5 },
+                transition: { duration: 0.3 },
               }}
               exit={{ scale: 0 }}
               className={`grid grid-cols-[1fr_1fr_1fr] gap-[40px] origin-top-left max-sm:grid-cols-[1fr_1fr]  py-[20px] w-full max-md:gap-[40px] bg-white rounded-2xl md:shadow-sm px-[3vw]  `}

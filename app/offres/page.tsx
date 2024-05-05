@@ -1,7 +1,7 @@
 import React from 'react'
 import Container from '../components/Container'
 import OffreCard from './offresComponents/OffresCard'
-import Data from "../marketplace/[productId]/components/data"
+import Data from "../marketplace/components/data"
 import Nouveau from './offresComponents/Nouveau'
 const page = ({ params }: { params: { productId: string } }) => {
   let car = Data
