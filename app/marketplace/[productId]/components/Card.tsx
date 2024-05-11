@@ -18,7 +18,7 @@ const Card: FC<CardProps> = ({ Images, _id, Prix_TTC, sticky }: CardProps) => {
       <img
         src={Images[0].Images[0]}
         alt=""
-        className=" h-[462px] w-full mb-[40px] h-[35%] "
+        className=" h-[462px] w-full mb-[40px]  "
       />
       <div className="font-bold text-xl   mb-[30px]">
         {" "}
