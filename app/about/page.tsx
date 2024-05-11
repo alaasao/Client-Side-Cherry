@@ -17,7 +17,7 @@ const page = () => {
                 longText={`Une équipe de cadres hautement qualifiée qui s'engage à fournirun produit représentatif et compétitif afin de satisfaire lesclients et créer de l'emploi et de la richesse pour le pays.\nL'bjectif de l'ALC est de proposer une large gamme devéhicules CHERY, couvrant les besoins essentiels du marché algérienavec un choix de gammes diverses, de segments, de motorisations etde finitions, sur pratiquement toutes les régions d'Algérie.\nALC compte prendre en charge tous les cas de garantie des véhiculesqui seront vendus par son réseau en Algérie.\nSes succursales et agents agréés ne seront pas seulement des pointsde vente, mais elles offriront et couvriront également, tous lesservices et besoins des clients de la marque CHERY.\n`}/>
             
         </div>
-        <Cover src='/assets/presentation.png'/> 
+        <img src='/assets/presentation.png' alt="haha"  className='w-full  md:w-[80%] rounded-md  mt-6 object-cover'/> 
         <div>
             <Propos title='CHERY'
              shortText={`Fondée en 1997, CHERY est aujourd'hui la marque automobile chinoise la plus exportée au monde.\nCHERY a réussi à créer des marques de produits telles que Arrizo, Tiggo et la marque EXEED haut de gamme et a cumulé plus de 8,3 millions de vente d'unités dans 80 pays.`} 

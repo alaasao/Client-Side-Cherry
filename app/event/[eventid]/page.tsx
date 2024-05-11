@@ -11,18 +11,17 @@ const page = (props:DemoProp) => {
           
           <div className='w-[90%] flex flex-col items-center justify-center'>
                   <img alt='car' className=' w-[95%] rounded-md md:w-[80%]  object-cover' src={`${foundObject?.Images}`} width={200} height={200}/>
-                  <p className='w-[90%] md:w-[80%] md:max-w-[75%] text-xs md:text-sm md:font-[600]  text-[#5E5959] mt-2'>{`${foundObject?.Description}`}</p>
           </div>
           <div className='w-[85%] text-xs sm:text-sm md:text-xl  mt-4'>
               
-             {/*  mba3ed nnhoha */} 
-                {foundObject?.Description.split('.').map((line, index) => (
+            {/*     {foundObject?.Description.split('.').map((line, index) => (
                     <React.Fragment key={index}>
                       <div className='mb-3'>
                         {line}
                       </div>
                     </React.Fragment>
-                ))}
+                ))} */}
+                <p>{foundObject?.Description}</p>
           </div>        
     </div>
   )
