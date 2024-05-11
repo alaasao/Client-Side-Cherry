@@ -3,7 +3,7 @@ import data from "./components/data";
 import Caracteristiques from "./components/Caracteristiques";
 import axios from "axios";
 async function getData(id:string) {
-  const res = await fetch('https://axeiny.tech:4004/car/'+id)
+  const res = await fetch('https://axeiny.tech:4004/car/'+id, { cache: 'no-store' })
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
  

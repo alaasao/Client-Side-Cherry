@@ -3,7 +3,7 @@ import data from "../components/data";
 import Main from "./component/Main";
 import Desc from "./component/Desc";
 import Doc from "./component/Doc";
-import Form from "./component/Form";
+import Form from "../../components/Form";
 const page = ({ params }: { params: { pieceId: string } }) => {
   let piece = data.filter((e) => e.id === params.pieceId)[0];
 

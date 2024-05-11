@@ -4,6 +4,7 @@ import { MdDone } from "react-icons/md";
 import ImagesDisplay from "./ImagesDisplay.jsx";
 import Sliderrr from "./Sliderrr.jsx";
 import Slideer from "./Slideer.jsx";
+import Form from "@/app/components/Form";
 
 const Main: FC<MainProps> = ({
   _id,
@@ -15,6 +16,7 @@ const Main: FC<MainProps> = ({
   Moteur,
   updatedAt,
 }: MainProps) => {
+ 
   return (
     <div className=" w-full   md:grid  md:grid-cols-2  max-md:gap-[100px] gap-[44px] md:h-[30%]   md:mb-[30px]">
         <div className="max-md:w-full max-md:mb-[30px] ">
@@ -86,6 +88,7 @@ const Main: FC<MainProps> = ({
           </div>
         </div>
       </div>
+ 
     </div>
   );
 };
