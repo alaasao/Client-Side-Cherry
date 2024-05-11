@@ -3,6 +3,8 @@ import { IoClose } from "react-icons/io5";
 import { MdDone } from "react-icons/md";
 import ImagesDisplay from "./ImagesDisplay.jsx";
 import Sliderrr from "./Sliderrr.jsx";
+import Slideer from "./Slideer.jsx";
+
 const Main: FC<MainProps> = ({
   _id,
   Modele,
@@ -14,9 +16,9 @@ const Main: FC<MainProps> = ({
   updatedAt,
 }: MainProps) => {
   return (
-    <div className=" w-full   md:grid  md:grid-cols-2  max-md:gap-[100px] gap-[44px] md:h-[400px]   md:mb-[30px]">
+    <div className=" w-full   md:grid  md:grid-cols-2  max-md:gap-[100px] gap-[44px] md:h-[30%]   md:mb-[30px]">
         <div className="max-md:w-full max-md:mb-[30px] ">
-          <Sliderrr />
+          <Sliderrr Images={Images[0].Images}/>
         </div>
       <div className="w-full flex flex-col gap-[70px] max-md:gap-[30px] capitalize ">
         <div className="grid grid-cols-3 gap-[50px] max-md:gap-[15px] w-full  ">

@@ -1,67 +1,67 @@
 'use client'
 import { useState } from 'react'
-import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { FreeMode, Navigation, Thumbs } from 'swiper/modules'
+import { FreeMode, Navigation, Thumbs,Zoom } from 'swiper/modules'
 import 'swiper/css'
+import Image from 'next/image'
 import 'swiper/css/free-mode'
 import 'swiper/css/navigation'
 import 'swiper/css/thumbs'
+import 'swiper/css/zoom'
 import daata from './daaata'
 
-export default function Page() {
+
+export default function Page(props) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null)
   return (
-    <section className=' h-full max-w-[100px] bg-black pb-12'>
-      <div className='container'>
+    <div className=' max-h-[200px]'>
+      <div className=' max-h-[200px]'>
+        <div className=''>
         <Swiper
           loop={true}
+          autoHeight={true}
           spaceBetween={10}
           navigation={false}
+          zoom={true}
           thumbs={{
             swiper:
               thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null
           }}
-          modules={[FreeMode, Navigation, Thumbs]}
-          className='h-full w-full rounded-lg'
+          modules={[FreeMode, Navigation,Thumbs,Zoom]}
+          className='max-h-[20px] h-[10%]  rounded-lg '
         >
-          {daata.map((image, index) => (
+          {props.Images.map((image, index) => (
             <SwiperSlide key={index}>
-              <div className='flex h-full w-full gap-[10px] items-center justify-center'>
+              <div className=' h-full flex justify-center '>
+                <img src={image} alt='fck my life' className='swiper-image rounded-md object-cover max-h-[200px] '/>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+</div>
+        {/* Thumbnail */}
+        <Swiper
+          onSwiper={setThumbsSwiper}
+          loop={true}
+          spaceBetween={10}
+          slidesPerView={4}
+          freeMode={true}
+          watchSlidesProgress={true}
+          modules={[FreeMode, Navigation, Thumbs]}
+          className='thumbs  h-full w-[90%] rounded-md '
+        >
+          {props.Images.map((image, index) => (
+            <SwiperSlide key={index} className='rounded-md mt-2'>
+             <div>
                 <img
-                  src={image.src}
-                  alt={image.alt}
-                  className=' h-[14vh] rounded-md w-[90%] object-cover'
+                  src={image}
+                  className={`h-[80%] rounded-md w-full object-cover `}
                 />
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
-
-        {/* Thumbnail */}
-        <Swiper
-          onSwiper={setThumbsSwiper}
-          loop={true}
-          spaceBetween={12}
-          slidesPerView={4}
-          freeMode={true}
-          watchSlidesProgress={true}
-          modules={[FreeMode, Navigation, Thumbs]}
-          className='thumbs mt-3 h-32 w-full rounded-lg'
-        >
-          {daata.map((image, index) => (
-            <SwiperSlide key={index}>
-              <button className='flex h-full w-full items-center justify-center'>
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className='block h-full mt-4 rounded-md w-[80%] object-cover'
-                />
-              </button>
-            </SwiperSlide>
-          ))}
-        </Swiper>
       </div>
-    </section>
+      </div>
   )
 }
