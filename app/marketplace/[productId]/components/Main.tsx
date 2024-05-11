@@ -3,9 +3,8 @@ import { IoClose } from "react-icons/io5";
 import { MdDone } from "react-icons/md";
 import ImagesDisplay from "./ImagesDisplay.jsx";
 import Sliderrr from "./Sliderrr.jsx";
-import Slideer from "./Slideer.jsx";
-import Form from "@/app/components/Form";
 
+import Form from "@/app/components/Form";
 const Main: FC<MainProps> = ({
   _id,
   Modele,
