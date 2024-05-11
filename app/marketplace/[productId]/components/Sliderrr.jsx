@@ -33,7 +33,7 @@ export default function Page(props) {
           {props.Images.map((image, index) => (
             <SwiperSlide key={index}>
               <div className=' h-full flex justify-center '>
-                <img src={image} alt='fck my life' className='swiper-image rounded-md object-cover max-h-[200px] '/>
+                <img src={image} alt='fck my life' className='swiper-image  rounded-md object-cover w-full '/>
               </div>
             </SwiperSlide>
           ))}
@@ -55,7 +55,7 @@ export default function Page(props) {
              <div>
                 <img
                   src={image}
-                  className={`h-[80%] rounded-md w-full object-cover `}
+                  className={`h-full rounded-md w-full object-cover `}
                 />
               </div>
             </SwiperSlide>
