@@ -13,12 +13,6 @@ import daata from './daaata'
 
 export default function Page(props) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null)
-  const x = props.Images.length;
-  while(x<4){
-    
-  }
-
-  props
   return (
     <div className=' max-h-[200px]'>
       <div className=' max-h-[200px]'>
