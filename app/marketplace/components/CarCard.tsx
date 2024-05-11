@@ -62,8 +62,6 @@ const CarCard: FC<CarCardProps> = ({
           filter.boite.length !== 0)
     );
   }, [filter, searchKey]);
-
-
   return (
     <div
       className={`w-[333px] sm:max-lg:min-w-[250px] sm:lg:min-w-[330px] sm:max-md:min-w-[300px] sm:max-sm:w-[300px]  ${
@@ -99,7 +97,7 @@ const CarCard: FC<CarCardProps> = ({
             {Prix_TTC.toLocaleString()}DZ
           </div>
           <Link
-            href={`/marketplace/${_id}`}
+            href={`/${_id}`}
             className="text-white bg-[#DB2719] flex justify-center items-center w-[127px] max-lg:w-[100px] max-md:w-[127px] h-[50px] rounded-lg"
           >
             Voir plus
@@ -124,7 +122,7 @@ const CarCard: FC<CarCardProps> = ({
           <div className="w-full flex gap-[71px] items-center justify-center text-[#858282] mb-[20px] font-medium p-[23px]">
             <div className="flex gap-[4px]">
               <GiGasPump className=" text-xl  " />
-              {VehiculeObj.Reservoir}
+              {VehiculeObj.Reservoir}L
             </div>
             <div className="flex  items-center gap-[7px]">
               {MoteurObj.Boite === "manuelle" ? (
@@ -139,12 +137,11 @@ const CarCard: FC<CarCardProps> = ({
             <div className="flex font-bold text-xl">
               {Prix_TTC.toLocaleString()}DZ
             </div>
-     
             <Link
               href={"/marketplace/" + _id}
               className="text-white bg-[#DB2719] flex justify-center items-center w-[127px] max-lg:w-[100px] max-md:w-[127px] h-[50px] rounded-lg"
             >
-              Voir plus  
+              Voir plus
             </Link>
           </div>
         </div>

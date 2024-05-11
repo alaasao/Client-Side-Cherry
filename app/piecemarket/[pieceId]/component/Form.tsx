@@ -5,12 +5,12 @@ interface FromProps {
 }
 const Form: FC<FromProps> = ({ name }: FromProps) => {
   return (
-    <div className="bg-[#e9e8e896] w-[90%] mx-auto py-[50px] rounded-2xl flex flex-col">
-      <div className="font-bold  text-[#DB2719]  text-4xl pl-[20px] mb-[20px]">
+    <div className="bg-[#e9e8e896] py-[50px] rounded-2xl flex flex-col">
+      <div className="font-bold   text-4xl pl-[20px] mb-[20px]">
         {" "}
         Prenez rendez-vous
       </div>
-      <form className=" w-full flex gap-x-[12vw] gap-y-[4vw] flex-wrap">
+      <form className="w-full flex gap-x-[12vw] gap-y-[4vw] flex-wrap">
         <div className="flex flex-col w-[40%] max-md:w-[80%] mx-auto ">
           <div className="font-bold">Nom</div>
           <input
