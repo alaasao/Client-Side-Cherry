@@ -13,13 +13,6 @@
 * {
   box-sizing: border-box;
 }
-.thumbs .swiper-slide {
-  opacity: 0.9;
-}
-
-.thumbs .swiper-slide-thumb-active {
-  opacity: 1;
-}
 /* @layer base {
   :root {
     --background: 0 0% 100%;
@@ -148,7 +141,7 @@ video {
 
   z-index: 999; /* Ensure it's above other content */
 }
-input[type="number"] {
+/* input[type="number"] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
@@ -156,4 +149,8 @@ input[type="number"] {
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
+} */
+.swiper-image {
+  max-height: 300px; /* Ajustez la hauteur selon vos besoins */
+  object-fit: cover;
 }

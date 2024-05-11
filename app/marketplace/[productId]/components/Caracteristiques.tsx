@@ -5,6 +5,7 @@ import Main from "./Main";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import DescSection from "./DescSection";
+import Form from "@/app/piecemarket/[pieceId]/component/Form";
 // import ImageSlider from "./ImageSlider";
 
 const Caracteristiques: FC<CaracteristiquesProps> = ({
@@ -101,7 +102,8 @@ const Caracteristiques: FC<CaracteristiquesProps> = ({
       <div className="w-full sticky top-[20px]">
         <Card Images={Images} _id={_id} Prix_TTC={Prix_TTC} sticky={isSticky} />
       </div>
-    </div>
+      </div>
+      <Form name="ddd" />
     </div>
   );
 };
