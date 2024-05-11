@@ -13,10 +13,18 @@ import daata from './daaata'
 
 export default function Page(props) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null)
+  const x = props.Images.length
+  let newArray = props.Images;
+  const clonedArray = props.Images.map((item) => item);
+  const clonedArray2 = clonedArray.map((item) => item);
+  const clonedArray3 = props.Images.map((item) => item);
+  const clonedArray4 = props.Images.map((item) => item);
+  const clonedArray5 = props.Images.map((item) => item);
+  newArray= clonedArray2.concat(clonedArray.concat(clonedArray3.concat(clonedArray4.concat(clonedArray5))))
+
+ 
   return (
-    <div className=' max-h-[200px]'>
-      <div className=' max-h-[200px]'>
-        <div className=''>
+      <div className=''>
         <Swiper
           loop={true}
           autoHeight={true}
@@ -28,40 +36,47 @@ export default function Page(props) {
               thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null
           }}
           modules={[FreeMode, Navigation,Thumbs,Zoom]}
-          className='max-h-[20px] h-[10%]  rounded-lg '
+          className='rounded-lg h-[20px] '
         >
-          {props.Images.map((image, index) => (
+          {newArray.map((image, index) => (
             <SwiperSlide key={index}>
-              <div className=' h-full flex justify-center '>
-                <img src={image} alt='fck my life' className='swiper-image  rounded-md object-cover w-full '/>
-              </div>
+               
+              <div className=' w-full h-full'> 
+                  <button className='w-full h-full '>
+                    <img src="/assets/serv/But.png" className='absolute h-[20px] w-[20px]  bottom-20 right-20' alt="haha" />
+                  </button>
+                <img src={image} alt='fck my life' className='imaaa h-full rounded-md  object-cover w-full '/>
+                 
+            </div>
             </SwiperSlide>
           ))}
         </Swiper>
-</div>
+
         {/* Thumbnail */}
-        <Swiper
-          onSwiper={setThumbsSwiper}
-          loop={true}
-          spaceBetween={10}
-          slidesPerView={4}
-          freeMode={true}
-          watchSlidesProgress={true}
-          modules={[FreeMode, Navigation, Thumbs]}
-          className='thumbs  h-full w-[90%] rounded-md '
-        >
-          {props.Images.map((image, index) => (
-            <SwiperSlide key={index} className='rounded-md mt-2'>
-             <div>
-                <img
-                  src={image}
-                  className={`h-full rounded-md w-full object-cover `}
-                />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+            <Swiper
+            onSwiper={setThumbsSwiper}
+            loop={true}
+            spaceBetween={10}
+            slidesPerView={4}
+            freeMode={true}
+            autoHeight={false}
+            watchSlidesProgress={true}
+            modules={[FreeMode, Navigation, Thumbs]}
+            className='thumbs w-full h-[300px] rounded-md'
+          >
+            {newArray.map((image, index) => (
+            <SwiperSlide key={index}  className='min-h-[100px] h-full rounded-md mt-2'>
+                <div className='h-full'>
+                  <img
+                    src={image}
+                    alt={`Thumbnail ${index}`}
+                    className='image rounded-md w-full h-full object-cover'
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+</Swiper>
+
       </div>
   )
 }

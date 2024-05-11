@@ -4,6 +4,7 @@ import Caracteristiques from "./components/Caracteristiques";
 import axios from "axios";
 async function getData(id:string) {
   const res = await fetch('https://axeiny.tech:4004/car/'+id)
+
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
  
@@ -11,12 +12,10 @@ async function getData(id:string) {
     // This will activate the closest `error.js` Error Boundary
     throw new Error('Failed to fetch data')
   }
- 
   return res.json()
 }
 export default   async function Page({ params }: { params: { productId: string } }) {
 const car= await getData(params.productId)
-
   return (
     <div>
       <Caracteristiques

@@ -55,8 +55,8 @@ const Caracteristiques: FC<CaracteristiquesProps> = ({
             Disponabilite={Disponabilite}
             Prix_TTC={Prix_TTC}
             Moteur={Moteur}
-              updatedAt={updatedAt}
-              Images={Images}
+            updatedAt={updatedAt}
+            Images={Images}
           />
         </div>
         <div className="w-full flex justify-between items-center max-md:text-[14px] mb-[84px]">

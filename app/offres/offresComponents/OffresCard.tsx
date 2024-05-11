@@ -41,7 +41,7 @@ const OffresCard = (props :Demoprop) => {
                             <p className='justify-evenly flex sm:w-full font-bold'><span className='text-red-500 text-lg sm:text-xl  md:text-xl lg:text-xl 2xl:text-2xl'>{props.price}.00 DZD </span>   <span className=' text-lg sm:text-xl md:text-xl lg:text-xl 2xl:text-2xl line-through'> {props.prixavant}.00 DZD</span> </p>
                           </div>
                           <div className='flex py-2  w-[90%] items-center justify-end sm:justify-between   '>
-                                  <div className='flex flex-col text-[0.4rem] sm:text-[0.7rem] md:text-sm max-sm:hidden 2xl:text-lg text-gray-500'>
+                                  <div className='flex flex-col text-[0.2rem] sm:text-[0.3rem] md:text-sm max-sm:hidden 2xl:text-lg text-gray-500'>
                                         <p>A partir de : {props.start}</p>
                                         <p>Jusqu&apos;a : {props.end}</p>
                                       

@@ -5,9 +5,7 @@ const BigVidange = () => {
   return (
     <div className='w-[90%]  justify-center items-center max-md:hidden'>
         <h1 className='good text-2xl sm:text-3xl mt-12 mb-6'>Vidange</h1>
-        <p className='text-lg font-[500] mb-6'>Dans notre section dédiée aux services chez Chery Algerie , nous nous engageons à maintenir votre véhicule en parfait état de fonctionnement. Planifiez votre vidange en ligne dès maintenant.</p>
-        
-        
+        <p className='text-lg font-[500] mb-6'>Dans notre section dédiée aux services chez Chery Algerie , nous nous engageons à maintenir votre véhicule en parfait état de fonctionnement. Planifiez votre vidange en ligne dès maintenant.</p> 
     <div className=" 2xl:h-[800px] max-sm:h-[610px] h-[500px] mb-10 relative">
         <img src='/assets/serv/vidange.png' className='w-full 2xl:h-[800px] max-sm:h-[610px] h-[500px]'/>
         <div className="w-full h-full absolute top-0 left-0 grid grid-cols-[3fr_1fr] lg:grid-cols-[2fr_1fr]  gap-[20px]  justify-center  text-black ">
@@ -65,7 +63,7 @@ const BigVidange = () => {
                                 Le modele
                                 </label>
                                 <input
-                                type="number"
+                                type="text"
                                 minLength={3}
                                 placeholder='Votre modele'
                                 maxLength={150}

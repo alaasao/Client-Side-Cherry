@@ -3,7 +3,7 @@ import { IoClose } from "react-icons/io5";
 import { MdDone } from "react-icons/md";
 import ImagesDisplay from "./ImagesDisplay.jsx";
 import Sliderrr from "./Sliderrr.jsx";
-
+import { useState } from "react";
 const Main: FC<MainProps> = ({
   _id,
   Modele,
@@ -14,12 +14,42 @@ const Main: FC<MainProps> = ({
   Moteur,
   updatedAt,
 }: MainProps) => {
+  const [colorlist, setColorlist] = useState(Images.map(item=>item.Color))
+  const [image, setImage] = useState(Images[0].Images.map(item=>item))
+  const handleColorClick = (color:any) => {
+    const jj = Images
+      .filter((e) => e.Color.toLowerCase() === color)
+      .flatMap((e) => e.Images);
+    setImage(jj);
+  };
+
   return (
     <div className=" w-full   md:grid  md:grid-cols-2  max-md:gap-[100px] gap-[44px] md:h-[30%]   md:mb-[30px]">
         <div className="max-md:w-full max-md:mb-[30px] ">
-          <Sliderrr Images={Images[0].Images}/>
+          <Sliderrr Images={image}/>
         </div>
       <div className="w-full flex flex-col gap-[70px] max-md:gap-[30px] capitalize ">
+        <div className="w-full flex flex-col">
+            <p className="">Couleur</p>
+            <div className="w-full flex flex-row h-[50px] gap-10 mt-2">
+            {colorlist.map((e, index) => (
+      <button
+        key={index}
+        onClick={() => handleColorClick(e.toLowerCase())}
+        className={`w-[50px] h-[70px] flex flex-col items-center justify-center`}
+      >
+        <div
+          className={`w-[50px] h-[60px] rounded-md ${
+            e.toLowerCase() === 'rouge' ? 'bg-[#D33030] opacity-100 z-10' : e.toLowerCase() === 'blanc' ? 'bg-white' : e.toLowerCase() === 'noir' ? 'bg-black' : 'bg-[#B9B9B9]'
+          }`}
+        >
+          <p className="opacity-0">haha</p>
+        </div>
+        <p>{e}</p>
+      </button>
+    ))}
+            </div>
+        </div>
         <div className="grid grid-cols-3 gap-[50px] max-md:gap-[15px] w-full  ">
           <div className="flex flex-col max-md:items-center gap-[30px] max-md:gap-[10px]  font-medium ">
             <h1 className="text-2xl max-lg:text-[16px] text-[#959494]">

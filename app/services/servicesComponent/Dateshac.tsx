@@ -32,6 +32,7 @@ export default function DatePickerDemo() {
       <PopoverContent className="w-auto p-3">
         <Calendar
           mode="single"
+          
           selected={date}
           onSelect={setDate}
           initialFocus

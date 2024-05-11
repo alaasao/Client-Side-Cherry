@@ -150,13 +150,15 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
 } */
-.swiper-image {
-  max-height: 350px; /* Ajustez la hauteur selon vos besoins */
-  object-fit: cover;
+.image{
+  min-height:100px;
+  max-height:101px
 }
-@media (min-width: 1400px) {
-  .swiper-image{
-    max-height: 500px; /* Ajustez la hauteur selon vos besoins */
-    object-fit: cover;
-  }
+.imaaa{
+  display:inline-block;
+  min-height:200px;
+  max-height:350px;
+}
+.ill{
+object-fit:cover;
 }
