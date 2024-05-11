@@ -3,7 +3,6 @@ import { IoClose } from "react-icons/io5";
 import { MdDone } from "react-icons/md";
 import ImagesDisplay from "./ImagesDisplay.jsx";
 import Sliderrr from "./Sliderrr.jsx";
-import Slideer from "./Slideer.jsx";
 
 const Main: FC<MainProps> = ({
   _id,

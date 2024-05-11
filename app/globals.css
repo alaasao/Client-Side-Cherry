@@ -151,6 +151,12 @@ input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
 } */
 .swiper-image {
-  max-height: 300px; /* Ajustez la hauteur selon vos besoins */
+  max-height: 350px; /* Ajustez la hauteur selon vos besoins */
   object-fit: cover;
+}
+@media (min-width: 1400px) {
+  .swiper-image{
+    max-height: 500px; /* Ajustez la hauteur selon vos besoins */
+    object-fit: cover;
+  }
 }
