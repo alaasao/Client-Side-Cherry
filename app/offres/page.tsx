@@ -6,7 +6,7 @@ import Nouveau from './offresComponents/Nouveau'
 import axios from "axios";
 import {useState, useEffect} from "react";
 import OffresCard from './offresComponents/OffresCard'
-const page = ({ params }: { params: { productId: string } }) => {
+const Page = ({ params }: { params: { productId: string } }) => {
   const [data, setData] = useState([
     {
       Masked: false,
@@ -134,4 +134,4 @@ const page = ({ params }: { params: { productId: string } }) => {
   )
 }
 
-export default page
+export default Page
