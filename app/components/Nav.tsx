@@ -123,7 +123,7 @@ const Nav = () => {
         <DialogHeader>
           <DialogTitle>Login</DialogTitle>
           <DialogDescription>
-          inscrivez-vous pour voir les informations de votre carte et bien d'autres fonctionnalités          </DialogDescription>
+          inscrivez-vous pour voir les informations de votre carte et bien d autres fonctionnalités          </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4">
           <div className="grid grid-cols-4 items-center gap-4">
