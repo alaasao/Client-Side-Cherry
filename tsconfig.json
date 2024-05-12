@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/marketplace/[productId]/components/Sliderrr.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/marketplace/[productId]/components/Sliderrr.jsx", "app/api/auth/[...nextauth].js", "app/AuthContext/page.jsx"],
   "exclude": ["node_modules"]
 }
