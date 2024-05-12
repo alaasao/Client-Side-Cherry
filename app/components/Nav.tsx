@@ -14,7 +14,6 @@ const targets = [
   { target: "/FAQ", title: "FAQ" },
   { target: "/about", title: "About Us" },
 ];
-
 const Nav = () => {
   let [isOpen, setIsOpen] = useState(false);
   let currentPath = usePathname();

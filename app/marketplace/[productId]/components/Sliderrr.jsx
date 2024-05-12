@@ -40,13 +40,8 @@ export default function Page(props) {
         >
           {newArray.map((image, index) => (
             <SwiperSlide key={index}>
-               
               <div className=' w-full h-full'> 
-                  <button className='w-full h-full '>
-                    <img src="/assets/serv/But.png" className='absolute h-[20px] w-[20px]  bottom-20 right-20' alt="haha" />
-                  </button>
                 <img src={image} alt='fck my life' className='imaaa h-full rounded-md  object-cover w-full '/>
-                 
             </div>
             </SwiperSlide>
           ))}

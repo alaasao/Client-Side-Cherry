@@ -1,3 +1,4 @@
+"use client"
 import React, { FC } from "react";
 import { IoClose } from "react-icons/io5";
 import { MdDone } from "react-icons/md";
@@ -29,28 +30,30 @@ const Main: FC<MainProps> = ({
           <Sliderrr Images={image}/>
         </div>
       <div className="w-full flex flex-col gap-[70px] max-md:gap-[30px] capitalize ">
-        <div className="w-full flex flex-col">
-            <p className="">Couleur</p>
-            <div className="w-full flex flex-row h-[50px] gap-10 mt-2">
-            {colorlist.map((e, index) => (
-      <button
-        key={index}
-        onClick={() => handleColorClick(e.toLowerCase())}
-        className={`w-[50px] h-[70px] flex flex-col items-center justify-center`}
-      >
-        <div
-          className={`w-[50px] h-[60px] rounded-md ${
-            e.toLowerCase() === 'rouge' ? 'bg-[#D33030] opacity-100 z-10' : e.toLowerCase() === 'blanc' ? 'bg-white' : e.toLowerCase() === 'noir' ? 'bg-black' : 'bg-[#B9B9B9]'
-          }`}
-        >
-          <p className="opacity-0">haha</p>
+              <div className="w-full flex flex-col">
+                  <h2 className="text-2xl mb-3">{Modele}</h2>
+                  <h2 className="text-2xl text-red-500">{Prix_TTC} DZ</h2>
+                  <p className="mt-6 mb-2 text-2xl">Couleur</p>
+                    <div className="w-full flex flex-row h-[50px] gap-10 mt-2">
+                        {colorlist.map((e, index) => (
+                            <button
+                              key={index}
+                              onClick={() => handleColorClick(e.toLowerCase())}
+                              className={`w-[50px] h-[70px] flex flex-col items-center justify-center`}
+                            >
+                              <div
+                                className={`w-[50px] h-[60px] rounded-md ${
+                                  e.toLowerCase() === 'rouge' ? 'bg-[#D33030] opacity-100 z-10' : e.toLowerCase() === 'blanc' ? 'bg-white' : e.toLowerCase() === 'noir' ? 'bg-black' : 'bg-[#B9B9B9]'
+                                }`}
+                              >
+                                <p className="opacity-0">haha</p>
+                              </div>
+                              <p>{e}</p>
+                            </button>
+                          ))}
+                    </div>
         </div>
-        <p>{e}</p>
-      </button>
-    ))}
-            </div>
-        </div>
-        <div className="grid grid-cols-3 gap-[50px] max-md:gap-[15px] w-full  ">
+        <div className="grid grid-cols-3 mt-6 gap-[50px] max-md:gap-[15px] w-full  ">
           <div className="flex flex-col max-md:items-center gap-[30px] max-md:gap-[10px]  font-medium ">
             <h1 className="text-2xl max-lg:text-[16px] text-[#959494]">
               Modéle
