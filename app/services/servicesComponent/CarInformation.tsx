@@ -51,7 +51,7 @@ const CarInformation = () => {
 
 
 
-      <div className="flex max-sm:flex-col w-full items-center justify-around md:flex-row gap-5 2xl:gap-10">
+      <div className="flex max-sm:flex-col w-full items-center justify-around md:flex-row gap-10 2xl:gap-10">
         <Link
           href={`haha`}
           download={`haha`}
