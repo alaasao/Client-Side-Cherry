@@ -51,7 +51,7 @@ const CarInformation = () => {
 
 
 
-      <div className="flex max-sm:flex-col w-full items-center justify-around md:flex-row gap-10 2xl:gap-10">
+      {/* <div className="flex max-sm:flex-col w-full items-center justify-around md:flex-row gap-10 2xl:gap-10">
         <Link
           href={`haha`}
           download={`haha`}
@@ -78,7 +78,7 @@ const CarInformation = () => {
           <p className="sm:font-bold w-[80%]">Facture d&apos;achat</p>
           <MdOutlineFileDownload className="sm:text-xl md:text-2xl 2xl:text-5xl lg:text-3xl text-3xl" />
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 };
