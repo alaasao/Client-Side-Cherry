@@ -45,7 +45,7 @@ const BigVidange = () => {
                                 Numero du telephone
                                 </label>
                                 <input
-                                type="number"
+                                type="tel"
                                 minLength={3}
                                 placeholder='entrer votre numero du telephone'
                                 maxLength={150}
@@ -58,7 +58,7 @@ const BigVidange = () => {
                         <div className="w-full  flex flex-col my-4">
                                 <label
                                 className="text-[#0C0C0C] mb-2"
-                                htmlFor="numero"
+                                htmlFor="modele"
                                 >
                                 Le modele
                                 </label>
@@ -68,7 +68,7 @@ const BigVidange = () => {
                                 placeholder='Votre modele'
                                 maxLength={150}
                                 required
-                                name='text'
+                                name='modele'
                                 className=" p-3  bg-gray-50 border border-opacity-[25%] border-[#000000] rounded-[5px] "
                                 autoComplete="off"
                                 id="numero" />

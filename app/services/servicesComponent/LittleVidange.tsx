@@ -39,40 +39,40 @@ const LittleVidange = () => {
                             <Dateshac/>
                     </div>
                     <div className="w-full md:w-[40%] flex flex-col my-4">
-                            <label
+                        <label
                             className="text-[#0C0C0C] mb-2"
-                            htmlFor="numero"
+                            htmlFor="tel"
                             >
-                            Numero du telephone
+                        Numero du telephone
                             </label>
-                            <input
-                            type="number"
-                            minLength={3}
-                            placeholder='entrer votre numero du telephone'
-                            maxLength={150}
-                            required
-                            name='numero'
-                            className=" p-3  bg-gray-50 border border-opacity-[25%] border-[#000000] rounded-[5px] "
-                            autoComplete="off"
-                            id="numero" />
+                        <input
+                                type="tel"
+                                minLength={3}
+                                placeholder="entrer votre numero du telephone"
+                                maxLength={150}
+                                required
+                                name="tel"
+                                className="p-3 bg-gray-50 border border-opacity-[25%] border-[#000000] rounded-[5px]"
+                                autoComplete="off"
+                                id="tel"/>
                     </div>
                     <div className="w-full md:w-[40%] flex flex-col my-4">
                             <label
                             className="text-[#0C0C0C] mb-2"
-                            htmlFor="numero"
+                            htmlFor="modele"
                             >
                             Le modele
                             </label>
                             <input
-                            type="number"
+                            type="text"
                             minLength={3}
                             placeholder='Votre modele'
                             maxLength={150}
                             required
-                            name='text'
+                            name='modele'
                             className=" p-3  bg-gray-50 border border-opacity-[25%] border-[#000000] rounded-[5px] "
                             autoComplete="off"
-                            id="numero" />
+                            id="modele" />
                     </div>
                 </div>
             <div className='flex items-center justify-center'>

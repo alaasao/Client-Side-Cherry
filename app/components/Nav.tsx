@@ -7,6 +7,19 @@ import { CiUser, CiMenuBurger, CiSearch } from "react-icons/ci";
 import { FiMenu } from "react-icons/fi";
 import { CgCloseR } from "react-icons/cg";
 import CustomLink from "./CustomLink";
+import { Button } from "@/components/ui/button"
+import axios from "axios";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
 const targets = [
   { target: "/marketplace", title: "Nos modèle" },
   { target: "/event", title: "Nos évènements" },
@@ -18,6 +31,19 @@ const Nav = () => {
   let [isOpen, setIsOpen] = useState(false);
   let currentPath = usePathname();
   let [searchOpen, serSearchOpen] = useState(false);
+  const [id, setId] = useState('');
+  const [isIdValid, setIsIdValid] = useState(null);
+
+  const checkIdExistence = async () => {
+    try {
+      const response = await axios.get(`https://axeiny.tech:4004/client/${id}`);
+      const { exists } = response.data;
+      setIsIdValid(exists);
+    } catch (error) {
+      console.error('Error checking ID existence:', error);
+      // Handle error state
+    }
+  };
   return (
     <div
       className={`w-screen box-border min-w-0 h-[90px]  border-b-[3px]  ${
@@ -84,17 +110,38 @@ const Nav = () => {
         />
       </ul>
       <div className="flex gap-[1.5vw]">
-        {/* <CiSearch
-          className={`w-8 h-8 ${
-            currentPath === "/" ? "text-white cursor-pointer " : ""
-          } `}
-          onClick={() => {
-            serSearchOpen((prev) => !prev);
-          }}
-        /> */}
-        <CiUser
-          className={`w-8 h-8 ${currentPath === "/" ? "text-white" : ""} `}
-        />
+        
+         <Dialog>
+      <DialogTrigger asChild>
+        <Button variant="outline">
+          <CiUser
+            className={`w-8 h-8 ${currentPath === "/" ? "text-white" : ""} `}
+          />
+        </Button>
+      </DialogTrigger>
+      <DialogContent className="sm:max-w-[425px] bg-gray-500">
+        <DialogHeader>
+          <DialogTitle>Login</DialogTitle>
+          <DialogDescription>
+          inscrivez-vous pour voir les informations de votre carte et bien d'autres fonctionnalités          </DialogDescription>
+        </DialogHeader>
+        <div className="grid gap-4 py-4">
+          <div className="grid grid-cols-4 items-center gap-4">
+            <Label htmlFor="name" className="text-right">
+              Name
+            </Label>
+            <Input id="name" onChange={(e) => setId(e.target.value)} placeholder="Entrer votre ID" className="col-span-3 text-black" />
+          </div>
+        </div>
+        <DialogFooter>
+          <Button  onClick={checkIdExistence}>Login</Button>
+          {isIdValid !== null && (
+        <p>{isIdValid ? 'ID exists' : 'ID does not exist'}</p>
+      )}
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
+        
       </div>
       <div
         className={`absolute left-0  rounded-lg transition-all duration-700 top-0`}
@@ -165,5 +212,4 @@ const Nav = () => {
     </div>
   );
 };
-
 export default Nav;

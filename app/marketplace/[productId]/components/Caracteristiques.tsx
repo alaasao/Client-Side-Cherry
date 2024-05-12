@@ -138,6 +138,13 @@ export interface SecurityObj {
   Verrouillage_Centralise: string;
   Alarme: string;
 }
+export interface PromoObj{
+ 
+    IsPromo: boolean;
+    Start: string;
+    End: string;
+    Value: number;
+};
 export interface LookObj {
   Feux_Anti_Arouillard: string[];
   Feux_Avant: string;

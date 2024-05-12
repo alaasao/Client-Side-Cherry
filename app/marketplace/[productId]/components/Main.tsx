@@ -29,20 +29,23 @@ const Main: FC<MainProps> = ({
         <div className="max-md:w-full max-md:mb-[30px] ">
           <Sliderrr Images={image}/>
         </div>
-      <div className="w-full flex flex-col gap-[70px] max-md:gap-[30px] capitalize ">
+      <div className="w-full flex flex-col gap-[20px] max-md:gap-[30px] capitalize ">
               <div className="w-full flex flex-col">
-                  <h2 className="text-2xl mb-3">{Modele}</h2>
-                  <h2 className="text-2xl text-red-500">{Prix_TTC} DZ</h2>
-                  <p className="mt-6 mb-2 text-2xl">Couleur</p>
-                    <div className="w-full flex flex-row h-[50px] gap-10 mt-2">
+                <div className="flex flex-row w-full justify-between">
+                  <h2 className="text-4xl my-6">{Modele} {Moteur} MT</h2>
+                  <h2 className="text-4xl my-6 text-red-500">{Prix_TTC}.000 DZ</h2>
+                  </div>
+                    <div className="w-full py-4 border-y  mt-2 border-gray-400 flex flex-col items-start justify-start gap-4 ">
+                        <p className="text-2xl">Couleur</p>
+                        <div className="w-full flex flex-row items-center justify-start gap-10 ">
                         {colorlist.map((e, index) => (
                             <button
                               key={index}
                               onClick={() => handleColorClick(e.toLowerCase())}
-                              className={`w-[50px] h-[70px] flex flex-col items-center justify-center`}
+                              className={`w-[50px]   h-[70px] flex flex-col items-center justify-center`}
                             >
                               <div
-                                className={`w-[50px] h-[60px] rounded-md ${
+                                className={`w-[50px] border border-black h-[60px] rounded-lg ${
                                   e.toLowerCase() === 'rouge' ? 'bg-[#D33030] opacity-100 z-10' : e.toLowerCase() === 'blanc' ? 'bg-white' : e.toLowerCase() === 'noir' ? 'bg-black' : 'bg-[#B9B9B9]'
                                 }`}
                               >
@@ -51,10 +54,11 @@ const Main: FC<MainProps> = ({
                               <p>{e}</p>
                             </button>
                           ))}
+                          </div>
                     </div>
         </div>
-        <div className="grid grid-cols-3 mt-6 gap-[50px] max-md:gap-[15px] w-full  ">
-          <div className="flex flex-col max-md:items-center gap-[30px] max-md:gap-[10px]  font-medium ">
+        <div className="grid grid-cols-3 gap-[30px] max-md:gap-[15px] w-full  ">
+          <div className="flex flex-col max-md:items-center gap-[15px] max-md:gap-[10px]  font-medium ">
             <h1 className="text-2xl max-lg:text-[16px] text-[#959494]">
               Modéle
             </h1>
@@ -62,7 +66,7 @@ const Main: FC<MainProps> = ({
               {} {Modele}{" "}
             </p>
           </div>
-          <div className="flex flex-col max-md:items-center gap-[30px] max-md:gap-[10px]  font-medium">
+          <div className="flex flex-col max-md:items-center gap-[15px] max-md:gap-[10px]  font-medium">
             <h1 className="text-2xl max-lg:text-[16px] text-[#959494]">
               Garentie{" "}
             </h1>
@@ -70,7 +74,7 @@ const Main: FC<MainProps> = ({
               {Garentie}
             </p>
           </div>
-          <div className="flex flex-col max-md:items-center gap-[30px] max-md:gap-[10px]  font-medium">
+          <div className="flex flex-col max-md:items-center gap-[15px] max-md:gap-[10px]  font-medium">
             <h1 className="text-2xl max-lg:text-[16px] text-[#959494]">
               Disponabilité
             </h1>
@@ -93,8 +97,8 @@ const Main: FC<MainProps> = ({
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-[50px] max-md:gap-[15px]  w-full">
-          <div className="flex flex-col max-md:items-center gap-[30px] max-md:gap-[10px]  font-medium">
+        <div className="grid grid-cols-3 gap-[30px] max-md:gap-[15px]  w-full">
+          <div className="flex flex-col max-md:items-center gap-[15px] max-md:gap-[10px]  font-medium">
             <h1 className="text-2xl max-lg:text-[16px] capitalize  text-[#959494]">
               Prix_TTC
             </h1>
@@ -102,13 +106,13 @@ const Main: FC<MainProps> = ({
               {Prix_TTC.toLocaleString()}DZ
             </p>
           </div>
-          <div className="flex flex-col max-md:items-center gap-[30px] max-md:gap-[10px]  font-medium">
+          <div className="flex flex-col max-md:items-center gap-[15px] max-md:gap-[10px]  font-medium">
             <h1 className="text-2xl max-lg:text-[16px] text-[#959494]">
               Moteur{" "}
             </h1>
             <p className="capitalize  text-2xl max-lg:text-[16px]">{Moteur}</p>
           </div>
-          <div className="flex flex-col max-md:items-center gap-[30px] max-md:gap-[10px]  font-medium">
+          <div className="flex flex-col max-md:items-center gap-[15px] max-md:gap-[10px]  font-medium">
             <h1 className="text-2xl max-lg:text-[16px] text-[#959494] ">
               Mise à jour{" "}
             </h1>

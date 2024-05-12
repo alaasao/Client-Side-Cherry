@@ -119,12 +119,10 @@ const Market: FC<MarketProps> = ({
   useEffect(() => { 
 
     axios.get("https://axeiny.tech:4004/car").then((res) => {setData(res.data)})
-  }, [])
-
+  },[])
   return (
     <div className="bg-[#F1F1F0] relative flex  max-sm:flex-col   flex-wrap sm:justify-center gap-[30px]  px-[20px]  max-md:gap-[10px] pb-[100px] ">
       {data.map((e, i) => {
-        
         return (
           <CarCard
             Modele={e.Modele}

@@ -15,10 +15,10 @@ const Nouveau = (props: CardProps) => {
         <div className='flex flex-col mt-10  justify-center items-start h-full w-full overflow-hidden shadow-[5px_3.49px_10px_0px_rgba(0,0,0,0.25)] '>
                               <div className='relative h-full  top-0 left-0  '>
                                 <p className='absolute  flex w-[60px] sm:w-[100px] lg:w-[120px] 2xl:w-[250px] border-y border-black sm:h-[30px] lg:h-[50px] 2xl:h-[50px] sm:text-center text-start  items-center text-white text-[0.7rem] skew-y-[-40deg] h-[20px] bg-[#D12621] '>
-                                  <span className=' xl:text-lg  p-1 skew-y-[1deg] font-bold '>Nouveau</span>
+                                  <span className=' text-xs xl:text-md  p-2 skew-y-[1deg] font-bold '>Nouveau</span>
                                 </p> 
                               </div>
-                              <img src={`${props.Images[0].Images[0]}`} 
+                              <img src={props.Images[0].Images[0]} 
                                   className='w-full h-full  object-cover lg:h-[320px] rounded-r-none  items-center' 
                                   alt="haha" 
                                   width={500} 
