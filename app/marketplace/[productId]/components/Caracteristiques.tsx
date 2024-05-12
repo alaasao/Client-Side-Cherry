@@ -5,6 +5,7 @@ import Main from "./Main";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import DescSection from "./DescSection";
+import Form from "@/app/components/Form";
 // import ImageSlider from "./ImageSlider";
 
 const Caracteristiques: FC<CaracteristiquesProps> = ({
@@ -100,7 +101,8 @@ const Caracteristiques: FC<CaracteristiquesProps> = ({
       </div>
       <div className="w-full sticky top-[20px]">
         <Card Images={Images} _id={_id} Prix_TTC={Prix_TTC} sticky={isSticky} />
-      </div>
+        </div>
+        <Form name={Modele} id={_id} type="voiture" />
     </div>
     </div>
   );

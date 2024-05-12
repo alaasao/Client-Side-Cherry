@@ -5,6 +5,7 @@ import { MdDone } from "react-icons/md";
 import ImagesDisplay from "./ImagesDisplay.jsx";
 import Sliderrr from "./Sliderrr.jsx";
 import { useState } from "react";
+
 const Main: FC<MainProps> = ({
   _id,
   Modele,
@@ -23,7 +24,6 @@ const Main: FC<MainProps> = ({
       .flatMap((e) => e.Images);
     setImage(jj);
   };
-
   return (
     <div className=" w-full   md:grid  md:grid-cols-2  max-md:gap-[100px] gap-[44px] md:h-[30%]   md:mb-[30px]">
         <div className="max-md:w-full max-md:mb-[30px] ">
@@ -118,6 +118,7 @@ const Main: FC<MainProps> = ({
           </div>
         </div>
       </div>
+ 
     </div>
   );
 };
