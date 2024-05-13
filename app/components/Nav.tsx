@@ -149,7 +149,6 @@ const Nav = () => {
               </div>
             </div>
             <DialogFooter>
-              dqs
               <Button
                 onClick={checkIdExistence}
                 className="bg-red-600 text-bold uppercase text-white"

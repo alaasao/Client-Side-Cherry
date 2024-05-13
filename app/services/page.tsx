@@ -7,8 +7,7 @@ import CarInformation from "./servicesComponent/CarInformation";
 import LittleVidange from "./servicesComponent/LittleVidange";
 import BigVidange from "./servicesComponent/BigVidange";
 import axios from "axios";
-const fetchUserData = async () => {};
-const page = () => {
+const Page = () => {
   const [userBonData, setUserBonData] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
@@ -40,4 +39,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
