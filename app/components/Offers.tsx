@@ -24,9 +24,8 @@ const Offers: FC = () => {
       <Link
         href={"/offres"}
         className="link text-xl max-md:text-[12px] border-[1px] rounded-xl max-lg:text-xl md:min-w-[300px]  w-max border-black focus:border-white  hover:scale-[1.1] focus:bg-red-600 focus:!text-white group flex items-center gap-[10px] justify-center  max-md:w-[200px] mx-auto px-[23px] py-[16px] group "
-        >
+      >
         <div> VOIR TOUTES LES OFFRES </div>{" "}
-       
       </Link>
     </div>
   );

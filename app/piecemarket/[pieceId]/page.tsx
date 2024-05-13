@@ -12,7 +12,7 @@ const page = ({ params }: { params: { pieceId: string } }) => {
       <Main {...piece} />
       <Desc desc={piece.desc} />
       <Doc doc={piece.doc} />
-  <Form  name={piece.name} id={piece.id} type="piece" />
+      <Form name={piece.name} id={piece.id} type="piece" />
     </div>
   );
 };

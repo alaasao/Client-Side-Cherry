@@ -38,14 +38,12 @@ const Price: FC<PriceProps> = ({ filterList, setFilterList }: PriceProps) => {
         <div
           className={`flex items-center cursor-pointer   justify-between text-[#858282] mx-auto w-full  h-[40px] mb-[10px]  transition-all duration-500  ${
             minOpen ? "" : "border-[#858282] border-b-[0.5px]"
-          } `}       onClick={() => setMinOpen((prev) => !prev)}
+          } `}
+          onClick={() => setMinOpen((prev) => !prev)}
         >
           <div className="font-bold   "> Min Prix</div>
 
-          <div
-            className="  cursor-pointer"
-     
-          >
+          <div className="  cursor-pointer">
             {" "}
             {minOpen ? (
               <MdKeyboardArrowUp className="" />
@@ -113,14 +111,12 @@ const Price: FC<PriceProps> = ({ filterList, setFilterList }: PriceProps) => {
         <div
           className={`flex items-center  cursor-pointer  justify-between text-[#858282] mx-auto w-full  h-[40px] mb-[10px]  transition-all duration-500  ${
             maxOpen ? "" : "border-[#858282] border-b-[0.5px]"
-          } `}     onClick={() => setMaxOpen((prev) => !prev)}
-       
+          } `}
+          onClick={() => setMaxOpen((prev) => !prev)}
         >
           <div className="font-bold   "> Max Prix</div>
 
-          <div
-            className="  cursor-pointer"
-          >
+          <div className="  cursor-pointer">
             {" "}
             {maxOpen ? (
               <MdKeyboardArrowUp className="" />

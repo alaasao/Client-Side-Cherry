@@ -17,7 +17,7 @@ const ClientPage: FC<ClientPageProps> = ({
   let [firstCarId, setFirstCarId] = useState<string>(firstId);
   let [secondCarId, setSecondCarId] = useState<string | null>(null);
   let [firstCar, setFirstCar] = useState<CaracteristiquesProps>(
-    Cars.filter((e) => e._id === firstId)[0]
+    Cars.filter((e) => e._id === firstId)[0],
   );
   let [secondCar, setSecondCar] = useState<CaracteristiquesProps | null>(null);
   useEffect(() => {

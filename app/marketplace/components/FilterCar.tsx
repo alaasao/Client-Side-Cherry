@@ -41,13 +41,11 @@ const FilterCar: FC<FilterCarProps> = ({
         className={`flex items-center  cursor-pointer justify-between text-[#858282] mx-auto w-full  h-[40px] mb-[10px]  transition-all duration-500  ${
           open ? "" : "border-[#858282] border-b-[0.5px]"
         } `}
-        onClick={() => setOpen((prev) => !prev)}      >
+        onClick={() => setOpen((prev) => !prev)}
+      >
         <div className="font-bold   "> {catName}</div>
 
-        <div
-          className="  cursor-pointer"
-   
-        >
+        <div className="  cursor-pointer">
           {" "}
           {open ? (
             <MdKeyboardArrowUp className="" />
@@ -81,13 +79,13 @@ const FilterCar: FC<FilterCarProps> = ({
                       filterList[
                         catName as keyof typeof filterList
                       ] as typeof filterList.colors,
-                      elem
+                      elem,
                     ),
                   });
                 }}
               >
                 {filterList[catName as keyof typeof filterList].some(
-                  (e) => e === elem
+                  (e) => e === elem,
                 ) ? (
                   <div
                     className={`w-[20px]  rounded-md border-[0.5px]  bg-[#FF4423] ${

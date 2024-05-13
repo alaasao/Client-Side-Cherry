@@ -50,7 +50,6 @@ const Slider = () => {
 
           // autoScroll: { speed: 1 },
         }}
-    
       >
         {data.map((e, i) => {
           return (

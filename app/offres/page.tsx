@@ -1,11 +1,11 @@
-"use client"
-import React from 'react'
-import Container from '../components/Container'
-import OffreCard from './offresComponents/OffresCard'
-import Nouveau from './offresComponents/Nouveau'
+"use client";
+import React from "react";
+import Container from "../components/Container";
+import OffreCard from "./offresComponents/OffresCard";
+import Nouveau from "./offresComponents/Nouveau";
 import axios from "axios";
-import {useState, useEffect} from "react";
-import OffresCard from './offresComponents/OffresCard'
+import { useState, useEffect } from "react";
+import OffresCard from "./offresComponents/OffresCard";
 const Page = ({ params }: { params: { productId: string } }) => {
   const [data, setData] = useState([
     {
@@ -98,40 +98,51 @@ const Page = ({ params }: { params: { productId: string } }) => {
       __v: 0,
     },
   ]);
-  useEffect(() => { 
-
-    axios.get("https://axeiny.tech:4004/car").then((res) => {setData(res.data)})
-  },[])
+  useEffect(() => {
+    axios.get("https://axeiny.tech:4004/car").then((res) => {
+      setData(res.data);
+    });
+  }, []);
   return (
-<div className=' h-[95%] w-screen flex items-center gap-8 flex-col justify-center mb-[50px] bg-white text-black'>
-    <Container title={'decouvrez nos offres du moment chez '} subtitle={'Comparez plusieurs offres et trouvez facilement votre véhicule.Renseignez-vous sur les offres de toute notre gamme '} redtitle={'chery'}  />
-    <div className='w-screen flex flex-col lg:flex-row justify-evenly   mt-10   h-[90%]'>
-     <div className='xl:w-[70%] w-full flex flex-col justify-start items-center  mt-10 gap-10'>
-     {data.map((e, i) => {
-        return (
-          <OffresCard
-            Modele={e.Modele}
-            Images={e.Images}
-            Moteur={e.Moteur}
-            Prix_TTC={e.Prix_TTC}
-            key={e._id + i}
-            _id={e._id}
-            MoteurObj={e.MoteurObj}
-            LookObj={e.LookObj}
-            SecurityObj={e.SecurityObj}
-            VehiculeObj={e.VehiculeObj}
-            PromoObj={e.PromoObj}
-          />
-        );
-      })}
-
-      </div>
-        <div className='items-center justify-center  xl:w-[30%] max-xl:hidden'>
-          <Nouveau Images={data[0].Images} Modele={data[0].Modele} id={data[0]._id} price={data[0].Prix_TTC}/>  
+    <div className=" h-[95%] w-screen flex items-center gap-8 flex-col justify-center mb-[50px] bg-white text-black">
+      <Container
+        title={"decouvrez nos offres du moment chez "}
+        subtitle={
+          "Comparez plusieurs offres et trouvez facilement votre véhicule.Renseignez-vous sur les offres de toute notre gamme "
+        }
+        redtitle={"chery"}
+      />
+      <div className="w-screen flex flex-col lg:flex-row justify-evenly   mt-10   h-[90%]">
+        <div className="xl:w-[70%] w-full flex flex-col justify-start items-center  mt-10 gap-10">
+          {data.map((e, i) => {
+            return (
+              <OffresCard
+                Modele={e.Modele}
+                Images={e.Images}
+                Moteur={e.Moteur}
+                Prix_TTC={e.Prix_TTC}
+                key={e._id + i}
+                _id={e._id}
+                MoteurObj={e.MoteurObj}
+                LookObj={e.LookObj}
+                SecurityObj={e.SecurityObj}
+                VehiculeObj={e.VehiculeObj}
+                PromoObj={e.PromoObj}
+              />
+            );
+          })}
         </div>
+        <div className="items-center justify-center  xl:w-[30%] max-xl:hidden">
+          <Nouveau
+            Images={data[0].Images}
+            Modele={data[0].Modele}
+            id={data[0]._id}
+            price={data[0].Prix_TTC}
+          />
+        </div>
+      </div>
     </div>
-</div>  
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

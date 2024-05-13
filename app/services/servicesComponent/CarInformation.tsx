@@ -1,7 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import { MdOutlineFileDownload } from "react-icons/md";
-const CarInformation = () => {
+type props = {
+  data: any;
+};
+const CarInformation = ({ data }: props) => {
   return (
     <div className="w-[85%] sm:w-[90%] justify-center items-center   ">
       <h1 className="good text-2xl sm:text-3xl my-14">Mon vehicule</h1>
@@ -23,35 +26,31 @@ const CarInformation = () => {
               <p>Garentie Restente : </p>
             </div>
             <div className="flex flex-col justify-end gap-6 sm:gap-10 text-xs font-semibold md:text-sm 2xl:text-3xl text-nowrap lg:text-lg">
-              <p>TOGOO 8</p>
-              <p>qwerqwe</p>
-              <p>2021</p>
-              <p>2022</p>
-              <p>12000km</p>
-              <p>1232131 DA</p>
-              <p>2ans/20000km</p>
+              {data.Car && (
+                <>
+                  <p>{data.Car.Modele}</p>
+                  <p>{data.Car.Modele}</p>
+                  <p>{data.Car.Modele}</p>
+                  <p>{data.Car.Date_Achat}</p>
+                  <p>{data.Car.Date_Achat}</p>
+                  <p>{data.Car.Prix_Vente}</p>
+                  <p>{data.Car.Garantie}</p>
+                </>
+              )}
             </div>
           </div>
-          <img src="/assets/serv/carr.png" className="flex 2xl:h-[800px] w-full h-full justify-center order-1 sm:order-2 items-center sm:rounded-r-md max-sm:rounded-t-[50px] sm:rounded-l-[60px] bg-[#ECECEC]"/>
-            
-           
-          
+          <img
+            src="/assets/serv/carr.png"
+            className="flex 2xl:h-[800px] w-full h-full justify-center order-1 sm:order-2 items-center sm:rounded-r-md max-sm:rounded-t-[50px] sm:rounded-l-[60px] bg-[#ECECEC]"
+          />
         </div>
       </div>
+    </div>
+  );
+};
 
-
-
-
-
-
-
-
-
-
-
-
-
-      {/* <div className="flex max-sm:flex-col w-full items-center justify-around md:flex-row gap-10 2xl:gap-10">
+export default CarInformation;
+/*  <div className="flex max-sm:flex-col w-full items-center justify-around md:flex-row gap-10 2xl:gap-10">
         <Link
           href={`haha`}
           download={`haha`}
@@ -78,9 +77,4 @@ const CarInformation = () => {
           <p className="sm:font-bold w-[80%]">Facture d&apos;achat</p>
           <MdOutlineFileDownload className="sm:text-xl md:text-2xl 2xl:text-5xl lg:text-3xl text-3xl" />
         </Link>
-      </div> */}
-    </div>
-  );
-};
-
-export default CarInformation;
+      </div> */

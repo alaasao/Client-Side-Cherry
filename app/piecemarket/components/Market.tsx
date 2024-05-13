@@ -50,13 +50,13 @@ const Market: FC<MarketProps> = ({
 };
 
 export default Market;
-export interface pieceProps{
+export interface pieceProps {
   name: string;
   img: string;
   categorie: string;
   etat: string;
   modele: string[];
- Garentie: string;
+  Garentie: string;
   id: string;
   prix: number;
   dispo: boolean;

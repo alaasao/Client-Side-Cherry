@@ -7,19 +7,18 @@ import { MdDone } from "react-icons/md";
 import { TbAutomaticGearbox, TbManualGearbox } from "react-icons/tb";
 import { IoClose } from "react-icons/io5";
 
-
 interface PieceCardProps {
-    name: string;
-    img: string;
-    categorie: string;
-    etat: string;
-    modele: string[];
-    searchKey: string;
-    id: string;
-    prix: number;
+  name: string;
+  img: string;
+  categorie: string;
+  etat: string;
+  modele: string[];
+  searchKey: string;
+  id: string;
+  prix: number;
   dispo: boolean;
   Garentie: string;
-    reffer: string;
+  reffer: string;
   mark: string;
   doc: string;
   filter: {
@@ -54,7 +53,7 @@ const PieceCard: FC<PieceCardProps> = ({
           filter.modele.length !== 0) ||
         filter.prix[0] > prix ||
         filter.prix[1] < prix ||
-        !name.toLowerCase().includes(searchKey)
+        !name.toLowerCase().includes(searchKey),
     );
   }, [filter, searchKey]);
   return (

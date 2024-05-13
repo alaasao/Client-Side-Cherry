@@ -32,13 +32,13 @@ const ComSec: FC<ComSecProps> = ({
 
   return (
     <div className="w-full flex flex-col">
-      <div className="flex items-center  w-full justify-between px-[15px]   bg-[#303030] text-white  h-[55px] cursor-pointer   " onClick={() => setOpen((prev) => !prev)}>
+      <div
+        className="flex items-center  w-full justify-between px-[15px]   bg-[#303030] text-white  h-[55px] cursor-pointer   "
+        onClick={() => setOpen((prev) => !prev)}
+      >
         <div className="font-medium text-3xl  "> {Title}</div>
 
-        <div
-          className=" text-3xl cursor-pointer"
-          
-        >
+        <div className=" text-3xl cursor-pointer">
           {" "}
           {open ? (
             <MdKeyboardArrowUp className="" />

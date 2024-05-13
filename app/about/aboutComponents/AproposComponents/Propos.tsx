@@ -6,7 +6,7 @@ import { motion, useScroll } from "framer-motion";
 type Demoprops = {
   title: string;
   shortText: string;
-  longText:string;
+  longText: string;
 };
 
 const Propos = (props: Demoprops) => {
@@ -28,12 +28,12 @@ const Propos = (props: Demoprops) => {
         />
 
         <div className=" sm:italic  pl-[40px] sm:max-w-[90%] w-full h-auto  text-sm  font-[400] sm:font-[500] sm:text-sm md:text-xl sm:text-start sm:pr-2 sm:leading-[37px]">
-        {props.shortText.split('\n').map((line, index) => (
-        <React.Fragment key={index}>
-          {line}
-          <br />
-        </React.Fragment>
-      ))}
+          {props.shortText.split("\n").map((line, index) => (
+            <React.Fragment key={index}>
+              {line}
+              <br />
+            </React.Fragment>
+          ))}
           <span
             className={`max-h-0 transition-all ease-in-out duration-1000 overflow-hidden inline-block md:max-h-[50rem] ${
               collapse
@@ -41,13 +41,13 @@ const Propos = (props: Demoprops) => {
                 : ""
             }`}
           >
-          {props.longText.split('\n').map((line, index) => (
-          <React.Fragment key={index}>
-            {line}
-            <br/>
-          </React.Fragment>
-      ))}
-      </span>
+            {props.longText.split("\n").map((line, index) => (
+              <React.Fragment key={index}>
+                {line}
+                <br />
+              </React.Fragment>
+            ))}
+          </span>
           <button
             className="md:hidden text-red-500"
             onClick={() => {

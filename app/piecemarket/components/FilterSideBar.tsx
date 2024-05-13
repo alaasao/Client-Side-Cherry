@@ -67,11 +67,11 @@ const FilterSideBar: FC<FilterSideBarProps> = ({
       <div
         className={` capitalize transition-all duration-700  max-md: max-md:z-[300]  max-md:overflow-hidden  w-full bg-[#F1F1F0] px-[5vw] pb-[20px] `}
       >
-        <div className="w-full flex items-center justify-between "            onClick={() => setIsOpen((prev) => !prev)}>
-          <div
-            className="my-[30px] font-bold  pl-[5px] cursor-pointer mr-[10px] w-[208px] max-md:text-[12px] max-md:w-[110px] bg-white h-[45px] rounded-xl flex items-center justify-between  text-[#827D7D]"
- 
-          >
+        <div
+          className="w-full flex items-center justify-between "
+          onClick={() => setIsOpen((prev) => !prev)}
+        >
+          <div className="my-[30px] font-bold  pl-[5px] cursor-pointer mr-[10px] w-[208px] max-md:text-[12px] max-md:w-[110px] bg-white h-[45px] rounded-xl flex items-center justify-between  text-[#827D7D]">
             <div className="flex gap-[5px] items-center">
               <img
                 src="../assets/marketplace/filter.png"

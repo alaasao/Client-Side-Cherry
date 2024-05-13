@@ -21,7 +21,7 @@ const Form: FC<FormProps> = ({
   let [secondOpen, setSecondOpen] = useState(false);
 
   let [firstField, setFirstField] = useState(
-    modelTiles.filter((e) => e.modelId === firstCarId)[0].modelName
+    modelTiles.filter((e) => e.modelId === firstCarId)[0].modelName,
   );
   let [secondField, setSecondField] = useState("");
   let [FirstId, setFirstId] = useState<string>(firstCarId);
@@ -89,7 +89,7 @@ const Form: FC<FormProps> = ({
             className="w-full h-[50px] border border-[#9C9C9C] rounded-lg pl-[2vw] outline-none"
             onChange={(e) => {
               setSecondField(e.target.value);
-              
+
               setSecondOpen(true);
             }}
             value={secondField}
