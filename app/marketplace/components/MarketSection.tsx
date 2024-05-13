@@ -31,7 +31,13 @@ const MarketSection = () => {
       />
       <div>
         <h1></h1>
-        <Market filterList={filterList} isOpen={isOpen} setIsOpen={setIsOpen} searchKey={searchKey} setSearchKey={setSearchKey} />
+        <Market
+          filterList={filterList}
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          searchKey={searchKey}
+          setSearchKey={setSearchKey}
+        />
       </div>
     </div>
   );

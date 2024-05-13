@@ -44,66 +44,69 @@ const Caracteristiques: FC<CaracteristiquesProps> = ({
   }, []);
   return (
     <div>
-      
-    
-    <div className="w-full  max-lg:grid-cols-1 ">
-      <div className="px-[40px] max-md:px-[20px] flex flex-col  py-[40px]">
-        <div className="mb-32">
-          <Main
-            _id={_id}
-            Modele={Modele}
-            Garentie={Garentie}
-            Disponabilite={Disponabilite}
-            Prix_TTC={Prix_TTC}
-            Moteur={Moteur}
-            updatedAt={updatedAt}
-            Images={Images}
+      <div className="w-full  max-lg:grid-cols-1 ">
+        <div className="px-[40px] max-md:px-[20px] flex flex-col  py-[40px]">
+          <div className="mb-32">
+            <Main
+              _id={_id}
+              Modele={Modele}
+              Garentie={Garentie}
+              Disponabilite={Disponabilite}
+              Prix_TTC={Prix_TTC}
+              Moteur={Moteur}
+              updatedAt={updatedAt}
+              Images={Images}
+            />
+          </div>
+          <div className="w-full flex justify-between items-center max-md:text-[14px] mb-[84px]">
+            <div className=" sm:text-xl md:text-2xl lg:text-4xl">
+              LES CARACTÉRISTIQUES
+            </div>
+            <Link
+              href={`/comparateur/${_id}`}
+              className="flex  items-center gap-[5px] text-white bg-[#E02727]  px-10 py-4 max-lg:px-4 max-lg:py-1 rounded-md"
+            >
+              <span className="max-sm:text-[12px]">Comparer</span>
+              <FaArrowRight />
+            </Link>
+          </div>
+
+          <DescSection
+            props={MoteurObj}
+            Title="MOTEUR"
+            img="../assets/details/Settings.png"
+          />
+          <DescSection
+            props={ConfortObj}
+            Title="CONFORT"
+            img="../assets/details/confort.png"
+          />
+          <DescSection
+            props={LookObj}
+            Title="LOOK"
+            img="../assets/details/car.png"
+          />
+          <DescSection
+            props={VehiculeObj}
+            Title="Vehicule"
+            img="../assets/details/wheel.png"
+          />
+          <DescSection
+            props={SecurityObj}
+            Title="SECURITE"
+            img="../assets/details/carLock.png"
           />
         </div>
-        <div className="w-full flex justify-between items-center max-md:text-[14px] mb-[84px]">
-          <div className=" sm:text-xl md:text-2xl lg:text-4xl">
-            LES CARACTÉRISTIQUES
-          </div>
-          <Link
-            href={`/comparateur/${_id}`}
-            className="flex  items-center gap-[5px] text-white bg-[#E02727]  px-10 py-4 max-lg:px-4 max-lg:py-1 rounded-md"
-          >
-            <span className="max-sm:text-[12px]">Comparer</span>
-            <FaArrowRight />
-          </Link>
-        </div>
-
-        <DescSection
-          props={MoteurObj}
-          Title="MOTEUR"
-          img="../assets/details/Settings.png"
-        />
-        <DescSection
-          props={ConfortObj}
-          Title="CONFORT"
-          img="../assets/details/confort.png"
-        />
-        <DescSection
-          props={LookObj}
-          Title="LOOK"
-          img="../assets/details/car.png"
-        />
-        <DescSection
-          props={VehiculeObj}
-          Title="Vehicule"
-          img="../assets/details/wheel.png"
-        />
-        <DescSection
-          props={SecurityObj}
-          Title="SECURITE"
-          img="../assets/details/carLock.png"
-        />
-      </div>
-      <div className="w-full sticky top-[20px]">
-        <Card Images={Images} _id={_id} Prix_TTC={Prix_TTC} sticky={isSticky} />
+        <div className="w-full sticky top-[20px]">
+          <Card
+            Images={Images}
+            _id={_id}
+            Prix_TTC={Prix_TTC}
+            sticky={isSticky}
+          />
         </div>
         <Form name={Modele} id={_id} type="voiture" />
-    </div>
+      </div>
     </div>
   );
 };
@@ -138,13 +141,12 @@ export interface SecurityObj {
   Verrouillage_Centralise: string;
   Alarme: string;
 }
-export interface PromoObj{
- 
-    IsPromo: boolean;
-    Start: string;
-    End: string;
-    Value: number;
-};
+export interface PromoObj {
+  IsPromo: boolean;
+  Start: string;
+  End: string;
+  Value: number;
+}
 export interface LookObj {
   Feux_Anti_Arouillard: string[];
   Feux_Avant: string;
@@ -197,7 +199,7 @@ export interface CaracteristiquesProps {
     Value: number;
   };
   MoteurObj: MoteurObj;
-  ConfortObj:ConfortObj ;
+  ConfortObj: ConfortObj;
   SecurityObj: SecurityObj;
   LookObj: LookObj;
   VehiculeObj: VehiculeObj;

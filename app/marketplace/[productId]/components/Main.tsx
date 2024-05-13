@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { FC } from "react";
 import { IoClose } from "react-icons/io5";
 import { MdDone } from "react-icons/md";
@@ -16,46 +16,54 @@ const Main: FC<MainProps> = ({
   Moteur,
   updatedAt,
 }: MainProps) => {
-  const [colorlist, setColorlist] = useState(Images.map(item=>item.Color))
-  const [image, setImage] = useState(Images[0].Images.map(item=>item))
-  const handleColorClick = (color:any) => {
-    const jj = Images
-      .filter((e) => e.Color.toLowerCase() === color)
-      .flatMap((e) => e.Images);
+  const [colorlist, setColorlist] = useState(Images.map((item) => item.Color));
+  const [image, setImage] = useState(Images[0].Images.map((item) => item));
+  const handleColorClick = (color: any) => {
+    const jj = Images.filter((e) => e.Color.toLowerCase() === color).flatMap(
+      (e) => e.Images,
+    );
     setImage(jj);
   };
   return (
     <div className=" w-full   md:grid  md:grid-cols-2  max-md:gap-[100px] gap-[44px] md:h-[30%]   md:mb-[30px]">
-        <div className="max-md:w-full max-md:mb-[30px] ">
-          <Sliderrr Images={image}/>
-        </div>
+      <div className="max-md:w-full max-md:mb-[30px] ">
+        <Sliderrr Images={image} />
+      </div>
       <div className="w-full flex flex-col gap-[20px] max-md:gap-[30px] capitalize ">
-              <div className="w-full flex flex-col">
-                <div className="flex flex-row w-full justify-between">
-                  <h2 className="text-4xl my-6">{Modele} {Moteur} MT</h2>
-                  <h2 className="text-4xl my-6 text-red-500">{Prix_TTC}.000 DZ</h2>
+        <div className="w-full flex flex-col">
+          <div className="flex flex-row w-full justify-between">
+            <h2 className="text-4xl my-6">
+              {Modele} {Moteur} MT
+            </h2>
+            <h2 className="text-4xl my-6 text-red-500">{Prix_TTC}.000 DZ</h2>
+          </div>
+          <div className="w-full py-4 border-y  mt-2 border-gray-400 flex flex-col items-start justify-start gap-4 ">
+            <p className="text-2xl">Couleur</p>
+            <div className="w-full flex flex-row items-center justify-start gap-10 ">
+              {colorlist.map((e, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleColorClick(e.toLowerCase())}
+                  className={`w-[50px]   h-[70px] flex flex-col items-center justify-center`}
+                >
+                  <div
+                    className={`w-[50px] border border-black h-[60px] rounded-lg ${
+                      e.toLowerCase() === "rouge"
+                        ? "bg-[#D33030] opacity-100 z-10"
+                        : e.toLowerCase() === "blanc"
+                          ? "bg-white"
+                          : e.toLowerCase() === "noir"
+                            ? "bg-black"
+                            : "bg-[#B9B9B9]"
+                    }`}
+                  >
+                    <p className="opacity-0">haha</p>
                   </div>
-                    <div className="w-full py-4 border-y  mt-2 border-gray-400 flex flex-col items-start justify-start gap-4 ">
-                        <p className="text-2xl">Couleur</p>
-                        <div className="w-full flex flex-row items-center justify-start gap-10 ">
-                        {colorlist.map((e, index) => (
-                            <button
-                              key={index}
-                              onClick={() => handleColorClick(e.toLowerCase())}
-                              className={`w-[50px]   h-[70px] flex flex-col items-center justify-center`}
-                            >
-                              <div
-                                className={`w-[50px] border border-black h-[60px] rounded-lg ${
-                                  e.toLowerCase() === 'rouge' ? 'bg-[#D33030] opacity-100 z-10' : e.toLowerCase() === 'blanc' ? 'bg-white' : e.toLowerCase() === 'noir' ? 'bg-black' : 'bg-[#B9B9B9]'
-                                }`}
-                              >
-                                <p className="opacity-0">haha</p>
-                              </div>
-                              <p>{e}</p>
-                            </button>
-                          ))}
-                          </div>
-                    </div>
+                  <p>{e}</p>
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
         <div className="grid grid-cols-3 gap-[30px] max-md:gap-[15px] w-full  ">
           <div className="flex flex-col max-md:items-center gap-[15px] max-md:gap-[10px]  font-medium ">
@@ -122,7 +130,6 @@ const Main: FC<MainProps> = ({
           </div>
         </div>
       </div>
- 
     </div>
   );
 };

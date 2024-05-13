@@ -74,13 +74,13 @@ const FilterCar: FC<FilterCarProps> = ({
                       filterList[
                         catName as keyof typeof filterList
                       ] as typeof filterList.categorie,
-                      elem
+                      elem,
                     ),
                   });
                 }}
               >
                 {filterList[catName as keyof typeof filterList].some(
-                  (e) => e === elem
+                  (e) => e === elem,
                 ) ? (
                   <div
                     className={`w-[20px]  rounded-md border-[0.5px]  bg-[#FF4423] ${

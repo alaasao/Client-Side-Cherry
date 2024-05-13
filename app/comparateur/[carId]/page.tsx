@@ -6,16 +6,18 @@ import Caracteristiques, {
 } from "@/app/marketplace/[productId]/components/Caracteristiques";
 import axios from "axios";
 async function getData() {
-  const res = await fetch('https://axeiny.tech:4004/car/', { cache: 'no-store' })
+  const res = await fetch("https://axeiny.tech:4004/car/", {
+    cache: "no-store",
+  });
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
- 
+
   if (!res.ok) {
     // This will activate the closest `error.js` Error Boundary
-    throw new Error('Failed to fetch data')
+    throw new Error("Failed to fetch data");
   }
- 
-  return res.json()
+
+  return res.json();
 }
 export interface modelTitle {
   modelName: string;
@@ -23,14 +25,12 @@ export interface modelTitle {
 }
 
 const page = async ({ params }: { params: { carId: string } }) => {
-
   let Cars = await getData();
-
 
   // Cars = Cars.slice(1);
   // console.log(Cars,"###########");
 
-  let modelTitles: Array<modelTitle> = Cars.map((el:CarsProps) => {
+  let modelTitles: Array<modelTitle> = Cars.map((el: CarsProps) => {
     return { modelName: el.Modele, modelId: el._id };
   });
   return (
@@ -133,8 +133,6 @@ export interface CarsProps {
   __v: number;
 }
 export interface EmptyCarModel {
-  
-
   Images: { Images: string[]; Color: string }[];
   Modele: string;
   Garentie: string;
@@ -147,5 +145,4 @@ export interface EmptyCarModel {
   SecurityObj: SecurityObj;
   LookObj: LookObj;
   VehiculeObj: VehiculeObj;
-
 }

@@ -88,7 +88,8 @@
   font-family: good;
   src: url("good times rg.otf");
 }
-.font-good,.good {
+.font-good,
+.good {
   font-family: "Good Times Rg";
 }
 .sliderText {
@@ -150,15 +151,15 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
 } */
-.image{
-  min-height:100px;
-  max-height:101px
+.image {
+  min-height: 100px;
+  max-height: 101px;
 }
-.imaaa{
-  display:inline-block;
-  min-height:200px;
-  max-height:350px;
+.imaaa {
+  display: inline-block;
+  min-height: 200px;
+  max-height: 350px;
 }
-.ill{
-object-fit:cover;
+.ill {
+  object-fit: cover;
 }

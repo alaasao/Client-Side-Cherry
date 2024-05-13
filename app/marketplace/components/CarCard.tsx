@@ -59,7 +59,7 @@ const CarCard: FC<CarCardProps> = ({
         filter.prix[1] < Prix_TTC ||
         !Modele.toLowerCase().includes(searchKey) ||
         (!filter.boite.some((e) => e === MoteurObj.Boite) &&
-          filter.boite.length !== 0)
+          filter.boite.length !== 0),
     );
   }, [filter, searchKey]);
   return (
@@ -151,4 +151,3 @@ const CarCard: FC<CarCardProps> = ({
 };
 
 export default CarCard;
-

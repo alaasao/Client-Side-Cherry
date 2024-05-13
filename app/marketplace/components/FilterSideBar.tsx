@@ -128,11 +128,8 @@ const FilterSideBar: FC<FilterSideBarProps> = ({
               })}
               <Price filterList={filterList} setFilterList={setFilterList} />
             </motion.div>
-             )}
-            </AnimatePresence>
-     
-      
-
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );

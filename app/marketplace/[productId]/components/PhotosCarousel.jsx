@@ -7,7 +7,7 @@ const defaultConfig = {
   slidesToShow: 1,
   slidesToScroll: 1,
   scrollLock: true,
-  itemWidth: undefined
+  itemWidth: undefined,
 };
 
 const PhotosCarousel = ({
@@ -17,7 +17,7 @@ const PhotosCarousel = ({
   currentSlideIdx,
   className = "",
   config: customConfig = {},
-  style
+  style,
 }) => {
   const carouselRef = React.useRef(null);
 

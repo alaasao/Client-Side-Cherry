@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { MantineProvider } from "@mantine/core";
 import ScrollBar from "./components/ScrollBar";
+import { Toaster } from "@/components/ui/toaster";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -31,6 +32,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </ScrollBar>
+        <Toaster />
       </body>
     </html>
   );
