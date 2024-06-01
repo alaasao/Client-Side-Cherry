@@ -54,7 +54,9 @@ const Main: FC<MainProps> = ({
                           ? "bg-white"
                           : e.toLowerCase() === "noir"
                             ? "bg-black"
-                            : "bg-[#B9B9B9]"
+                            :e.toLowerCase() === "gris"
+                            ? "bg-gray-500"
+                            : "bg-blue-800"
                     }`}
                   >
                     <p className="opacity-0">haha</p>

@@ -7,6 +7,8 @@ type props = {
 const CarInformation = ({ data }: props) => {
   return (
     <div className="w-[85%] sm:w-[90%] justify-center items-center   ">
+       {data.Car && (
+                <>
       <h1 className="good text-2xl sm:text-3xl my-14">Mon vehicule</h1>
 
       <div className=" bg-gradient-to-r 2xl:h-[800px] max-sm:h-[700px] h-[500px] mb-10 max-sm:rounded-[50px] rounded-md relative from-[#3E3D45] to-[#202020] shadow-[0px_2px_6px_0px_rgba(0,0,0,0.25)] ">
@@ -26,8 +28,7 @@ const CarInformation = ({ data }: props) => {
               <p>Garentie Restente : </p>
             </div>
             <div className="flex flex-col justify-end gap-6 sm:gap-10 text-xs font-semibold md:text-sm 2xl:text-3xl text-nowrap lg:text-lg">
-              {data.Car && (
-                <>
+             
                   <p>{data.Car.Modele}</p>
                   <p>{data.Car.Modele}</p>
                   <p>{data.Car.Modele}</p>
@@ -35,8 +36,7 @@ const CarInformation = ({ data }: props) => {
                   <p>{data.Car.Date_Achat}</p>
                   <p>{data.Car.Prix_Vente}</p>
                   <p>{data.Car.Garantie}</p>
-                </>
-              )}
+               
             </div>
           </div>
           <img
@@ -45,6 +45,8 @@ const CarInformation = ({ data }: props) => {
           />
         </div>
       </div>
+      </>
+              )}
     </div>
   );
 };

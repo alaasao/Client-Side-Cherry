@@ -37,9 +37,9 @@ const OffresCard: FC<CarCardProps> = ({
 }: CarCardProps) => {
   const percantge = Math.round((PromoObj.Value / Prix_TTC) * 100);
   return (
-    <div className="flex max-sm:w-[90%] w-[90%] lg:w-[95%] 2xl:w-full  flex-col lg:flex-row justify-start  items-center">
+    <div className="flex max-h-[400px]  max-sm:w-[90%] w-[90%] lg:w-[95%] 2xl:w-full  flex-col lg:flex-row justify-start  items-center">
       {PromoObj.IsPromo && (
-        <div className="flex justify-evenly w-full items-center">
+        <div className="flex justify-evenly w-full items-center mb-10 ">
           <div className=" grid max-sm:flex max-sm:flex-col  lg:grid-cols-[1.5fr_2fr]  grid-cols-[1.8fr_2fr] h-[20%]  items-center justify-between gap-4 w-[90%]  md:w-[90%] md:h-[20%] border-2 border-[grey]  hover:border-[#D12621]  rounded-[20px] ">
             <div className="flex justify-start  h-full w-full overflow-hidden ">
               <div className="relative h-full  top-0 left-0  ">
@@ -47,12 +47,12 @@ const OffresCard: FC<CarCardProps> = ({
                   <span className="p-4 sm:p-4 lg:p-5  2xl:p-10 lg:text-lg 2xl:text-2xl  sm:text-xs skew-y-[1deg] font-bold ">
                     -20%
                   </span>
-                </p>
+                </p>  
               </div>
               <img
                 src={Images[0].Images[0]}
                 alt="haha"
-                className="w-full  rounded-l-[19px] object-cover items-center  h-full "
+                className="w-full  max-h-[300px] rounded-l-[19px] object-cover items-center  h-full "
                 width={500}
                 height={500}
               />

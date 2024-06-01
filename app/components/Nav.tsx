@@ -1,7 +1,6 @@
 "use client";
 import React, { FC, useState } from "react";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
 import Link from "next/link";
 import { CiUser, CiMenuBurger, CiSearch } from "react-icons/ci";
 import { FiMenu } from "react-icons/fi";
@@ -34,7 +33,7 @@ const Nav = () => {
   let currentPath = usePathname();
   let [searchOpen, serSearchOpen] = useState(false);
   const [id, setId] = useState("");
-  const [isIdValid, setIsIdValid] = useState(null);
+  const [isIdValid, setIsIdValid] = useState(false);
 
   const checkIdExistence = () => {
     axios
@@ -45,6 +44,8 @@ const Nav = () => {
           description: "you can go and check your client info ",
         });
         localStorage.setItem("UserId", id);
+        window.location.href = `/services`;
+        setIsIdValid(true)
       })
       .catch((err) => {
         toast({
@@ -127,9 +128,9 @@ const Nav = () => {
               />
             </Button>
           </DialogTrigger>
-          <DialogContent className="sm:max-w-[425px] bg-gray-500">
+          <DialogContent className="sm:max-w-[425px] text-white bg-black">
             <DialogHeader>
-              <DialogTitle>Login</DialogTitle>
+              <DialogTitle >Login</DialogTitle>
               <DialogDescription>
                 inscrivez-vous pour voir les informations de votre carte et bien
                 d autres fonctionnalités{" "}
@@ -138,7 +139,7 @@ const Nav = () => {
             <div className="grid gap-4 py-4">
               <div className="grid grid-cols-4 items-center gap-4">
                 <Label htmlFor="name" className="text-right">
-                  Name
+                 USER ID
                 </Label>
                 <Input
                   id="name"
@@ -151,13 +152,9 @@ const Nav = () => {
             <DialogFooter>
               <Button
                 onClick={checkIdExistence}
-                className="bg-red-600 text-bold uppercase text-white"
-              >
+                className="bg-red-600 text-bold uppercase text-white">
                 Login
               </Button>
-              {isIdValid !== null && (
-                <p>{isIdValid ? "ID exists" : "ID does not exist"}</p>
-              )}
             </DialogFooter>
           </DialogContent>
         </Dialog>
