@@ -7,7 +7,7 @@ type DemoProp = {
   params: any;
 };
 
-const page = (props: DemoProp) => {
+const Page = (props: DemoProp) => {
   const [data, setData] = useState([
     {
       "_id": "6659d9c4c85c109887da3e8e",
@@ -57,4 +57,4 @@ const page = (props: DemoProp) => {
   );
 };
 
-export default page;
+export default Page;
