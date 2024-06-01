@@ -113,7 +113,7 @@ const Page = ({ params }: { params: { productId: string } }) => {
         redtitle={"chery"}
       />
       <div className="w-screen flex flex-col lg:flex-row justify-evenly   mt-10   h-[90%]">
-        <div className="xl:w-[70%] w-full flex flex-col justify-start items-center  mt-10 gap-10">
+        <div className="xl:w-[70%] w-full flex flex-col justify-start items-center  first:mb-0 mt-10 ">
           {data.map((e, i) => {
             return (
               <OffresCard

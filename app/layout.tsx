@@ -4,7 +4,7 @@ import "./globals.css";
 import { MantineProvider } from "@mantine/core";
 import ScrollBar from "./components/ScrollBar";
 import { Toaster } from "@/components/ui/toaster";
-
+import { usePathname } from "next/navigation";
 const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-mont",
@@ -28,7 +28,7 @@ export default function RootLayout({
         <ScrollBar
           className={"relative ww overflow-x-hidden bg-white text-black "}
         >
-          <Nav />
+          <Nav/>
           {children}
           <Footer />
         </ScrollBar>
