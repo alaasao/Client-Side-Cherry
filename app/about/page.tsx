@@ -4,6 +4,11 @@ import Horaire from "./aboutComponents/HoraireComponents/Horaire";
 import ContactUs from "./aboutComponents/ContactUs";
 import Container from "../components/Container";
 import Cover from "./Cover";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "About Us",
+  description: "La meilleur ",
+};
 const page = () => {
   return (
     <div className="h-[95%] w-screen flex items-center justify-center mb-[50px] bg-white text-black ">

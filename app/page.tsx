@@ -9,7 +9,11 @@ import Summum from "./components/Summum";
 import Explore from "./components/Explore";
 import Slider from "./components/Slider.jsx";
 import Offers from "./components/Offers";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "Chery",
+  description: "La meilleur ",
+};
 export default function Home() {
   return (
     <div className="   ">
