@@ -6,6 +6,7 @@ import Nouveau from "./offresComponents/Nouveau";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import OffresCard from "./offresComponents/OffresCard";
+import { Metadata } from "next";
 const Page = ({ params }: { params: { productId: string } }) => {
   const [data, setData] = useState([
     {
