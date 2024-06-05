@@ -8,10 +8,12 @@ import axios from "axios";
 const Questions = () => {
   const [Data, setData] = useState([{ Question: "", Answer: "", _id: "" }]);
 
-  const res = axios.get("https://axeiny.tech:4004/faq");
-  res.then((res) => {
-    setData(res.data);
-  });
+  useEffect(()=>{
+    const res = axios.get("https://axeiny.tech:4004/faq");
+    res.then((res) => {
+      setData(res.data);
+    });
+  },[])
   const [visible, setvisible] = useState(5);
   function showMore() {
     setvisible((prev) => prev + 4);
