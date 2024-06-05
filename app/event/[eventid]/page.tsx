@@ -8,7 +8,18 @@ type DemoProp = {
 };
 
 const Page = (props: DemoProp) => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([
+    {
+      "_id": "",
+      "Masked": false,
+      "Images": [""],
+      "Title": "Y",
+      "Description": "jjcfddf",
+      "Event_Date": "2024-05-29T00:00:00.000Z",
+      "createdAt": "2024-05-31T14:08:04.863Z",
+      "updatedAt": "2024-05-31T21:34:47.261Z",
+      "__v": 0
+  },]);
   useEffect(() => {
     axios.get("https://axeiny.tech:4004/event").then((res) => {
       setData(res.data);
