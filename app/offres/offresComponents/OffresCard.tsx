@@ -54,7 +54,7 @@ const OffresCard: FC<CarCardProps> = ({
               <img
                 src={Images[0].Images[0]}
                 alt="haha"
-                className="w-full  max-h-[300px] rounded-l-[19px] object-cover items-center  h-full "
+                className="w-full h-full max-h-[400px]  rounded-l-[19px] object-cover items-center "
                 width={500}
                 height={500}
               />
