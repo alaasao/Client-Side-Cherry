@@ -6,15 +6,15 @@ import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import SliderCard from "./SliderCard";
 
 const data = [
-  { title: "tiggo 2 Pro", image: "../assets/tiggo_4.png" }, //the data will be fetched
+  { title: "tiggo 2 Pro", image: "../assets/details/tiggo_4_de_profil-removebg-preview 2.png" }, //the data will be fetched
+  { title: "tiggo 2 Pro", image: "../assets/details/tiggo_8_pro_de_profil-removebg-preview 1.png" },
+  { title: "tiggo 2 Pro", image: "../assets/details/tiggo2_de_profil-removebg 3.png" },
+  { title: "tiggo 2 Pro", image: "../assets/details/Tiggo8_de_profil-removebg-preview 2.png" },
+  { title: "tiggo 2 Pro", image: "../assets/details/tiggo_4_de_profil-removebg-preview 2.png" },
   { title: "tiggo 2 Pro", image: "../assets/tiggo_4.png" },
-  { title: "tiggo 2 Pro", image: "../assets/tiggo_4.png" },
-  { title: "tiggo 2 Pro", image: "../assets/tiggo_4.png" },
-  { title: "tiggo 2 Pro", image: "../assets/tiggo_4.png" },
-  { title: "tiggo 2 Pro", image: "../assets/tiggo_4.png" },
-  { title: "tiggo 2 Pro", image: "../assets/tiggo_4.png" },
-  { title: "tiggo 2 Pro", image: "../assets/tiggo_4.png" },
-  { title: "tiggo 2 Pro", image: "../assets/tiggo_4.png" },
+  { title: "tiggo 2 Pro", image: "../assets/details/Tiggo8_de_profil-removebg-preview 2.png" },
+  { title: "tiggo 2 Pro", image: "../assets/details/tiggo_8_pro_de_profil-removebg-preview 1.png" },
+  { title: "tiggo 2 Pro", image: "../assets/details/tiggo_4_de_profil-removebg-preview 2.png" },
 ];
 const Slider = () => {
   const [perPage, setPerPage] = useState(1);
