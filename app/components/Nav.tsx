@@ -184,7 +184,7 @@ const Nav = () => {
             onClick={() => {
               setIsOpen((prev) => !prev);
             }}
-            className={`absolute   py-[50px] h-screen bg-white text-black  flex flex-col rounded-lg transition-all duration-700  z-[100] ${
+            className={`absolute   py-[50px] h-full bg-white text-black  flex flex-col rounded-lg transition-all duration-700  z-[100] ${
               isOpen
                 ? "w-[600px] left-0 top-0 max-lg:w-screen"
                 : "w-0 top-0 left-[-1000px] "

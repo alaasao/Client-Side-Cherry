@@ -13,7 +13,7 @@ const Desc: FC<DescProps> = ({ desc }: DescProps) => {
   let [open, setOpen] = useState(false);
 
   return (
-    <div className="w-full flex flex-col  mt-[66px] ">
+    <div className="w-full flex flex-col  mt-[66px]  mb-[50px]">
       <div
         className="flex items-center  w-full justify-between  h-[77px] mt-[23px] rounded-t-xl px-[20px] bg-[#D9D9D9] cursor-pointer"
         onClick={() => setOpen((prev) => !prev)}
