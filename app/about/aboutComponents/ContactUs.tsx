@@ -27,7 +27,7 @@ const ContactUs = () => {
   return (
     <div>
       <form>
-        <div className="flex flex-col md:flex-row justify-between items-center w-full p-6">
+        <div className="flex flex-col md:flex-row justify-between items-center w-full p-6" id="contact">
           <div className="w-full md:w-[40%] flex flex-col my-4">
             <label className=" text-[#0C0C0C] mb-2" htmlFor="name">
               Nom complet*

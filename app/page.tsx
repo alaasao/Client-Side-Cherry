@@ -22,7 +22,7 @@ export default function Home() {``
         <Recherche />
         <Summum />
         <Explore />
-        <Offers />
+       
       </div>
     </div>
   );

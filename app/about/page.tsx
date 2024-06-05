@@ -42,8 +42,8 @@ const page = () => {
             <Horaire />
           </div>
         </div>
-
-        <div className="flex flex-col  justify-center w-full sm:w-[90%] my-6 ">
+ 
+        <div className="flex flex-col  justify-center w-full sm:w-[90%] my-6 " id="location">
           <div className="good text-sm font-[400]  sm:text-2xl lg:text-4xl mb-8  ">
             Ou Nous <span className="text-[#D12621]"> Trouver :</span>
           </div>
