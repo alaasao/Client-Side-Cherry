@@ -67,7 +67,7 @@ const Form: FC<FromProps> = ({ name, id, type }: FromProps) => {
     )
   }
   return (
-    <div className="bg-[#e9e8e896] py-[50px] rounded-2xl flex flex-col w-[90vw] mx-auto mb-[50px]">
+    <div className="bg-[#e9e8e896] py-[50px] rounded-2xl flex flex-col w-[90vw] mx-auto my-[50px]">
       <div className="font-bold   text-4xl pl-[20px] mb-[20px]">
         {" "}
         Prenez rendez-vous

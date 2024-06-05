@@ -1,17 +1,28 @@
 import React, { FC } from "react";
-import { pieceProps } from "../../components/Market";
+;
 import Image from "next/image";
 import { MdDone } from "react-icons/md";
 import { IoClose } from "react-icons/io5";
+
+interface pieceProps {
+  Name: string;
+  img: string;
+
+
+  dispo: boolean;
+
+  _id: string;
+  Price: number;
+ }
 
 const Main: FC<pieceProps> = ({
   Name,
   img,
 
-  searchKey,
+
   dispo,
 
-  id,
+  _id,
   Price,
   
 }: pieceProps) => {

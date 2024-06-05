@@ -34,8 +34,8 @@ const Page = ({ params }: { params: { pieceId: string } }) => {
 
   return (
     <div className="p-[4.5vw]">
-      <Main {...piece} />
-      <Desc desc={""} />
+      <Main {...piece}  img={piece.Image[0].images[0]} dispo={piece.Quantity>0} />
+      <Desc desc={"it is a vital component of a vehicle that provides illumination for the driver in dark environments or during poor visibility conditions. They come in various types including headlights, tail lights, brake lights, and turn signals. Headlights allow drivers to see the road ahead in the dark, while tail lights and brake lights signal to other drivers the car's presence and intentions. Turn signals, also known as blinkers, indicate the direction in which the vehicle intends to turn or change lanes."} />
 
       <Form name={piece.Name} id={piece._id} type="piece" />
     </div>
