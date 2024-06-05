@@ -58,10 +58,10 @@ const Nav = () => {
     setIsIdValid(false);
   }
   useEffect(()=>{
-  if(localStorage.length >= 1){
+  if(localStorage.length>1){
     setIsIdValid(true)
   }
- },[])
+ },[isIdValid])
  
   return (
     <div
