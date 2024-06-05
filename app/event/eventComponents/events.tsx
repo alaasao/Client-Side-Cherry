@@ -11,13 +11,12 @@ const Events = () => {
   }
   const [data, setData] = useState([
     {
-      "_id": "6659d9c4c85c109887da3e8e",
+      "_id": "",
       "Masked": false,
       "Images": [
-          "https://firebasestorage.googleapis.com/v0/b/cherry-36cfa.appspot.com/o/images%2FScreenshot%202023-03-30%20141636.png?alt=media&token=2a56d1df-7a94-421d-97da-e52a41731320"
-      ],
-      "Title": "Y",
-      "Description": "jjcfddf",
+""      ],
+      "Title": "",
+      "Description": "",
       "Event_Date": "2024-05-29T00:00:00.000Z",
       "createdAt": "2024-05-31T14:08:04.863Z",
       "updatedAt": "2024-05-31T21:34:47.261Z",

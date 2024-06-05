@@ -14,8 +14,8 @@ const Card = (props: DemoProp) => {
   const newDate=props.date.split("T")
   
   return (
-    <div className=" md:grid md:max-h-[400px] md:grid-cols-[1fr_1fr] lg:gap-[50px] flex flex-col md:flex-row  max-md:items-center max-md:justify-center gap-4 w-[80%] h-full border-b-2 border-black border-opacity-[25%] py-4 ">
-      <div className="flex items-center justify-center w-full">
+    <div className={`md:grid md:max-h-[400px] md:grid-cols-[1fr_1fr] lg:gap-[50px] flex flex-col md:flex-row  max-md:items-center max-md:justify-center gap-4 w-[80%] h-full border-b-2 border-black border-opacity-[25%] py-4  ${props.id===""?"hidden":""}  ` }  > 
+    <div className="flex items-center justify-center w-full">
         <img
           src={`${props.Images}`}
           className="w-full h-full rounded-[10px] max-h-[300px] items-center sm:w-[70%] md:w-[80%] lg:w-full"
