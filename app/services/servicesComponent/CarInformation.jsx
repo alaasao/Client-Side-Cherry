@@ -97,7 +97,7 @@ const CarInformation = ({ data }) => {
     },
   );
   useEffect(() => {
-    axios.get(`https://axeiny.tech:4004/car/665ff088ef496b201171a462`).then((res) => {
+    axios.get(`https://axeiny.tech:4004/car/${data.Car._id}`).then((res) => {
       setDaata(res.data);
       console.log(res.data);
     });}
@@ -133,10 +133,9 @@ const CarInformation = ({ data }) => {
                  
 
           </div>
-          
           <img
             src={`${daata.Images[0].Images[0]}`}
-            className="flex 2xl:h-[800px] w-full h-full justify-center order-1 sm:order-2 items-center sm:rounded-r-md max-sm:rounded-t-[50px] sm:rounded-l-[60px] bg-[#ECECEC]" />
+            className="2xl:h-[800px] w-full h-full justify-center order-1 sm:order-2 items-center sm:rounded-t-2xl max-sm:rounded-t-[50px] sm:rounded-l-[60px] bg-[#ECECEC]" />
         
           </div>
       </div>

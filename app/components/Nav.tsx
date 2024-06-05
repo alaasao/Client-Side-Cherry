@@ -57,9 +57,8 @@ const Nav = () => {
     localStorage.removeItem("UserId");
     setIsIdValid(false);
   }
-  const gg = localStorage.length
   useEffect(()=>{
-  if(gg >= 1){
+  if(localStorage.length >= 1){
     setIsIdValid(true)
   }
  },[])
