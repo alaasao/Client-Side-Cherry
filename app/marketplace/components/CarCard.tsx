@@ -71,7 +71,7 @@ const CarCard: FC<CarCardProps> = ({
       <div
         className={`sm:hidden w-[90vw] mx-auto flex flex-col py-[20px] px-[26px] h-[260px] bg-white rounded-lg ${
           hide ? "hidden" : ""
-        } `}
+        } ${_id===""?"hidden":""}`}
       >
         {" "}
         <h1 className="font-bold text-xl  capitalize  ">{Modele}</h1>

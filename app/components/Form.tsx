@@ -1,6 +1,7 @@
-"use client";
+"use data";
 import axios from "axios";
 import React, { FC, useState } from "react";
+import toast from "react-hot-toast";
 import { FaArrowRight } from "react-icons/fa";
 interface FromProps {
   name: string;
@@ -22,16 +23,51 @@ const Form: FC<FromProps> = ({ name, id, type }: FromProps) => {
     Etat: RdvEtat.EN_ATTENTE,
   });
   async function submit() {
-    console.log("jj");
-
-    console.log(JSON.stringify(data));
+    if (data.Name === "") {
+      toast.error("Nom est vide");
+      return;
+    }
+    if (data.Adresse === "") {
+      toast.error("Veuillez entrer l'adresse");
+      return;
+    }
+    if (data.Date_Choisie.toLocaleString() === "") {
+      toast.error("Veuillez entrer la date");
+      return;
+    }
+    if (data.Phone === "") {
+      toast.error("Veuillez entrer le numéro de téléphone");
+      return;
+    } else {
+      const phoneRegex = /^(\+213|0)(5|6|7)[0-9]{8}$/;
+      if (!phoneRegex.test(data.Phone)) {
+        toast.error("Veuillez entrer un numéro de téléphone algérien valide");
+        return;
+      }
+    }
+    if (data.Email === "") {
+      toast.error("Veuillez entrer l'email"); return
+    } else {
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if (!emailRegex.test(data.Email)) {
+        toast.error("Veuillez entrer un email valide");return
+      }
+    }
+ 
 
     await axios.post("https://axeiny.tech:4004/rdv", data).then(() => {
-      window.location.href = "/";
-    });
+      toast.success("Rendez-vous envoyé avec succès");
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 2000);
+     
+    }).catch((e) => {
+      toast.error(e.response.data.message);
+     }
+    )
   }
   return (
-    <div className="bg-[#e9e8e896] py-[50px] rounded-2xl flex flex-col w-[90vw] mx-auto">
+    <div className="bg-[#e9e8e896] py-[50px] rounded-2xl flex flex-col w-[90vw] mx-auto mb-[50px]">
       <div className="font-bold   text-4xl pl-[20px] mb-[20px]">
         {" "}
         Prenez rendez-vous
@@ -92,7 +128,8 @@ const Form: FC<FromProps> = ({ name, id, type }: FromProps) => {
           <div className="font-bold">Date</div>
           <input
             type="date"
-            placeholder="12/05/2024"
+           
+            min={new Date().toISOString().slice(0, 10)}
             value={new Date(data.Date_Choisie).toISOString().slice(0, 10)}
             onChange={(e) => {
               setData((prev) => ({
@@ -100,7 +137,7 @@ const Form: FC<FromProps> = ({ name, id, type }: FromProps) => {
                 Date_Choisie: new Date(e.target.value),
               }));
             }}
-            className=" outline-none bg-[#F6F7F9] h-[56px] px-[30px] mt-[16px] w-full cursor-pointer rounded-xl"
+            className=" outline-none bg-[#F6F7F9] text-black h-[56px] px-[30px] mt-[16px] w-full cursor-pointer rounded-xl "
           />
         </div>
         <div className="flex flex-col w-[40%] max-md:w-[80%] mx-auto ">
