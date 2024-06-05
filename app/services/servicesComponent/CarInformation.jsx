@@ -139,7 +139,6 @@ const CarInformation = ({ data }) => {
         
           </div>
       </div>
-      </>}
       <div className="flex max-sm:flex-col w-full items-center justify-around md:flex-row gap-10 2xl:gap-10">
         <a
           href={data.Contrat_De_Vente}
@@ -160,6 +159,7 @@ const CarInformation = ({ data }) => {
           <MdOutlineFileDownload className="sm:text-xl md:text-2xl 2xl:text-5xl lg:text-3xl text-3xl" />
         </a>
       </div>
+      </>}
     </div> 
   );
 };
