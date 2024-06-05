@@ -36,6 +36,8 @@ const OffresCard: FC<CarCardProps> = ({
   Prix_TTC,
 }: CarCardProps) => {
   const percantge = Math.round((PromoObj.Value / Prix_TTC) * 100);
+  const promostart=PromoObj.Start.slice(0,10)
+  const promoend=PromoObj.End.slice(0,10)
   return (
     <div className="flex max-h-[400px]  max-sm:w-[90%] w-[90%] lg:w-[95%] 2xl:w-full  flex-col lg:flex-row justify-start  items-center">
       {PromoObj.IsPromo && (
@@ -83,16 +85,18 @@ const OffresCard: FC<CarCardProps> = ({
               </div>
               <div className="flex py-2  w-[90%] items-center justify-end sm:justify-between   ">
                 <div className="flex flex-col text-[0.2rem] sm:text-[0.3rem] md:text-sm max-sm:hidden 2xl:text-lg text-gray-500">
-                  <p>A partir de : {PromoObj.Start}</p>
-                  <p>Jusqu&apos;a : {PromoObj.End}</p>
+                  <p>A partir de : {promostart}</p>
+                  <p>Jusqu&apos;a : {promoend}</p>
                 </div>
                 <Link
                   href={"/marketplace/" + _id}
-                  className="bg-[#D12621] px-4 py-1 rounded-[5px] text-white border no-underline"
+                  className=" text-white  no-underline"
                 >
-                  <span className=" sm:text-sm lg:text-2xl  2xl:text-3xl  ">
-                    Voir Plus
-                  </span>
+                  <button
+                  className="text-[#D12621] border rounded-[10px] relative  z-10 text-nowrap good text-xs   font-good  mt-2 h-2  animation"
+                >
+                  <span className="relative z-10">Voir Plus</span>
+                </button>
                 </Link>
               </div>
             </div>

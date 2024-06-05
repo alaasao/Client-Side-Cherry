@@ -39,7 +39,7 @@ const Questions = () => {
         </div>
         <div className="text-xs sm:text-lg font-semibold text-[#686565] mt-4 ">
           N&apos;hésitez pas à
-          <Link href="/about/contact">
+          <Link href="/about">
             <span className="text-red-500"> nous contacter</span>
           </Link>
         </div>

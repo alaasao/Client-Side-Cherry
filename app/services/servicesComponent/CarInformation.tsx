@@ -2,12 +2,14 @@
 import React from "react";
 import { useState,useEffect } from "react";
 import axios from "axios";
+import Link from "next/link";
+import { MdOutlineFileDownload } from "react-icons/md";
 type props = {
   data: any;
 };
 const CarInformation = ({ data }: props) => {
   
-   const [daata, setDaata] = useState([
+   const [daata, setDaata] = useState(
     {
       Masked: false,
       _id: "",
@@ -97,18 +99,23 @@ const CarInformation = ({ data }: props) => {
       updatedAt: "2024-03-26T22:40:55.502Z",
       __v: 0,
     },
-  ]);
-  
+  );
   useEffect(() => {
     if(data.Car){
-
-    axios.get(`https://axeiny.tech:4004/car/${data.Car._id}`).then((res) => {
+    axios.get(`https://axeiny.tech:4004/car/${data[0].Car._id}`).then((res) => {
       setDaata(res.data);
     });}}
   , []);
+  const filtreddata: { Client: { _id: string | null; }; }[]=[]
+  data.map((item: { Client: { _id: string | null; }; })=>{
+    if(item.Client._id = localStorage.getItem("UserId")){
+      filtreddata.push(item)
+                  }})
+                  console.log(filtreddata)
   return (
+
     <div className="w-[85%] sm:w-[90%] justify-center items-center   ">
-       {data.Car && (
+       
                 <>
       <h1 className="good text-2xl sm:text-3xl my-14">Mon vehicule</h1>
 
@@ -128,32 +135,28 @@ const CarInformation = ({ data }: props) => {
               <p>Le prix :</p>
               <p>Garentie Restente : </p>
             </div>
-            <div className="flex flex-col justify-end gap-6 sm:gap-10 text-xs font-semibold md:text-sm 2xl:text-3xl text-nowrap lg:text-lg">
-             
-                  <p>{data.Car.Name}</p>
-                  <p>{data.Car.Name}</p>
-                  <p>{data.Car.Name}</p>
-                  <p>{data.Date_Achat}</p>
-                  <p>{data.Date_Achat}</p>
-                  <p>{data.Prix_Vente}</p>
-                  <p>{data.Car.Garentie}</p>
+         {data[0] &&  
+         <div className="flex flex-col justify-end gap-6 sm:gap-10 text-xs font-semibold md:text-sm 2xl:text-3xl text-nowrap lg:text-lg">     
+                  <p>{data[0].Car.Name}</p>
+                  <p>{data[0].Car.Name}</p>
+                  <p>{data[0].Car.Name}</p>
+                  <p>{data[0].Date_Achat}</p>
+                  <p>{data[0].Date_Achat}</p>
+                  <p>{data[0].Prix_Vente}</p>
+                  <p>{data[0].Car.Garentie}</p>
+              </div>  
+                 }
                
-            </div>
+           
           </div>
-          {data.Car && <img
-            src={`${daata[0].Images[0].Images}`}
+         <img
+            src={`${daata.Images[0].Images}`}
             className="flex 2xl:h-[800px] w-full h-full justify-center order-1 sm:order-2 items-center sm:rounded-r-md max-sm:rounded-t-[50px] sm:rounded-l-[60px] bg-[#ECECEC]"
-          />}
+          />
         </div>
       </div>
       </>
-              )}
-    </div>
-  );
-};
-
-export default CarInformation;
-/*  <div className="flex max-sm:flex-col w-full items-center justify-around md:flex-row gap-10 2xl:gap-10">
+      <div className="flex max-sm:flex-col w-full items-center justify-around md:flex-row gap-10 2xl:gap-10">
         <Link
           href={`haha`}
           download={`haha`}
@@ -173,11 +176,17 @@ export default CarInformation;
           <MdOutlineFileDownload className="text-3xl md:text-2xl lg:text-3xl sm:text-xl" />
         </Link>
         <Link
-          href={`haha`}
-          download={`haha`}
-          className="w-[267px]   sm:w-[35%] sm:text-sm md:text-lg lg-text-xl 2xl:text-3xl text-lg h-[60px] text-nowrap flex flex-row items-center 2xl:py-10 p-[0px_9.81px_0px_9.81px] rounded-[3.27px] justify-around font-semibold py-2 text-center bg-[#ECECEC] shadow-xl"
-        >
+            href={`haha`}
+            download={`haha`}
+            className="w-[267px]   sm:w-[35%] sm:text-sm md:text-lg lg-text-xl 2xl:text-3xl text-lg h-[60px] text-nowrap flex flex-row items-center 2xl:py-10 p-[0px_9.81px_0px_9.81px] rounded-[3.27px] justify-around font-semibold py-2 text-center bg-[#ECECEC] shadow-xl"
+          >
           <p className="sm:font-bold w-[80%]">Facture d&apos;achat</p>
           <MdOutlineFileDownload className="sm:text-xl md:text-2xl 2xl:text-5xl lg:text-3xl text-3xl" />
         </Link>
-      </div> */
+      </div> 
+    </div>
+  );
+};
+
+export default CarInformation;
+

@@ -43,17 +43,20 @@ const Nav = () => {
           title: "logged in",
           description: "you can go and check your client info ",
         });
-        localStorage.setItem("UserId", id);
-        window.location.href = `/services`;
+        localStorage.setItem("UserId", id); 
         setIsIdValid(true)
       })
       .catch((err) => {
         toast({
-          title: err.response.data.message,
+          title: "response.data.message",
           description: "check your id and try again ",
         });
       });
   };
+  const removeId = () =>{
+    localStorage.removeItem("UserId");
+    setIsIdValid(false);
+  }
   return (
     <div
       className={`w-screen box-border min-w-0 h-[90px]  border-b-[3px]  ${
@@ -119,41 +122,49 @@ const Nav = () => {
           currentPath={currentPath}
         />
       </ul>
-      <div className="flex gap-[1.5vw]">
+      <div className="flex items-center justify-center gap-[1.5vw]">
         <Dialog>
           <DialogTrigger asChild>
             <Button variant="outline">
-              <CiUser
-                className={`w-8 h-8 ${currentPath === "/" ? "text-white" : ""} `}
-              />
+                <p>{isIdValid ? `LOGOUT` : `LOGIN` }</p>
             </Button>
-          </DialogTrigger>
-          <DialogContent className="sm:max-w-[425px] text-white bg-black">
+          </DialogTrigger> 
+          <DialogContent className="sm:max-w-[40%]  text-white bg-black">
             <DialogHeader>
-              <DialogTitle >Login</DialogTitle>
+              <DialogTitle >{ isIdValid && localStorage.length>1 ? `LOGOUT` : `LOGIN` }</DialogTitle>
               <DialogDescription>
-                inscrivez-vous pour voir les informations de votre carte et bien
-                d autres fonctionnalités{" "}
+               { !isIdValid && 
+              <p> inscrivez-vous pour voir les informations de votre carte et bien
+                  d autres fonctionnalités
+              </p>
+              } 
+              {
+                isIdValid && 
+                <p>
+                      go and fuck yourself
+                </p>
+              }
               </DialogDescription>
             </DialogHeader>
             <div className="grid gap-4 py-4">
-              <div className="grid grid-cols-4 items-center gap-4">
-                <Label htmlFor="name" className="text-right">
-                 USER ID
-                </Label>
-                <Input
-                  id="name"
-                  onChange={(e) => setId(e.target.value)}
-                  placeholder="Entrer votre ID"
-                  className="col-span-3 text-black"
-                />
-              </div>
+              {!isIdValid  && 
+               <div className="grid grid-cols-4 items-center gap-4">
+                    <Label htmlFor="name" className="text-right">
+                      USER ID
+                      </Label>
+                      <Input
+                        id="name"
+                        onChange={(e) => setId(e.target.value)}
+                        placeholder="Entrer votre ID"
+                        className="col-span-3 text-black"
+                      /> 
+                </div>}             
             </div>
-            <DialogFooter>
-              <Button
-                onClick={checkIdExistence}
-                className="bg-red-600 text-bold uppercase text-white">
-                Login
+            <DialogFooter className="w-full flex items-center justify-center">
+              <Button 
+                onClick={isIdValid ? removeId : checkIdExistence }
+                className="bg-red-600 text-bold uppercase justify-center text-white">
+                { isIdValid ? `LOGOUT` : `LOGIN` }
               </Button>
             </DialogFooter>
           </DialogContent>
