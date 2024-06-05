@@ -43,10 +43,11 @@ const PieceCard: FC<PieceCardProps> = ({
         !Name.toLowerCase().includes(searchKey))
     );
   }, [ searchKey]);
+  console.log(id,)
   return (
     <div
       className={`w-[333px] sm:max-lg:min-w-[250px] sm:lg:min-w-[330px] sm:max-md:min-w-[300px] sm:max-sm:w-[300px]${
-        hide ? "hidden" : ""
+        id==="" ? "hidden" : ""
       } `}
     >
       {" "}
@@ -99,7 +100,7 @@ const PieceCard: FC<PieceCardProps> = ({
       </div>
       <div
         className={`max-sm:hidden w-full bg-white flex flex-col rounded-xl  items-center ${
-          hide ? " hidden" : ""
+          id==="" ? " hidden" : ""
         }`}
       >
         <img

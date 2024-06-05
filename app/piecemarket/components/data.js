@@ -1,7 +1,7 @@
 const data = [
   
   {
-    "_id": "665c73b13a27725917c38485",
+    "_id": "",
     "Name": "piece one",
     "Description": "ddddd",
     "Price": 22,
