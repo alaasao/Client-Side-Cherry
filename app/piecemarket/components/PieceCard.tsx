@@ -8,19 +8,14 @@ import { TbAutomaticGearbox, TbManualGearbox } from "react-icons/tb";
 import { IoClose } from "react-icons/io5";
 
 interface PieceCardProps {
-  name: string;
+  Name: string;
   img: string;
-  categorie: string;
-  etat: string;
-  modele: string[];
+
   searchKey: string;
   id: string;
-  prix: number;
+  Price: number;
   dispo: boolean;
-  Garentie: string;
-  reffer: string;
-  mark: string;
-  doc: string;
+
   filter: {
     categorie: string[];
     modele: string[];
@@ -30,32 +25,24 @@ interface PieceCardProps {
   };
 }
 const PieceCard: FC<PieceCardProps> = ({
-  name,
+  Name,
   img,
-  categorie,
-  etat,
-  modele,
+
   searchKey,
   dispo,
-  reffer,
-  mark,
+
   id,
-  prix,
+  Price,
   filter,
 }: PieceCardProps) => {
   let [hide, setHide] = useState(false);
   useEffect(() => {
     setHide(
-      (!filter.categorie.some((e) => e === categorie) &&
-        filter.categorie.length !== 0) ||
-        (!filter.etat.some((e) => e === etat) && filter.etat.length !== 0) ||
-        (!filter.modele.some((e) => modele.some((ele) => ele === e)) &&
-          filter.modele.length !== 0) ||
-        filter.prix[0] > prix ||
-        filter.prix[1] < prix ||
-        !name.toLowerCase().includes(searchKey),
+      (
+        
+        !Name.toLowerCase().includes(searchKey))
     );
-  }, [filter, searchKey]);
+  }, [ searchKey]);
   return (
     <div
       className={`w-[333px] sm:max-lg:min-w-[250px] sm:lg:min-w-[330px] sm:max-md:min-w-[300px] sm:max-sm:w-[300px]${
@@ -69,7 +56,7 @@ const PieceCard: FC<PieceCardProps> = ({
         }`}
       >
         <div className="w-full flex justify-between px-[15px] items-center py-[20px] capitalize">
-          <h1 className="font-bold text-xl ">{name}</h1>
+          <h1 className="font-bold text-xl ">{Name}</h1>
         </div>
 
         <div className="flex justify-between  w-full mb-[24px]">
@@ -78,8 +65,7 @@ const PieceCard: FC<PieceCardProps> = ({
           </div>
           <div className="flex flex-col w-1/2 font-bold text-[#A5A5A5] items-center justify-center ">
             <div className="flex flex-col gap-[4px]">
-              <div>{mark}</div>
-              <div> Réf :{reffer}</div>
+          
               {dispo ? (
                 <div className="text-[#39A63D] flex items-center gap-[4px]">
                   <div className="rounded-full flex w-[20px] h-[20px] justify-center items-center border-2 border-[#39A63D]">
@@ -101,9 +87,9 @@ const PieceCard: FC<PieceCardProps> = ({
         <div className="flex flex-col w-full ">
           {" "}
           <div className="flex justify-between items-center w-full px-[15px]  mb-[10px] ">
-            <div className="font-bold"> {prix.toLocaleString()}.00DZ</div>
+            <div className="font-bold"> { Price}00DZ</div>
             <Link
-              href={""}
+                 href={"/piecemarket/" + id}
               className="text-white bg-[#DB2719] flex justify-center items-center w-[180px]  h-[40px] rounded-full"
             >
               Voir plus
@@ -122,10 +108,10 @@ const PieceCard: FC<PieceCardProps> = ({
           alt=""
         />
         <div className="flex flex-col w-full px-[15px] gap-[6px]">
-          <h1 className="font-bold text-xl w-full capitalize">{name}</h1>
+          <h1 className="font-bold text-xl w-full capitalize">{Name}</h1>
           <div className="text-[#A5A5A5]">
             {" "}
-            {mark} -Réf:{reffer}
+
           </div>
           <div>
             {" "}
@@ -147,7 +133,7 @@ const PieceCard: FC<PieceCardProps> = ({
           </div>
           <div className="flex gap-[50px] max-md:gap-[20px] items-center max-lg:gap-[5px] px-[6px] mb-[16px] ">
             <div className="flex font-bold text-xl w-full justify-between">
-              {prix.toLocaleString()}DZ
+              {Price}DZ
             </div>
             <Link
               href={"/piecemarket/" + id}

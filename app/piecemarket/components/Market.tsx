@@ -1,8 +1,9 @@
-import React, { Dispatch, SetStateAction, FC, useState } from "react";
+import React, { Dispatch, SetStateAction, FC, useState, useEffect } from "react";
 import data from "./data";
 import CarCard from "./PieceCard";
 import PieceCard from "./PieceCard";
 import { CiSearch } from "react-icons/ci";
+import axios from "axios";
 interface MarketProps {
   searchKey: string;
   setSearchKey: Dispatch<SetStateAction<string>>;
@@ -22,25 +23,33 @@ const Market: FC<MarketProps> = ({
   searchKey,
   setSearchKey,
 }: MarketProps) => {
+  const [realData, setData] = useState(data)
+  useEffect(() => {
+    axios.get("https://axeiny.tech:4004/pieces").then((res) => {
+
+      setData(res.data)
+    }
+  )
+  },[])
   return (
     <div className="bg-[#F1F1F0] relative flex  max-sm:flex-col max-sm:items-center  flex-wrap max-sm:justify-start sm:justify-center gap-[30px]  px-[20px]  max-md:gap-[10px] pb-[100px] ">
-      {data.map((e, i) => {
+      {realData.map((e, i) => {
         return (
           <PieceCard
-            Garentie={e.Garentie}
-            dispo={e.dispo}
-            reffer={e.reffer}
-            mark={e.mark}
-            name={e.name}
-            categorie={e.categorie}
-            modele={e.modele}
-            etat={e.etat}
-            img={e.img}
+        
+            dispo={e.Quantity > 0 ? true : false}
+           
+   
+            Name={e.Name}
+      
+        
+    
+            img={e.Image[0].images[0]}
             searchKey={searchKey}
-            prix={e.prix}
-            key={e.id + i}
-            id={e.id}
-            doc={e.doc}
+            Price={e.Price}
+            key={e._id + i}
+            id={e._id}
+    
             filter={filterList}
           />
         );
