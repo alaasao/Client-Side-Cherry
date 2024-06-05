@@ -26,7 +26,7 @@ const Card = (props: DemoProp) => {
       </div>
 
       <div className="flex flex-col max-w-[1500px]  justify-around lg:justify-evenly">
-        <p className="w-full md:max-w-[80%] lg:w-full  overflow-hidden text-sm sm:text-xl md:text-lg md:text-left text-center  line-clamp-4 2xl:line-clamp-6 lg:text-lg 2xl:text-2xl">
+        <p className="w-full md:max-w-[80%] lg:w-full  overflow-hidden text-sm sm:text-xl md:text-2xl md:text-left text-center text-red-500  line-clamp-4 2xl:line-clamp-6 lg:text-3xl 2xl:text-2xl">
           {props.Title}
         </p>
         <p className="w-full md:max-w-[80%] lg:w-full  overflow-hidden text-xs sm:text-lg md:text-sm md:text-left text-center  line-clamp-4 2xl:line-clamp-6 lg:text-lg 2xl:text-2xl">

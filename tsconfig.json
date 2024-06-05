@@ -29,6 +29,6 @@
     "app/marketplace/[productId]/components/Sliderrr.jsx",
     "app/api/auth/[...nextauth].js",
     "app/AuthContext/page.jsx"
-, "app/services/page.jsx"  ],
+, "app/services/page.jsx", "app/services/servicesComponent/CarInformation.jsx"  ],
   "exclude": ["node_modules"]
 }

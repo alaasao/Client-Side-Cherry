@@ -1,5 +1,5 @@
 "use client";
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { CiUser, CiMenuBurger, CiSearch } from "react-icons/ci";
@@ -48,7 +48,7 @@ const Nav = () => {
       })
       .catch((err) => {
         toast({
-          title: "response.data.message",
+          title: err.response.data.message,
           description: "check your id and try again ",
         });
       });
@@ -57,6 +57,13 @@ const Nav = () => {
     localStorage.removeItem("UserId");
     setIsIdValid(false);
   }
+  const gg = localStorage.length
+  useEffect(()=>{
+  if(gg >= 1){
+    setIsIdValid(true)
+  }
+ },[])
+ 
   return (
     <div
       className={`w-screen box-border min-w-0 h-[90px]  border-b-[3px]  ${
@@ -141,7 +148,7 @@ const Nav = () => {
               {
                 isIdValid && 
                 <p>
-                      go and fuck yourself
+                  Tu veux logout de notre website ?
                 </p>
               }
               </DialogDescription>
