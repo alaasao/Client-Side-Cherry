@@ -3,8 +3,9 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { MantineProvider } from "@mantine/core";
 import ScrollBar from "./components/ScrollBar";
-import { Toaster } from "@/components/ui/toaster";
+
 import { usePathname } from "next/navigation";
+import { Toaster } from "react-hot-toast";
 const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-mont",
@@ -49,10 +50,11 @@ export default function RootLayout({
       <body className={poppins.className}>
         <ScrollBar className={"relative ww overflow-x-hidden bg-white text-black"}>
           <Nav />
+          <Toaster position="bottom-center" />
           {children}
           <Footer />
         </ScrollBar>
-        <Toaster />
+   
       </body>
     </html>
   );
