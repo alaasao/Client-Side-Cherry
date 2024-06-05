@@ -11,8 +11,8 @@ interface CardProps {
 }
 const Nouveau = (props: CardProps) => {
   return (
-    <div className="w-[90%]">
-      <div className="flex flex-col mt-10  justify-center items-start h-full w-full overflow-hidden shadow-[5px_3.49px_10px_0px_rgba(0,0,0,0.25)] ">
+    <div className="w-[90%] rounded-lg">
+      <div className="flex flex-col mt-10 rounded-lg justify-center items-start h-full w-full overflow-hidden shadow-[5px_3.49px_10px_0px_rgba(0,0,0,0.25)] ">
         <div className="relative h-full  top-0 left-0  ">
           <p className="absolute  flex w-[60px] sm:w-[100px] lg:w-[120px] 2xl:w-[250px] border-y border-black sm:h-[30px] lg:h-[50px] 2xl:h-[50px] sm:text-center text-start  items-center text-white text-[0.7rem] skew-y-[-40deg] h-[20px] bg-[#D12621] ">
             <span className=" text-xs xl:text-md  p-2 skew-y-[1deg] font-bold ">
@@ -45,7 +45,7 @@ const Nouveau = (props: CardProps) => {
                 href={"/marketplace/" + props.id}
                 className="bg-[#D12621] rounded-[10.68px] p-2 text-white border-[0.89px]  no-underline"
               >
-                <span className=" p-2 text-[0.5rem] sm:text-sm lg:text-2xl  2xl:text-3xl  ">
+                <span className=" p-2 text-[0.5rem] sm:text-xs lg:text-2xl  2xl:text-3xl  ">
                   Voir Plus
                 </span>
               </Link>
