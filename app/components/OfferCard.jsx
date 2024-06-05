@@ -1,10 +1,7 @@
 import Link from "next/link";
 import React, { FC } from "react";
-interface OfferCardProps {
-  id: number;
-  img: string;
-}
-const OfferCard: FC<OfferCardProps> = ({ id, img }: OfferCardProps) => {
+const OfferCard = ({ id,img}) => {
+  console.log(img)
   return (
     <div className=" relative w-full h-full group cursor-pointer ">
       <img src={img} className="w-full h-full  top-0  " alt="" />
@@ -16,7 +13,7 @@ const OfferCard: FC<OfferCardProps> = ({ id, img }: OfferCardProps) => {
         className="absolute z-[-1] px-[10px] w-full h-full top-0 pb-[80px] text-white bg-[#696564] text-3xl rounded-xl opacity-[90%]  justify-normal items-center  text-center flex group-hover:z-[3]"
       >
         {" "}
-        PROFITEZ DE L’OFFRE AVANT QU’IL NE SOIT TROP TARD !!!!!!
+        PROFITEZ DE L OFFRE AVANT QU IL NE SOIT TROP TARD !!!!!!
       </Link>
     </div>
   );
