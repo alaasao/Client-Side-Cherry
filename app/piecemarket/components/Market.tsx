@@ -25,7 +25,7 @@ const Market: FC<MarketProps> = ({
 }: MarketProps) => {
   const [realData, setData] = useState(data)
   useEffect(() => {
-    axios.get("https://axeiny.tech:4004/pieces").then((res) => {
+    axios.get("https://axeiny.tech:4004/piece").then((res) => {
 
       setData(res.data)
     }
