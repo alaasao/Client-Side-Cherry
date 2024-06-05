@@ -12,9 +12,7 @@ const Page = (props: DemoProp) => {
     {
       "_id": "6659d9c4c85c109887da3e8e",
       "Masked": false,
-      "Images": [
-          "https://firebasestorage.googleapis.com/v0/b/cherry-36cfa.appspot.com/o/images%2FScreenshot%202023-03-30%20141636.png?alt=media&token=2a56d1df-7a94-421d-97da-e52a41731320"
-      ],
+      "Images": [""],
       "Title": "Y",
       "Description": "jjcfddf",
       "Event_Date": "2024-05-29T00:00:00.000Z",
