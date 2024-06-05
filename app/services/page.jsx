@@ -12,14 +12,14 @@ import "@splidejs/react-splide/css";
 const Page = () => {
   const [Data,setData] = useState(
     {
-      "_id": "665dd754ef496b2011718fbf",
-      "Date_Achat": "2024-09-03T00:00:00.000Z",
-      "Prix_Vente": 12345,
+      "_id": "",
+      "Date_Achat": 0,
+      "Prix_Vente": 0,
       "Contrat_De_Vente": "https://firebasestorage.googleapis.com/v0/b/cherry-36cfa.appspot.com/o/images%2FNouveau%20document%20texte.txt?alt=media&token=1dc21a90-cd51-43ca-b538-0e9745e31957",
       "Facture": "https://firebasestorage.googleapis.com/v0/b/cherry-36cfa.appspot.com/o/images%2FNouveau%20document%20texte.txt?alt=media&token=169e3544-e519-4022-aa02-5335cf98a033",
       "Car": {
           "Name": "arrizo",
-          "_id": "66403d73c85c109887d93db3",
+          "_id": "665ff014ef496b201171a44f",
           "Garentie": "2 ans"
       },
       "Piece": null,
