@@ -32,10 +32,10 @@ const Main: FC<MainProps> = ({
       <div className="w-full flex flex-col gap-[20px] max-md:gap-[30px] capitalize ">
         <div className="w-full flex flex-col">
           <div className="flex flex-row w-full justify-between">
-            <h2 className="text-4xl my-6">
+            <h2 className="text-4xl my-6 max-md:text-xl">
               {Modele} {Moteur} MT
             </h2>
-            <h2 className="text-4xl my-6 text-red-500">{Prix_TTC}.000 DZ</h2>
+            <h2 className="text-4xl my-6 text-red-500 max-md:text-xl">{Prix_TTC}.000 DZ</h2>
           </div>
           <div className="w-full py-4 border-y  mt-2 border-gray-400 flex flex-col items-start justify-start gap-4 ">
             <p className="text-2xl">Couleur</p>

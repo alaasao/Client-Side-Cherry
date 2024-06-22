@@ -128,47 +128,68 @@ const OfferSlider = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   return (
-    <div className="bg-white h-[200px] w-full flex flex-row ">
-      <div className=" relative w-full h-full group cursor-pointer ">
-          <img src={data[0].Images[0].Images[0]} className="w-full h-full  top-0  " alt="" />
-          <div className="w-[50%] h-[52px] bg-white rounded-full absolute hover:scale-[1.1] z-[10] bottom-[27px] left-1/2 -translate-x-1/2  good text-black flex items-center justify-center ">
-            En Profiter
-          </div>
-          <Link
-            href={""}
-            className="absolute z-[-1] px-[10px] w-full h-full top-0 pb-[80px] text-white bg-[#696564] text-3xl rounded-xl opacity-[90%]  justify-normal items-center  text-center flex group-hover:z-[3]"
-          >
-        {" "}
-        PROFITEZ DE L OFFRE AVANT QU IL NE SOIT TROP TARD !!!!!!
-      </Link>
-    </div>
-      <div className=" relative w-full h-full group cursor-pointer ">
-          <img src={data[0].Images[0].Images[0]} className="w-full h-full  top-0  " alt="" />
-          <div className="w-[50%] h-[52px] bg-white rounded-full absolute hover:scale-[1.1] z-[10] bottom-[27px] left-1/2 -translate-x-1/2  good text-black flex items-center justify-center ">
-            En Profiter
-          </div>
-          <Link
-            href={""}
-            className="absolute z-[-1] px-[10px] w-full h-full top-0 pb-[80px] text-white bg-[#696564] text-3xl rounded-xl opacity-[90%]  justify-normal items-center  text-center flex group-hover:z-[3]"
-          >
-        {" "}
-        PROFITEZ DE L OFFRE AVANT QU IL NE SOIT TROP TARD !!!!!!
-      </Link>
-    </div>
-      <div className=" relative w-full h-full group cursor-pointer ">
-          <img src={data[0].Images[0].Images[0]} className="w-full h-full  top-0  " alt="" />
-          <div className="w-[50%] h-[52px] bg-white rounded-full absolute hover:scale-[1.1] z-[10] bottom-[27px] left-1/2 -translate-x-1/2  good text-black flex items-center justify-center ">
-            En Profiter
-          </div>
-          <Link
-            href={""}
-            className="absolute z-[-1] px-[10px] w-full h-full top-0 pb-[80px] text-white bg-[#696564] text-3xl rounded-xl opacity-[90%]  justify-normal items-center  text-center flex group-hover:z-[3]"
-          >
-        {" "}
-        PROFITEZ DE L OFFRE AVANT QU IL NE SOIT TROP TARD !!!!!!
-      </Link>
-    </div>
-    </div>
+    // <div className="bg-white h-[200px] w-full flex flex-row ">
+    //   <div className=" relative w-full h-full group cursor-pointer ">
+    //       <img src={data[0].Images[0].Images[0]} className="w-full h-full  top-0  " alt="" />
+    //       <div className="w-[50%] h-[52px] bg-white rounded-full absolute hover:scale-[1.1] z-[10] bottom-[27px] left-1/2 -translate-x-1/2  good text-black flex items-center justify-center ">
+    //         En Profiter
+    //       </div>
+    //       <Link
+    //         href={""}
+    //         className="absolute z-[-1] px-[10px] w-full h-full top-0 pb-[80px] text-white bg-[#696564] text-3xl rounded-xl opacity-[90%]  justify-normal items-center  text-center flex group-hover:z-[3]"
+    //       >
+    //     {" "}
+    //     PROFITEZ DE L OFFRE AVANT QU IL NE SOIT TROP TARD !!!!!!
+    //   </Link>
+    // </div>
+    //   <div className=" relative w-full h-full group cursor-pointer ">
+    //       <img src={data[0].Images[0].Images[0]} className="w-full h-full  top-0  " alt="" />
+    //       <div className="w-[50%] h-[52px] bg-white rounded-full absolute hover:scale-[1.1] z-[10] bottom-[27px] left-1/2 -translate-x-1/2  good text-black flex items-center justify-center ">
+    //         En Profiter
+    //       </div>
+    //       <Link
+    //         href={""}
+    //         className="absolute z-[-1] px-[10px] w-full h-full top-0 pb-[80px] text-white bg-[#696564] text-3xl rounded-xl opacity-[90%]  justify-normal items-center  text-center flex group-hover:z-[3]"
+    //       >
+    //     {" "}
+    //     PROFITEZ DE L OFFRE AVANT QU IL NE SOIT TROP TARD !!!!!!
+    //   </Link>
+    // </div>
+    //   <div className=" relative w-full h-full group cursor-pointer ">
+    //       <img src={data[0].Images[0].Images[0]} className="w-full h-full  top-0  " alt="" />
+    //       <div className="w-[50%] h-[52px] bg-white rounded-full absolute hover:scale-[1.1] z-[10] bottom-[27px] left-1/2 -translate-x-1/2  good text-black flex items-center justify-center ">
+    //         En Profiter
+    //       </div>
+    //       <Link
+    //         href={""}
+    //         className="absolute z-[-1] px-[10px] w-full h-full top-0 pb-[80px] text-white bg-[#696564] text-3xl rounded-xl opacity-[90%]  justify-normal items-center  text-center flex group-hover:z-[3]"
+    //       >
+    //     {" "}
+    //     PROFITEZ DE L OFFRE AVANT QU IL NE SOIT TROP TARD !!!!!!
+    //   </Link>
+    // </div>
+    // </div>
+    <div className="bg-white">
+    <Splide
+      aria-label="My Favorite Images"
+      options={{
+        type: "loop",
+        perPage: perPage,
+        arrows: false,
+        autoplay: true,
+        pagination: false,
+        gap: 46,
+      }}
+    >
+      {data.map((e, i) => {
+        return (
+          <SplideSlide key={e.title + i}>
+            <OfferCard img={e.Images[0].Images[0]} id={e._id} />
+          </SplideSlide>
+        );
+      })}
+    </Splide>
+  </div>
   );
 };
 

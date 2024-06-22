@@ -46,7 +46,7 @@ const PieceCard: FC<PieceCardProps> = ({
   console.log(id,)
   return (
     <div
-      className={`w-[333px] sm:max-lg:min-w-[250px] sm:lg:min-w-[330px] sm:max-md:min-w-[300px] sm:max-sm:w-[300px]${
+      className={`w-[333px] sm:max-lg:min-w-[250px] sm:lg:min-w-[330px] sm:max-md:min-w-[300px] sm:max-sm:w-[300px] bg-white${
         id==="" ? "hidden" : ""
       } `}
     >

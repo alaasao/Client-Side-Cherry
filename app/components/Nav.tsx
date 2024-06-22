@@ -62,7 +62,19 @@ const Nav = () => {
     setIsIdValid(true)
   }
  },[isIdValid])
- 
+ useEffect(() => {
+  const handleScroll = () => {
+setIsOpen(false)
+    // Your scroll handling logic here
+  };
+
+  window.addEventListener('scroll', handleScroll);
+
+  // Cleanup the event listener on component unmount
+  return () => {
+    window.removeEventListener('scroll', handleScroll);
+  };
+}, []);
   return (
     <div
       className={`w-screen box-border min-w-0 h-[90px]  border-b-[3px]  ${
@@ -184,7 +196,7 @@ const Nav = () => {
             onClick={() => {
               setIsOpen((prev) => !prev);
             }}
-            className={`absolute   py-[50px] h-full bg-white text-black  flex flex-col rounded-lg transition-all duration-700  z-[100] ${
+            className={`absolute   py-[50px] h-screen  bg-white text-black  flex flex-col rounded-lg transition-all duration-700  z-[100] ${
               isOpen
                 ? "w-[600px] left-0 top-0 max-lg:w-screen"
                 : "w-0 top-0 left-[-1000px] "
